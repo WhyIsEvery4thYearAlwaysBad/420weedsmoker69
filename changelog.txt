@@ -1,0 +1,25 @@
+6/5/2020 - 4:34 AM (US-Canada)
+Debug mode now displays console and runs cl_fullupdate.
++ac.attack3 no longer aliases itself to ac.slot3.
+Q is now bound to +ac.attack3
+Lowered matchmaking ping tolerance to 50 from 100.
+
+-ChatMenu:
+Removed the script submenu entirely. Uses loadouts instead. Check and ensure you have the correct items and change the aliases to account before playing.
+Removed all the bind commands in the aliases.
+--Commands
+
+6/9/2020 - 4:46 PM
+-ChatMenu:
+Changed [Commands] to [Server] in selection menu.
+-Binds
+SHIFT now toggles duck.
+
+6/10/2020 - 11:32 AM
+-Binds
+Added a new Camping mode.
+
+6/12/2020 - 11:39 AM
+-Binds
+--Spy
+Moved undisguise and fake uber to alt+E. E has been reverted to medic call.
