@@ -1,0 +1,27 @@
+Another Major Update
+
+-Added New custom binds
+Medic when will you uber?
+#BootlegTrolldierOP->#StockMedigunIsOverrated
+for spy:
+**ENEMY MEDIC HAS BLANK **
+for medic:
+**ÜBER READY!**
+**ÜBER DEPLOYED!**
+**PUSH NOW!**
+Somone suicide so I can charge my shield!
+Engineer:
+Teleporter Up!
+Dispenser Up!
+**BUILDINGS ARE BEING SAPPED**
+Can y'all upgrade the tele when not doing anything?
+-Fixed class specific menu not showing.
+-Can now alert team of multiple sentries.
+-Moved some binds to be set in a sensical order.
+-Removed ÜBER script (Felt too annoying)
+-Removed MVM Server setup execs. (Too useless tbh)
+-Removed redundant cfgs.
+-Reorganized the file structure.
+-Renamed the files to their proper names.
+-Removed Config Settings (Would be a nuisance to go into a file an delete it everytime it gets full.)
+-Deleted MVM and General categories entirely (MVM - Unnecessary; infinite time to talk things out. General - Redundant.)
