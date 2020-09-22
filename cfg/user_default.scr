@@ -321,8 +321,4 @@ DESCRIPTION INFO_OPTIONS
 		{ STRING }
 		{ "None" }
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 50ae5e4103971db606a02f742855e59efe51eaa3
