@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "chapters"
 {
 	1	"background_2fort"
@@ -11,4 +12,19 @@
 	2	"background_2fort"
 	3	"background_2fort"
 	4	"background_2fort"
+=======
+"chapters"
+{
+	1	"background_2fort"
+	2	"background_2fort"
+	3	"background_2fort"
+	4	"background_2fort"
+}
+"BackgroundMaps"
+{
+	1	"background_2fort"
+	2	"background_2fort"
+	3	"background_2fort"
+	4	"background_2fort"
+>>>>>>> a6bde281808e2a02960549ab18a962b07a26d594
 }
