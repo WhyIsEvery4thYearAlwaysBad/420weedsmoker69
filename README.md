@@ -1,2 +1,2 @@
 # 420weedsmoker69
-My TF2 config. Mainly posted this as a back up, but you can download it if you want. I highly recommend converting this into a vpk.
+My TF2 config in a vpk. You will need the folder, because captions don't work when stored in a vpk.
