@@ -93,8 +93,6 @@ DESCRIPTION INFO_OPTIONS
 		{ NUMBER 0 -1 }
 		{ "97000" }
 	}
-		{ "1" }
-	}
 	"Gameplay"
 	{
 		"Gameplay"
