@@ -1,0 +1,4 @@
+user_default.scr
+main.cfg
+-3.cfg deleted
++voicelines/main.cfg
