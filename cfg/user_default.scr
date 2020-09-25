@@ -78,6 +78,8 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_simple_disguise_menu_option"
 		"#Tooltip_simple_disguise_menu_option"
 		{ BOOL }
+		{ "0" }
+	}
 	"cl_autoreload"
 	{
 		"#TF_autoreload"
