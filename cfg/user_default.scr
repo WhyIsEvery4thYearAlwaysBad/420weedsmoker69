@@ -9,36 +9,37 @@ DESCRIPTION INFO_OPTIONS
 	}
 	"cl_interp"
 	{
-		"Interp"
-		"How much time to interpolate in milliseconds."
+		"Interp [!]"
+		"How much time to interpolate in milliseconds. [!] THIS SHOULD EQUAL cl_interp_ratio / cl_updaterate!"
 		{ NUMBER 0 0.1 }
 		{ "0" }
 	}
 	"cl_interp_ratio"
 	{
-		"Interp Ratio"
+		"Interpolation Ratio."
 		{ NUMBER 1 2.9 }
-		{ "2.2" }
+		{ "1" }
 	}
 	"cl_updaterate"
 	{
 		"Update Rate"
 		"How many packets are sent to server per second."
 		{ NUMBER 0 128 }
-		{ "66" }
+		{ "67" }
 	}
 	"cl_cmdrate"
 	{
 		"Command rate"
 		"How many packets are recieved per second."
 		{ NUMBER 0 128 }
-		{ "66" }
+		{ "67" }
 	}
-	"cl_lagcompensation"
+	"rate"
 	{
-		"Lag compensation?"
-		{ BOOL }
-		{ "1" }
+		"Rate"
+		"Maximum bytes per second the client can recieve."
+		{ NUMBER 0 -1 }
+		{ "1048576" }
 	}
 	"cl_smooth"
 	{
@@ -53,13 +54,6 @@ DESCRIPTION INFO_OPTIONS
 		"Smooth playermodels over this many seconds."
 		{ NUMBER 0.01 2 }
 		{ "0.1" }
-	}
-	"rate"
-	{
-		"Rate"
-		"Maximum bytes per second the client can recieve."
-		{ NUMBER 0 -1 }
-		{ "97000" }
 	}
 	"Gameplay"
 	{
@@ -207,6 +201,13 @@ DESCRIPTION INFO_OPTIONS
 			"9.8 (Least FPS)"	"98"
 		}
 		{ "81" }
+	}
+	"mat_phong"
+	{
+		"Mat Phong?"
+		"Shading on characters to make them look realistic."
+		{ BOOL }
+		{ "0" }
 	}
 	"glow_outline_effect_enable"
 	{
