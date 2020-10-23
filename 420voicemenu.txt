@@ -1,0 +1,122 @@
+#cvm.boldbydefault: "true"
+#cvm.italicizebydefault: "false"
+#cvm.defaultcolor <clr:234,209,174>
+#cvm.resetkeys: "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9"
+"root" {
+	"[Common]" {
+		"[Strategic]" {
+			"Fallback!"	"say_team **FALLBACK! FALLBACK!**"
+			"Push!"	"say_team **PUSH NOW!**"
+			"Hold!"	"say_team **HOLD POSITION!**"
+		}
+		"[Enemy Running {Medigun}!]" {
+			"<clr:255,100,100>Stock"	"say_team **ENEMY USING STOCK MEDIGUN**"
+			"<clr:210,100,100>Kritz"	"say_team **ENEMY USING KRITZ**"
+			"<clr:150,100,100>Quickie"	"say_team **ENEMY USING QUICKFIX**"
+			"<clr:100,100,100>Vacc"	"say_team **ENEMY USING VACCINATOR**"
+		}
+		"[Hashtags]" {
+			"#ÜbersawIsOverrated"	"say Übersaw is overrated. Change my mind!"
+			"#YERIsUnderrated"	"say YER is under-rated. Diamondback overrated!"
+			"#BonkAtomicPunchIsUnderrated"	"say #BonkAtomicPunchIsUnderrated"
+			"#DualWieldingPyroOP" "say #DualWieldingPyroOP"
+			"#PirateSniperOP" "say #PirateSniperOP"
+		}
+		"Buildings Being Sapped!" "say_team **BUILDINGS BEING SAPPED**"
+		"Light My Arrow!" "say_team Pyro light my arrow!"
+	}
+	"[Warnings]" {
+		"Enemy Über Prepared!"	"say_team **ENEMY ÜBER PREPPED!**"
+		"[Spy {Blank}!]" {
+			"[Scout/Soldier/Pyro]" {
+				"Spy Scout!" "say_team **SPY SCOUT**"
+				"Spy Soldier!" "say_team **SPY SOLDIER**"
+				"Spy Pyro!" "say_team **SPY PYRO**"
+			}
+			"[Demo/Heavy/Engi]" {
+				"Spy Demo!" "say_team **SPY DEMO**"
+				"Spy Heavy!" "say_team **SPY HEAVY**"
+				"Spy Engi!" "say_team **SPY ENGI**"
+			}
+			"[Medic/Sniper/Spy]" {
+				"Spy Medic!" "say_team **SPY MEDIC**"
+				"Spy Sniper!" "say_team **SPY SNIPER**"
+				"Spy Spy!" "say_team **SPY SPY**"
+			}
+		}
+		"Sniper Ahead!" "say_team **SNIPER AHEAD**"
+		"Spy Dead Rang!" "say_team **SPY DEAD RANG**"
+		"Sticky Trap Ahead!"	"say_team **STICKY TRAP AHEAD**"
+	}
+	"[Voicelines]" {
+		"Thanks!" "voicemenu 0 1"
+		"[Warnings]" {
+			"Spy!" "voicemenu 1 1"
+			"Sentry Ahead!" "voicemenu 1 2"
+			"Incoming!"	"voicemenu 1 0"
+		}
+		"[Orders]" {
+			"Go!" "voicemenu 0 2"
+			"[Need Building Loop]" {
+				TOGGLE "<clr:100,255,100>Enable Teleporter Loop" "alias tloop teleporterloop; tloop" "<clr:255,100,100>Disable Teleporter Loop" "alias tloop ;" |
+				TOGGLE "<clr:100,255,100>Enable Dispenser Loop" "alias dloop dispenserloop; dloop" "<clr:255,100,100>Disable Dispenser Loop" "alias dloop ;" |
+				TOGGLE "<clr:100,255,100>Enable Sentry Loop" "alias sloop sentryloop; sloop" "<clr:255,100,100>Disable Sentry Loop" "alias sloop ;" |
+			}
+			"No"	"voicemenu 0 7"
+			"Yes"	"voicemenu 0 6"
+		}
+		"[Non-Text]" {
+			"Battle Cry" "voicemenu 2 1"
+			"Cheers" "voicemenu 2 2"
+			"Jeers" "voicemenu 2 3"	
+		}
+	}
+	"[Commands]" {
+		"[Vanilla]" {
+			"[Loadout]" {
+				"Loadout 1"	"load_itempreset 0"
+				"Loadout 2"	"load_itempreset 1"
+				"Loadout 3"	"load_itempreset 2"
+				"Loadout 4"	"load_itempreset 3"
+			}
+			"[Suicide]" {
+				"Kill" "kill"
+				"Explode" "explode"
+			}
+			"Fixer Upper" "ac.fixme"
+			"retry" "retry"
+		}
+		"[Common]" {
+			"Scramble" "say /vscramble"
+			"Alltalk" "say /valltalk"
+		}
+		"[Specific]" {
+			"[Creators]" {
+				"/contracker" "say /contracker"
+				"/loadout" "say /loadout"
+				"/inventory" "say /inventory"
+				"/profile" "say /profile"
+			}
+			"[Potato]" {
+				"/tour" "say /tour"
+				"/restart" "say /restart"
+				"/bug" "say /bug"
+			}
+		}
+		"[Options]" {
+			TOGGLE "<clr:255,100,100>Disable Text Chat"	"cl_enable_text_chat 0"	"<clr:100,255,100>Enable Text Chat"	"cl_enable_text_chat 1" |
+			TOGGLE "<clr:255,100,100>Disable Voice Chat"	"voice_modenable 0" "<clr:100,255,100>Enable Voice Chat"	"voice_modenable 1" |
+			TOGGLE "<clr:100,255,100>Debug Mode On"	"ac.debug_mode"	"<clr:255,100,100>Debug Mode Off" "ac.debug_mode" | 
+		}
+	}
+	"[Misc]" {
+		"[PSAs]" {
+			"Don't über a heavy." "say ATTENTION ALL MEDICS: Don't über a heavy when pushing."
+			"Don't heal your spy." "say ATTENTION ALL MEDICS: Don't heal your spy, unless if he requests/needs it."
+			"Reserve Health Kits for Medic" "say ATTENTION ALL PLAYERS: Reserve Health kits for your Medic."
+			"Resrerve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer."
+			"Upgrade Your Engi's Buildings!" "say_team ATTENTION TEAM PLAYERS: Upgrade your engi's buildings when free."
+		}
+		"Sry accidental bind." "say Sorry accidental bind."
+	}
+}
