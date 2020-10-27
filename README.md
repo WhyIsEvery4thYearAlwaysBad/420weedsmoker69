@@ -1,3 +1,3 @@
 # 420weedsmoker69
 My TF2 config. Mainly posted this as a back up, but you can download it if you want. NOTE: Please check the advanced options menu! You won't regret it. ;) 
-Also this has it's own custom voice menu you use with the C key.
+Also this has it's own custom voice menu file you use with the C key. To use it you will need to compile 420voicemenu.txt with the [voicemenu generator I have made](https://github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator).
