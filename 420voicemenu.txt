@@ -30,13 +30,22 @@
 	}
 	"[Alerts]" {
 		"[Enemy Info]" {
-			"Enemy Über Prepared!"	"say_team **ENEMY ÜBER PREPPED!**"
-			"[Enemy Running {Medigun}!]" {
-				"<clr:255,100,100>Stock"	"say_team **ENEMY USING STOCK MEDIGUN**"
-				"<clr:210,100,100>Kritz"	"say_team **ENEMY USING KRITZ**"
-				"<clr:150,100,100>Quickie"	"say_team **ENEMY USING QUICKFIX**"
-				"<clr:100,100,100>Vacc"	"say_team **ENEMY USING VACCINATOR**"
+			"[Uber Status]" {
+				"Enemy Über Prepped!"	"say_team **ENEMY ÜBER PREPPED**"
+				"Enemy Über Popped!"	"say_team **ENEMY ÜBER POPPED**"
 			}
+			"[Medigun]" {
+				"Stock"	"say_team **ENEMY USING STOCK MEDIGUN**"
+				"Kritz"	"say_team **ENEMY USING KRITZ**"
+				"Quickie"	"say_team **ENEMY USING QUICKFIX**"
+				"Vacc"	"say_team **ENEMY USING VACCINATOR**"
+			}
+			"[Banner]" {
+				"Buff" "say_team **ENEMY USING BUFF BANNER**"
+				"Battalion's" "say_team **ENEMY USING BATTALIONS**"
+				"Concheror" "say_team **ENEMY USING CONCHEROR**"
+			}
+			"Incoming Flank!" "say_team **INCOMING FLANK**"
 		}
 		"[Enemy Spy]" {
 			"[Scout/Soldier/Pyro]" {
@@ -55,15 +64,23 @@
 				"Spy Spy!" "say_team **SPY SPY**"
 			}
 			"Spy Dead Rang!" "say_team **SPY DEAD RANG**"
-			"YER Spy!" "say_team **YER SPY**"
 		}
-		"Sniper Ahead!" "say_team **SNIPER AHEAD**"
-		"Sticky Trap Ahead!"	"say_team **STICKY TRAP AHEAD**"
+		"[Blank Ahead!]" {
+			"Sniper!" "say_team **SNIPER AHEAD**"
+			"Sticky Trap!"	"say_team **STICKY TRAP AHEAD**"
+			"Sentry Nest!" "say_team **SENTRY NEST AHEAD**"
+			"[Sentry!]" {
+				"1st" "say_team **SENTRY AT 1st**"
+				"2nd" "say_team **SENTRY AT 2nd**"
+				"3rd" "say_team **SENTRY AT 3rd**"
+				"4th" "say_team **SENTRY AT 4th**"
+				"Last" "say_team **SENTRY AT LAST**"
+			}
+		}
 		"Buildings Being Sapped!" "say_team **BUILDINGS BEING SAPPED**"
 	}
 	"[Voicelines]" {
-		"Thanks!" "voicemenu 0 1"
-		"[Warnings]" {
+		"[Alerts]" {
 			"Spy!" "voicemenu 1 1"
 			"Sentry Ahead!" "voicemenu 1 2"
 			"Incoming!"	"voicemenu 1 0"
@@ -78,10 +95,14 @@
 			"No"	"voicemenu 0 7"
 			"Yes"	"voicemenu 0 6"
 		}
-		"[Non-Text]" {
+		"[Battle Cry/Cheers/Jeers]" {
 			"Battle Cry" "voicemenu 2 1"
 			"Cheers" "voicemenu 2 2"
 			"Jeers" "voicemenu 2 3"	
+		}
+		"[Misc]" {
+			"Thanks!" "voicemenu 0 1"
+			"Nice Shot!" "voicemenu 2 6"
 		}
 	}
 	"[Commands]" {
@@ -102,6 +123,10 @@
 		"[Common]" {
 			"Scramble" "say /vscramble"
 			"Alltalk" "say /valltalk"
+			"RTD" "say /rtd"
+			"[VSH]" {
+				"weaponstats" "say /weaponstats"
+			}
 		}
 		"[Specific]" {
 			"[Creators]" {
