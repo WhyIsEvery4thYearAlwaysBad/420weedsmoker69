@@ -1,3 +1,18 @@
+// TODO: Add options for the cvars:
+// ⦁ tf_hud_target_id_show_avatars
+// ⦁ tf_hud_target_id_alpha
+// ⦁ tf_hud_show_servertimelimit
+// ⦁ tf_hud_num_building_alert_beeps
+// ⦁ sv_motd_unload_on_dismissal
+// ⦁ tf_dashboard_slide_time .1
+// ⦁ tf_item_inspect_model_auto_spin 1
+// ⦁ tf_item_inspect_model_spin_rate 30
+// ⦁ tf_healthicon_height_offset 10
+// ⦁ tf_hud_target_id_offset 0
+// ⦁ cl_hud_killstreak_display_alpha 255;cl_hud_killstreak_display_time 2.25
+// ⦁ cl_notifications_move_time
+// ⦁ hud_achievement_description 0;hud_achievement_tracker 0;hud_achievement_count 0;hud_achievement_count_engineer 0
+// ⦁ glow_outline_effect_enable 1;tf_enable_glows_after_respawn 0;tf_spec_xray_disable 1
 VERSION 1.0
 
 DESCRIPTION INFO_OPTIONS
@@ -54,6 +69,13 @@ DESCRIPTION INFO_OPTIONS
 		"Smooth playermodels over this many seconds."
 		{ NUMBER 0.01 2 }
 		{ "0.1" }
+	}
+	"cl_timeout"
+	{
+		"Timeout Length"
+		"After this many seconds without receiving a packet from the server, the client will disconnect itself."
+		{ NUMBER 0 -1 }
+		{ "60" }
 	}
 	"Gameplay"
 	{
@@ -122,6 +144,67 @@ DESCRIPTION INFO_OPTIONS
 		{ SLIDER 54 90 }
 		{ "90" }
 	}
+	"tf_use_min_viewmodels"
+	{
+		"#TF_use_min_viewmodels_option"
+		"#Tooltip_use_min_viewmodels_option"
+		{ BOOL }
+		{ "0" }
+	}
+	"Crosshair"
+	{
+		"Crosshair Settings"
+		{ CATEGORY }
+	}
+	"cl_crosshaircolor"
+	{
+		"Enable crosshair color (RGBA)"
+		"Enables crosshair colors."
+		{ BOOL }
+		{ "1" }
+	}
+	"cl_crosshair_red"
+	{
+		"Red"
+		"Red."
+		{ SLIDER 0 255 }
+		{ "200" }
+	}
+	"cl_crosshair_green"
+	{
+		"Green"
+		"Green"
+		{ SLIDER 0 255 }
+		{ "200" }
+	}
+	"cl_crosshair_blue"
+	{
+		"Alpha"
+		"Alpha."
+		{ SLIDER 0 255 }
+		{ "200" }
+	}
+	"cl_crosshairalpha"
+	{
+		"Blue"
+		"Blue."
+		{ SLIDER 0 255 }
+		{ "200" }
+	}
+	"cl_crosshair_scale"
+	{
+		"Crosshair Scale"
+		"Scale of crosshair."
+		{ NUMBER 0 -1 }
+		{ "32.0" }
+	}
+	"cl_crosshair_file"
+	{
+		"File Path"
+		"Path to crosshair."
+		{ STRING }
+		{ "" }
+	}
 	"Medic"
 	{
 		"Medic Settings"
@@ -169,6 +252,13 @@ DESCRIPTION INFO_OPTIONS
 		{ BOOL }
 		{ "0" }
 	}
+	"zoom_sensitivity_ratio"
+	{
+		"Zoom Sensitivity Ratio"
+		"mouse sensitivity scale factor applied when FOV is zoomed in."
+		{ NUMBER 0 -1 }
+		{ "0.833333333333333333" }
+	}
 	"tf_sniper_fullcharge_bell"
 	{
 		"#TF_sniperbell"
@@ -213,6 +303,20 @@ DESCRIPTION INFO_OPTIONS
 		"#Tooltip_EnableTextChat"
 		{ BOOL }
 		{ "0" }
+	}
+	"tf_chat_popup_hold_time"
+	{
+		"Chat Length"
+		"How long to display chat for."
+		{ NUMBER -1 -1 }
+		{ "5" }
+	}
+	"cl_mute_all_comms"
+	{
+		"Block all muted communications?"
+		"If enabled, all communications from a player will be blocked when that player is muted, including chat messages."
+		{ BOOL }
+		{ "1" }
 	}
 	"chat_filter_settings"
 	{
@@ -427,6 +531,20 @@ DESCRIPTION INFO_OPTIONS
 		"Inventory Settings"
 		{ CATEGORY }
 	}
+	"tf_time_loading_item_panels"
+	{
+		"Item panel loading time."
+		"The time to spend per frame loading data for item panels."
+		{ NUMBER -1 -1 }
+		{ "0.0004" }
+	}
+	"tf_backpack_page_button_delay"
+	{
+		"Page Button Delay"
+		"Amount of time the mouse cursor needs to hover over the page button to select the page."
+		{ NUMBER -1 -1 }
+		{ "0.5" }
+	}
 	"cl_show_market_data_on_items"
 	{
 		"#TF_ShowMarketDataOnItems"
@@ -449,6 +567,13 @@ DESCRIPTION INFO_OPTIONS
 	{
 		"Miscellaneous"
 		{ CATEGORY }
+	}
+	"tf_colorblindassist"
+	{
+		"#TF_colorblindassist"
+		"#Tooltip_colorblindassist"
+		{ BOOL }
+		{ "0" }
 	}
 	"cl_mvm_wave_status_visible_during_wave"
 	{
@@ -504,6 +629,18 @@ DESCRIPTION INFO_OPTIONS
 		"Enable Ragdolls?"
 		{ BOOL }
 		{ "1" }
+	}
+	"cl_ragdoll_physics_enable"
+	{
+		"Enable Ragdoll Physics?"
+		{ BOOL }
+		{ "1" }
+	}
+	"cl_ragdoll_forcefade"
+	{
+		"Force Fading?"
+		{ BOOL }
+		{ "0" }
 	}
 	"cl_ragdoll_fade_time"
 	{
@@ -569,10 +706,41 @@ DESCRIPTION INFO_OPTIONS
 		}
 		{ "1" }
 	}
+	"Misc"
+	{
+		"Miscellaneous"
+		{ CATEGORY }
+	}
+	"mat_software_aa_strength"
+	{
+		"Software Anti-Aliasing Strength"
+		"Software AA - perform a software anti-aliasing post-process (an alternative/supplement to MSAA). This value sets the strength of the effect: (0.0 - off), (1.0 - full)"
+		{ "NUMBER" 0 -1 }
+		{ "-1" }
+	}
+	"mat_software_aa_strength_vgui"
+	{
+		"Software Anti-Aliasing Strength (VGUI)"
+		"Software AA - perform a software anti-aliasing post-process (an alternative/supplement to MSAA). This value sets the strength of the effect: (0.0 - off), (1.0 - full)"
+		{ "NUMBER" 0 -1 }
+		{ "-1" }
+	}
 	"Audio"
 	{
 		"Audio"
 		{ CATEGORY }
+	}
+	"snd_mixahead"
+	{
+		"Mix ahead."
+		{ NUMBER 0 -1 }
+		{ "0.1" }
+	}
+	"snd_legacy_surround"
+	{
+		"Legacy Surround Sound"
+		{ BOOL }
+		{ "0" }
 	}
 	"Hitsound"
 	{
@@ -584,6 +752,13 @@ DESCRIPTION INFO_OPTIONS
 		"#TF_Hitbeeps"
 		"#Tooltip_Hitbeeps"
 		{ BOOL }
+		{ "0" }
+	}
+	"tf_dingalingaling_repeat_delay"
+	{
+		"Repeat Delay"
+		"Desired repeat delay of the hit sound.  Set to 0 to play a sound for every instance of damage dealt."
+		{ NUMBER 0 -1 }
 		{ "0" }
 	}
 	"tf_dingaling_volume"
@@ -743,17 +918,16 @@ DESCRIPTION INFO_OPTIONS
 		{ NUMBER 1 1000 }
 		{ "5" }
 	}
-	"misc"
+	"console"
 	{
-		"Miscellaneous"
+		"Console Settings"
 		{ CATEGORY }
 	}
-	// charinfo
-	"tetsvar"
+	"con_logfile"
 	{
-		"Test Button"
-		"Testing."
-		{ BUTTON }
-		{ "test" }
+		"Log File"
+		"Console output is logged to this file."
+		{ STRING }
+		{ "console.log" }
 	}
 }
