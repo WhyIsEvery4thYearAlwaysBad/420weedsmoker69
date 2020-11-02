@@ -25,6 +25,7 @@
 				"Resrerve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer!"
 				"Upgrade Your Engi's Buildings!" "say_team ATTENTION TEAM PLAYERS: Upgrade your engi's buildings when free!"
 			}
+			"[Leaving Early]" "say I'm leaving early so I can save my ticket."
 		}
 		"Sry accidental bind." "say Sorry accidental bind."
 	}
