@@ -56,20 +56,6 @@ DESCRIPTION INFO_OPTIONS
 		{ NUMBER 0 -1 }
 		{ "1048576" }
 	}
-	"cl_smooth"
-	{
-		"Smoothen Player models?"
-		"Player model positions are smoothed out at the expense of accuracy."
-		{ BOOL }
-		{ "0" }
-	}
-	"cl_smoothtime"
-	{
-		"Smooth Time"
-		"Smooth playermodels over this many seconds."
-		{ NUMBER 0.01 2 }
-		{ "0.1" }
-	}
 	"cl_timeout"
 	{
 		"Timeout Length"
