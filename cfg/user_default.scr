@@ -179,15 +179,15 @@ DESCRIPTION INFO_OPTIONS
 	}
 	"cl_crosshair_blue"
 	{
-		"Alpha"
-		"Alpha."
+		"Blue"
+		"Blue."
 		{ SLIDER 0 255 }
 		{ "200" }
 	}
 	"cl_crosshairalpha"
 	{
-		"Blue"
-		"Blue."
+		"Alpha"
+		"Alpha."
 		{ SLIDER 0 255 }
 		{ "200" }
 	}
