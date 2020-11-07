@@ -583,12 +583,6 @@ DESCRIPTION INFO_OPTIONS
 		"Soundsprays"
 		{ CATEGORY }
 	}
-	"cl_customsounds"
-	{
-		"Enable Soundsprays?"
-		{ BOOL }
-		{ "1" }
-	}
 	"cl_soundfile"
 	{
 		"Soundspray Path"
