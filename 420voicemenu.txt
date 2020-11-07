@@ -88,15 +88,15 @@
 		}
 		"[Orders]" {
 			"Go!" "voicemenu 0 2"
-			"[Need Building Loop]" {
+			"No"	"voicemenu 0 7"
+			"Yes"	"voicemenu 0 6"
+			"[Need Building]" {
 				TOGGLE "<clr:100,255,100>Enable Teleporter Loop" "alias tloop teleporterloop; tloop" "<clr:255,100,100>Disable Teleporter Loop" "alias tloop ;" |
 				TOGGLE "<clr:100,255,100>Enable Dispenser Loop" "alias dloop dispenserloop; dloop" "<clr:255,100,100>Disable Dispenser Loop" "alias dloop ;" |
 				TOGGLE "<clr:100,255,100>Enable Sentry Loop" "alias sloop sentryloop; sloop" "<clr:255,100,100>Disable Sentry Loop" "alias sloop ;" |
 			}
-			"No"	"voicemenu 0 7"
-			"Yes"	"voicemenu 0 6"
 		}
-		"[Battle Cry/Cheers/Jeers]" {
+		"[Battle Cry/Cheers/Jeers/Thanks]" {
 			"Battle Cry" "voicemenu 2 1"
 			"Cheers" "voicemenu 2 2"
 			"Jeers" "voicemenu 2 3"	
