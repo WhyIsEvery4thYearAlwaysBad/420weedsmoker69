@@ -37,8 +37,6 @@ sound\misc\tf_domination.mp3
 sound\misc\tf_domination.wav
 sound\ui\hitsound.wav
 sound\ui\killsound.wav
-sound\ui\mm_match_end_lose_music_casual.wav
-sound\ui\mm_match_end_win_music_casual.wav
 sound\vo\demoman_medic01.mp3
 sound\vo\demoman_medic02.mp3
 sound\vo\demoman_medic03.mp3
