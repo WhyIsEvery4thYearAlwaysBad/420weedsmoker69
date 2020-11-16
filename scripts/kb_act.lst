@@ -83,7 +83,7 @@
 "save_replay"	"#Replay_SaveReplay"
 "abuse_report_queue"			"#AbuseReport_QueueCommandName"
 "quit"			"#Valve_Quit_Game"
-"toggleconsole"	"#Valve_Console_Toggle"
+"switchconsole"	"#Valve_Console_Toggle"
 "askconnect_accept"	"#Valve_Accept_Redirect"
 "cl_trigger_first_notification" "#TF_Notification_Trigger"
 "cl_decline_first_notification" "#TF_Notification_Decline"

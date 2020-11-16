@@ -7,8 +7,8 @@
 	"[Common]" {
 		"[Strategic]" {
 			BIND "Fallback!"	"say_team **FALLBACK! FALLBACK!**" |
-			BIND "Push!"	"say_team **PUSH NOW!**" |
-			BIND "Hold!"	"say_team **HOLD POSITION!**" |
+			BIND "Push!"	"say_team **PUSH! PUSH!**" |
+			BIND "Hold!"	"say_team **HOLD! HOLD!**" |
 		}
 		"[Text Binds]" {
 			"[Hashtags]" {
@@ -46,7 +46,10 @@
 				BIND "Battalion's" "say_team **ENEMY USING BATTALIONS**" |
 				BIND "Concheror" "say_team **ENEMY USING CONCHEROR**" |
 			}
-			BIND "Incoming Flank!" "say_team **INCOMING FLANK**" |
+			"[Strategic]" {
+				BIND "Incoming Flank!" "say_team **INCOMING FLANK**" |
+				BIND "Incoming Push!" "say_team **INCOMING PUSH**" |
+			}
 		}
 		"[Enemy Spy]" {
 			"[Scout/Soldier/Pyro]" {
