@@ -121,7 +121,7 @@
 				BIND "Kill" "kill" |
 				BIND "Explode" "explode" |
 			}
-			BIND "Fixer Upper" "ac.fixme" |
+			BIND "Fixme" "cmd demorestart; snd_restart; cc_lang english; cc_lang _customvoicemenu" |
 			BIND "retry" "retry" |
 		}
 		"[Common]" {
@@ -129,7 +129,7 @@
 			BIND "Alltalk" "say /valltalk" |
 			BIND "RTD" "say /rtd" |
 			"[VSH]" {
-				BIND "weaponstats" "say /weaponstats" |
+				BIND "/weaponstats" "say /weaponstats" |
 			}
 		}
 		"[Specific]" {
@@ -146,9 +146,9 @@
 			}
 		}
 		"[Options]" {
-			TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"cl_enable_text_chat 0"	"<clr:100,255,100>Enable Text Chat"	"cl_enable_text_chat 1" |
-			TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_modenable 0" "<clr:100,255,100>Enable Voice Chat"	"voice_modenable 1" |
-			TOGGLE BIND "<clr:100,255,100>Debug Mode On"	"ac.debug_mode"	"<clr:255,100,100>Debug Mode Off" "ac.debug_mode" | 
+			TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages=off"	"<clr:100,255,100>Enable Text Chat"	"messages=on" |
+			TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_chat=off" "<clr:100,255,100>Enable Voice Chat"	"voice_chat=on" |
+			TOGGLE BIND "<clr:100,255,100>Debug Mode On"	"debug=on"	"<clr:255,100,100>Debug Mode Off" "debug=minimal" | 
 		}
 	}
 }
