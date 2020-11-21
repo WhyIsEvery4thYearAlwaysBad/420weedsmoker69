@@ -7,9 +7,9 @@
 "root" {
 	"[Common]" {
 		"[Strategic]" {
-			BIND "Fallback!"	"say_team **FALLBACK! FALLBACK!**" |
-			BIND "Push!"	"say_team **PUSH! PUSH!**" |
-			BIND "Hold!"	"say_team **HOLD! HOLD!**" |
+			BIND "Fallback!"	"say_team **FALLBACK! FALLBACK!** (BIND)" |
+			BIND "Push!"	"say_team **PUSH! PUSH!** (BIND)" |
+			BIND "Hold!"	"say_team **HOLD! HOLD!** (BIND)" |
 		}
 		"[Text Binds]" {
 			"[Hashtags]" {
@@ -26,63 +26,57 @@
 				BIND "Resrerve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer!" |
 				BIND "Upgrade Your Engi's Buildings!" "say_team ATTENTION TEAM PLAYERS: Upgrade your engi's buildings when free!" |
 			}
-			BIND "[Leaving Early]" "say I'm leaving early so I can save my ticket." |
+			BIND "[Leaving Early]" "say I'm leaving early on the last wave so I can save my ticket." |
 		}
 		BIND "Sry accidental bind." "say Sorry accidental bind." |
 	}
 	"[Alerts]" {
 		"[Enemy Info]" {
 			"[Uber Status]" {
-				BIND "Enemy Über Prepped!"	"say_team **ENEMY ÜBER PREPPED**" |
-				BIND "Enemy Über Popped!"	"say_team **ENEMY ÜBER POPPED**" |
+				BIND "Enemy Über Prepped!"	"say_team **ENEMY ÜBER PREPPED** (BIND)" |
+				BIND "Enemy Über Popped!"	"say_team **ENEMY ÜBER POPPED** (BIND)" |
 			}
 			"[Medigun]" {
-				BIND "Stock"	"say_team **ENEMY USING STOCK MEDIGUN**" |
-				BIND "Kritz"	"say_team **ENEMY USING KRITZ**" |
-				BIND "Quickie"	"say_team **ENEMY USING QUICKFIX**" |
-				BIND "Vacc"	"say_team **ENEMY USING VACCINATOR**" |
+				BIND "Stock"	"say_team **ENEMY USING STOCK MEDIGUN** (BIND)" |
+				BIND "Kritz"	"say_team **ENEMY USING KRITZ** (BIND)" |
+				BIND "Quickie"	"say_team **ENEMY USING QUICKFIX** (BIND)" |
+				BIND "Vacc"	"say_team **ENEMY USING VACCINATOR** (BIND)" |
 			}
 			"[Banner]" {
-				BIND "Buff" "say_team **ENEMY USING BUFF BANNER**" |
-				BIND "Battalion's" "say_team **ENEMY USING BATTALIONS**" |
-				BIND "Concheror" "say_team **ENEMY USING CONCHEROR**" |
+				BIND "Buff" "say_team **ENEMY USE BUFF BANNER** (BIND)" |
+				BIND "Battalion's" "say_team **ENEMY USE BATTALIONS** (BIND)" |
+				BIND "Concheror" "say_team **ENEMY USE CONCH** (BIND)" |
 			}
 			"[Strategic]" {
-				BIND "Incoming Flank!" "say_team **INCOMING FLANK**" |
-				BIND "Incoming Push!" "say_team **INCOMING PUSH**" |
+				BIND "Incoming Flank!" "say_team **INCOMING FLANK** (BIND)" |
+				BIND "Incoming Push!" "say_team **INCOMING PUSH** (BIND)" |
 			}
 		}
 		"[Enemy Spy]" {
 			"[Scout/Soldier/Pyro]" {
-				BIND "Spy Scout!" "say_team **SPY SCOUT**" |
-				BIND "Spy Soldier!" "say_team **SPY SOLDIER**" |
-				BIND "Spy Pyro!" "say_team **SPY PYRO**" |
+				BIND "Spy Scout!" "say_team **SPY SCOUT** (BIND)" |
+				BIND "Spy Soldier!" "say_team **SPY SOLDIER** (BIND)" |
+				BIND "Spy Pyro!" "say_team **SPY PYRO** (BIND)" |
 			}
 			"[Demo/Heavy/Engi]" {
-				BIND "Spy Demo!" "say_team **SPY DEMO**" |
-				BIND "Spy Heavy!" "say_team **SPY HEAVY**" |
-				BIND "Spy Engi!" "say_team **SPY ENGI**" |
+				BIND "Spy Demo!" "say_team **SPY DEMO** (BIND)" |
+				BIND "Spy Heavy!" "say_team **SPY HEAVY** (BIND)" |
+				BIND "Spy Engi!" "say_team **SPY ENGI** (BIND)" |
 			}
 			"[Medic/Sniper/Spy]" {
-				BIND "Spy Medic!" "say_team **SPY MEDIC**" |
-				BIND "Spy Sniper!" "say_team **SPY SNIPER**" |
-				BIND "Spy Spy!" "say_team **SPY SPY**" |
+				BIND "Spy Medic!" "say_team **SPY MEDIC** (BIND)" |
+				BIND "Spy Sniper!" "say_team **SPY SNIPER** (BIND)" |
+				BIND "Spy Spy!" "say_team **SPY SPY** (BIND)" |
 			}
-			BIND "Spy Dead Rang!" "say_team **SPY DEAD RANG**" |
+			BIND "Spy Dead Rang!" "say_team **SPY DEAD RANG** (BIND)" |
 		}
 		"[Blank Ahead!]" {
-			BIND "Sniper!" "say_team **SNIPER AHEAD**" |
-			BIND "Sticky Trap!"	"say_team **STICKY TRAP AHEAD**" |
-			BIND "Sentry Nest!" "say_team **SENTRY NEST AHEAD**" |
-			"[Sentry!]" {
-				BIND "1st" "say_team **SENTRY AT 1st**" |
-				BIND "2nd" "say_team **SENTRY AT 2nd**" |
-				BIND "3rd" "say_team **SENTRY AT 3rd**" |
-				BIND "4th" "say_team **SENTRY AT 4th**" |
-				BIND "Last" "say_team **SENTRY AT LAST**" |
-			}
+			BIND "Sniper!" "say_team **SNIPER AHEAD** (BIND)" |
+			BIND "Sticky Trap!" "say_team **STICKY TRAP AHEAD** (BIND)" |
+			BIND "Sentry Nest!" "say_team **SENTRY NEST AHEAD!** (BIND)" |
+			BIND "Sentry" "say_team **SENTRY AHEAD** (BIND)" |
 		}
-		BIND "Buildings Being Sapped!" "say_team **BUILDINGS BEING SAPPED**" |
+		BIND "Buildings Being Sapped!" "say_team **BUILDINGS BEING SAPPED** (BIND)" |
 	}
 	"[Voicelines]" {
 		"[Alerts]" {
@@ -95,9 +89,14 @@
 			BIND "No"	"voicemenu 0 7" |
 			BIND "Yes"	"voicemenu 0 6" |
 			"[Need Building]" {
+				/* I forgot wait isn't enabled on all servers.
 				TOGGLE BIND "<clr:100,255,100>Enable Teleporter Loop" "alias tloop teleporterloop; tloop" "<clr:255,100,100>Disable Teleporter Loop" "alias tloop ;" |
 				TOGGLE BIND "<clr:100,255,100>Enable Dispenser Loop" "alias dloop dispenserloop; dloop" "<clr:255,100,100>Disable Dispenser Loop" "alias dloop ;" |
 				TOGGLE BIND "<clr:100,255,100>Enable Sentry Loop" "alias sloop sentryloop; sloop" "<clr:255,100,100>Disable Sentry Loop" "alias sloop ;" |
+				*/
+				BIND "Teleporter" "voicemenu 1 3" |
+				BIND "Dispenser" "voicemenu 1 4" |
+				BIND "Sentry" "voicemenu 1 5" |
 			}
 		}
 		"[Battle Cry/Cheers/Jeers/Thanks]" {
@@ -126,9 +125,9 @@
 			BIND "retry" "retry" |
 		}
 		"[Common]" {
-			BIND "Scramble" "say /vscramble" |
-			BIND "Alltalk" "say /valltalk" |
-			BIND "RTD" "say /rtd" |
+			BIND "/vscramble" "say /vscramble" |
+			BIND "/valltalk" "say /valltalk" |
+			BIND "/rtd" "say /rtd" |
 			"[VSH]" {
 				BIND "/weaponstats" "say /weaponstats" |
 			}
