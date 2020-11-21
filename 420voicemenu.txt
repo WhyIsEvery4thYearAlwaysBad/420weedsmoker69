@@ -72,7 +72,7 @@
 				BIND "Spy!" "say_team **SPY SPY** (BIND)" |
 			}
 			BIND "Dead Rang!" "say_team **SPY DEAD RANG** (BIND)" |
-			BIND "Spy!" "say_team **SPY - CHECK YOUR BACKS!** (BIND)"
+			BIND "Spy!" "say_team **SPY - CHECK YOUR BACKS!** (BIND)" |
 		}
 		"[Blank Ahead]" {
 			BIND "Sniper!" "say_team **SNIPER AHEAD** (BIND)" |
