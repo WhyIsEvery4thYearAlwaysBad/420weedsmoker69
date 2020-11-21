@@ -147,9 +147,9 @@
 			}
 		}
 		"[Options]" {
-			TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages=off"	"<clr:100,255,100>Enable Text Chat"	"messages=on" |
-			TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_chat=off" "<clr:100,255,100>Enable Voice Chat"	"voice_chat=on" |
-			TOGGLE BIND "<clr:100,255,100>Debug Mode On"	"debug=on"	"<clr:255,100,100>Debug Mode Off" "debug=minimal" | 
+			TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages=off; messages"	"<clr:100,255,100>Enable Text Chat"	"messages=on; messages" |
+			TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_chat=off; voice_chat " "<clr:100,255,100>Enable Voice Chat"	"voice_chat=on; voice_chat" |
+			TOGGLE BIND "<clr:100,255,100>Debug Mode On"	"debug=on; debug"	"<clr:255,100,100>Debug Mode Off" "debug=minimal; debug" | 
 		}
 	}
 }
