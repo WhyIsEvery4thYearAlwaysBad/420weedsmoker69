@@ -1,9 +1,7 @@
 cfg\antivirus.cfg
 cfg\definitions.cfg
 cfg\demoviewer.cfg
-cfg\listenserver.cfg
 cfg\settings_default.scr
-cfg\universal.cfg
 cfg\user_default.scr
 cfg\user\autoexec.cfg
 cfg\user\demoman.cfg
@@ -15,6 +13,10 @@ cfg\user\scout.cfg
 cfg\user\sniper.cfg
 cfg\user\soldier.cfg
 cfg\user\spy.cfg
+cfg\user\modules.cfg
+cfg\user\game_overrides.cfg
+cfg\config\home.cfg
+cfg\config\school.cfg
 materials\console\background_2fort.vtf
 materials\console\background_2fort_widescreen.vtf
 materials\vgui\logos\pad_etiquette.vmt
