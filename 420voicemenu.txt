@@ -1,4 +1,4 @@
-// Compile with custom voice menu generator.
+// Compile with voicemenu generator.
 #cvm.boldbydefault="true"
 #cvm.italicizebydefault="false"
 #cvm.defaultcolor="<clr:234,209,174>"
@@ -10,16 +10,17 @@
 			BIND "Fallback"	"say_team **FALLBACK! FALLBACK!** (BIND)" |
 			BIND "Push"	"say_team **PUSH! PUSH!** (BIND)" |
 			BIND "Hold"	"say_team **HOLD! HOLD!** (BIND)" |
+			BIND "Flank!"	"say_team **FLANK ENEMY!** (BIND)" |
 		}
 		"[Buildings]" {
 			BIND "Sentry" "say_team **NEED SENTRY** (BIND)" |
 			BIND "Disp" "say_team **NEED DISPENSER** (BIND)" |
 			BIND "Tele" "say_team **NEED TELE** (BIND)" |
-			BIND "Move Up" "say_team **MOVE BUILDS FORWARD** (BIND)" |
-			BIND "Move Back" "say_team **MOVE BUILDS BACK** (BIND)" |
+			BIND "Move Up" "say_team **MOVE BUILDS UP** (BIND)" |
+			BIND "Move Back" "say_team **MOVE BUILDS DOWN** (BIND)" |
 		}
 		"[Chat Binds]" {
-			"[Hashtags]" {
+			"[Meme Binds]" {
 				"[#Overrated]" {
 					BIND "Übersaw" "say #ÜbersawIsOverrated" |
 					BIND "Mad Milk" "say #MadMilkBottleIsOverrated" |
@@ -32,16 +33,17 @@
 				}
 			}
 			"[Bind Talk]" {
-				BIND "Bind Count"	"say I currently have 109 binds. 88 of which are chat binds." |
-				BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenu's which themselves are nested in each other." |
+				BIND "Bind Count"	"say I currently have 117 binds. 96 of which are chat binds." |
+				BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
 				BIND "CVMGen Link" "say Link to the generator: https://github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
 			}
 			"[PSAs]" {
 				"[Medic]" {
 					BIND "Don't über a heavy." "say ATTENTION ALL MEDICS: Don't über a heavy when pushing!" |
 					BIND "Don't heal your spy." "say ATTENTION ALL MEDICS: Don't heal your spy, unless if he requests/needs it!" |
+					BIND "Tell team über." "say ATTENTION ALL MEDICS: Tell your team your über percentage so they can coordinate!" |
 				}
-				BIND "No near übersaw" "say ATTENTION ALL PLAYERS: STAY AWAY FROM THE ÜBERSAW MEDIC! Use your ranged weapon instead. (#ÜbersawIsOverrated)" |
+				BIND "No near übersaw" "say ATTENTION ALL PLAYERS: STAY AWAY FROM THE ÜBERSAW MEDIC! Use your ranged weapon instead." |
 				BIND "Reserve Health Kits for Medic" "say ATTENTION ALL PLAYERS: Reserve Health kits for your Medic!" |
 				BIND "Resrerve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer!" |
 				BIND "Upgrade Your Engi's Buildings!" "say_team ATTENTION TEAM PLAYERS: Upgrade your engi's buildings when free!" |
@@ -53,31 +55,27 @@
 	"[Alerts]" {
 		"[Enemy Info]" {
 			"[Meters]" {
-				"Über" {
-					"10-30" {
+				"[Über]" {
+					"[10-30]" {
 						BIND "10%" "say_team **ENEMY ÜBER 10%** (BIND)" |
 						BIND "20%" "say_team **ENEMY ÜBER 20%** (BIND)" |
 						BIND "30%" "say_team **ENEMY ÜBER 30%** (BIND)" |
 					}
-					"40-60" {
+					"[40-60]" {
 						BIND "40%" "say_team **ENEMY ÜBER 40%** (BIND)" |
 						BIND "50%" "say_team **ENEMY ÜBER 50%** (BIND)" |
 						BIND "60%" "say_team **ENEMY ÜBER 60%** (BIND)" |
 					}
-					"70-90" {
+					"[70-90]" {
 						BIND "70%" "say_team **ENEMY ÜBER 70%** (BIND)" |
 						BIND "80%" "say_team **ENEMY ÜBER 80%** (BIND)" |
 						BIND "90%" "say_team **ENEMY ÜBER 90%** (BIND)" |
 					}
-					BIND "100" "say_team **ENEMY ÜBER PREPPED** (BIND)" |
+					BIND "100%" "say_team **ENEMY ÜBER PREPPED** (BIND)" |
+					BIND "Faked Über!" "say_team **ENEMY FAKED ÜBER** (BIND)" |
 				}
 				BIND "Banner Prepped!" "say_team **ENEMY BANNER PREPPED** (BIND)" |
-				BIND "Phlog Prepped" "say_team **ENEMY PHLOG PREPPED** (BIND)" |
-			}
-			"[Strats]" {
-				BIND "Incoming Flank!" "say_team **INCOMING FLANK** (BIND)" |
-				BIND "Incoming Push!" "say_team **INCOMING PUSH** (BIND)" |
-				BIND "Faked Über!" "say_team **ENEMY FAKED ÜBER** (BIND)" |
+				BIND "Phlog Prepped!" "say_team **ENEMY PHLOG PREPPED** (BIND)" |
 			}
 			"[Builds]" {
 				BIND "Tele" "say_team **ENEMY TELEPORTER UP** (BIND)" |
@@ -85,15 +83,15 @@
 			}
 			"[Medgun/Banner]" {
 				"[Medgun]" {
-					BIND "Stock"	"say_team **ENEMY USE STOCK MEDIGUN** (BIND)" |
+					BIND "Stock"	"say_team **ENEMY USE MEDGUN** (BIND)" |
 					BIND "Kritz"	"say_team **ENEMY USE KRITZ** (BIND)" |
-					BIND "Quickie"	"say_team **ENEMY USE QUICKFIX** (BIND)" |
+					BIND "Quickie"	"say_team **ENEMY USE QUICKIE** (BIND)" |
 					BIND "Vacc" "say_team **ENEMY USE VACC** (BIND)" |
 				}
 				"[Banner]" {
 					BIND "Buff" "say_team **ENEMY USE BUFF BANNER** (BIND)" |
 					BIND "Battalions" "say_team **ENEMY USE BATTALS** (BIND)" |
-					BIND "Conch" "say_team **ENEMY USE BUFF CONCH** (BIND)" |
+					BIND "Conch" "say_team **ENEMY USE CONCH** (BIND)" |
 				}
 			}
 		}
@@ -116,23 +114,37 @@
 			BIND "Dead Rang!" "say_team **SPY DEAD RANG** (BIND)" |
 			BIND "Spy!" "say_team **SPY - CHECK YOUR BACKS!** (BIND)" |
 		}
-		"[Blank Ahead]" {
-			// Temporarily disabling this to see if vague callouts will do.
+		"[Callouts]" {
 			"[Sniper]" {
-				BIND "Spawn" "say_team **SNIPER SPAWN** (BIND)" |
-				BIND "Left" "say_team **SNIPER LEFT** (BIND)" |
 				BIND "Mid" "say_team **SNIPER MID** (BIND)" |
+				BIND "Point" "say_team **SNIPER POINT** (BIND)" |
+				BIND "Left" "say_team **SNIPER LEFT** (BIND)" |
 				BIND "Right" "say_team **SNIPER RIGHT** (BIND)" |
 			}
 			"[Sticky Trap]" {
-				BIND "Spawn" "say_team **STICKY TRAP SPAWN** (BIND)" |
-				BIND "Left" "say_team **STICKY TRAP LEFT** (BIND)" |
 				BIND "Mid" "say_team **STICKY TRAP MID** (BIND)" |
-				BIND "Right" "say_team **STICKY TRAP RIGHT** (BIND)" |
 				BIND "Point" "say_team **STICKY TRAP POINT** (BIND)" |
+				BIND "Left" "say_team **STICKY TRAP LEFT** (BIND)" |
+				BIND "Right" "say_team **STICKY TRAP RIGHT** (BIND)" |
 			}
-			BIND "Sentry Nest!" "say_team **SENTRY NEST AHEAD** (BIND)" |
-			BIND "Sentry!" "say_team **SENTRY AHEAD** (BIND)" |
+			"[Sentry]" {
+				BIND "Mid" "say_team **SENTRY MID** (BIND)" |
+				BIND "Point" "say_team **SENTRY POINT** (BIND)" |
+				BIND "Left" "say_team **SENTRY LEFT** (BIND)" |
+				BIND "Right" "say_team **SENTRY RIGHT** (BIND)" |
+			}
+			"[Push]" {
+				BIND "Mid" "say_team **ENEMY PUSH MID** (BIND)" |
+				BIND "Left" "say_team **ENEMY PUSH LEFT** (BIND)" |
+				BIND "Right" "say_team **ENEMY PUSH RIGHT** (BIND)" |
+			}
+			"[Flank]" {
+				BIND "Left" "say_team **ENEMY FLANKER(S) LEFT** (BIND)" |
+				BIND "Right" "say_team **ENEMY FLANKER(S) RIGHT** (BIND)" |
+				BIND "Up" "say_team **ENEMY FLANKER(S) TOP** (BIND)" |
+				BIND "Down" "say_team **ENEMY FLANKER(S) BOTTOM** (BIND)" |
+				BIND "Back" "say_team **ENEMY FLANKER(S) BACK** (BIND)" |
+			}
 		}
 		BIND "Our Builds Sapped!" "say_team **TEAM BUILDS BEING SAPPED** (BIND)" |
 	}
