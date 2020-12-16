@@ -1,39 +1,29 @@
 // Compile with voicemenu generator.
-#cvm.boldbydefault="true"
-#cvm.italicizebydefault="false"
-#cvm.defaultcolor="<clr:234,209,174>"
-#cvm.predisplay_time="0"
-#cvm.resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9"
+format = "<clr:234,209,174><B>$(nkey). $(str)<B> "
+predisplay_time="0"
+resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9"
 "root" {
 	"[Common]" {
 		"[Strategic]" {
 			BIND "Fallback"	"say_team **FALLBACK! FALLBACK!** (BIND)" |
 			BIND "Push"	"say_team **PUSH! PUSH!** (BIND)" |
 			BIND "Hold"	"say_team **HOLD! HOLD!** (BIND)" |
-			BIND "Flank!"	"say_team **FLANK ENEMY!** (BIND)" |
+			BIND "Flank!"	"say_team Flank the enemy, dimwits! (BIND)" |
 		}
 		"[Buildings]" {
 			BIND "Sentry" "say_team **NEED SENTRY** (BIND)" |
 			BIND "Disp" "say_team **NEED DISPENSER** (BIND)" |
 			BIND "Tele" "say_team **NEED TELE** (BIND)" |
 			BIND "Move Up" "say_team **MOVE BUILDS UP** (BIND)" |
-			BIND "Move Back" "say_team **MOVE BUILDS DOWN** (BIND)" |
 		}
 		"[Chat Binds]" {
-			"[Meme Binds]" {
-				"[#Overrated]" {
-					BIND "Übersaw" "say #ÜbersawIsOverrated" |
-					BIND "Mad Milk" "say #MadMilkBottleIsOverrated" |
-					BIND "Kunai" "say #KunaiIsOverrated" |
-				}
-				"[#Underrated]" {
-					BIND "Bonk" "say #BonkAtomicPunchIsUnderrated" |
-					BIND "Amputator" "say #AmputatorIsUnderrated" |
-					BIND "Red-Tape" "say #RedTapeRecorderIsUnderrated" |
-				}
+			"[Hashtags]" {
+				BIND "Übersaw" "say #ÜbersawIsOverrated" |
+				BIND "Bonk" "say #BonkAtomicPunchIsUnderrated" |
+				BIND "Amp" "say #AmputatorIsUnderrated" |
 			}
 			"[Bind Talk]" {
-				BIND "Bind Count"	"say I currently have 117 binds. 96 of which are chat binds." |
+				BIND "Bind Count"	"say I currently have 136 binds. 115 of which are chat binds." |
 				BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
 				BIND "CVMGen Link" "say Link to the generator: https://github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
 			}
@@ -42,15 +32,19 @@
 					BIND "Don't über a heavy." "say ATTENTION ALL MEDICS: Don't über a heavy when pushing!" |
 					BIND "Don't heal your spy." "say ATTENTION ALL MEDICS: Don't heal your spy, unless if he requests/needs it!" |
 					BIND "Tell team über." "say ATTENTION ALL MEDICS: Tell your team your über percentage so they can coordinate!" |
+					BIND "Amp Spy" "say ATTENTION ALL AMPUTATOR MEDS: Taunt behind a wall to protect yourself from backstabs!" |
 				}
+				"[All]" {
 				BIND "No near übersaw" "say ATTENTION ALL PLAYERS: STAY AWAY FROM THE ÜBERSAW MEDIC! Use your ranged weapon instead." |
 				BIND "Reserve Health Kits for Medic" "say ATTENTION ALL PLAYERS: Reserve Health kits for your Medic!" |
 				BIND "Resrerve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer!" |
+				}
 				BIND "Upgrade Your Engi's Buildings!" "say_team ATTENTION TEAM PLAYERS: Upgrade your engi's buildings when free!" |
+				TOGGLE BIND "Let RTR sap! (1)" "say_team ATTENTION TEAM PLAYERS: Let enemy buildings sapped by RTR be sapped to death," "Let RTR sap! (2)" "say_team so that the engineer doesn't have access to his buildings." |
 			}
 			BIND "Leaving Early" "say I'm leaving early on the last wave so I can save my ticket." |
 		}
-		BIND "False Alarm" "say Sry false alarm." |
+		BIND "Accidental Bind" "say oops accidental bind." |
 	}
 	"[Alerts]" {
 		"[Enemy Info]" {
@@ -116,33 +110,67 @@
 		}
 		"[Callouts]" {
 			"[Sniper]" {
-				BIND "Mid" "say_team **SNIPER MID** (BIND)" |
-				BIND "Point" "say_team **SNIPER POINT** (BIND)" |
-				BIND "Left" "say_team **SNIPER LEFT** (BIND)" |
-				BIND "Right" "say_team **SNIPER RIGHT** (BIND)" |
+				"[M/P]" {
+					BIND "Mid" "say_team **SNIPER MID** (BIND)" |
+					BIND "Point" "say_team **SNIPER POINT** (BIND)" |
+				}
+				"[L/R]" {
+					BIND "Left" "say_team **SNIPER LEFT** (BIND)" |
+					BIND "Right" "say_team **SNIPER RIGHT** (BIND)" |
+				}
+				"[U/D]" {
+					BIND "Up" "say_team **SNIPER UPPER** (BIND)" |
+					BIND "Down" "say_team **SNIPER LOWER** (BIND)" |
+				}
 			}
 			"[Sticky Trap]" {
-				BIND "Mid" "say_team **STICKY TRAP MID** (BIND)" |
-				BIND "Point" "say_team **STICKY TRAP POINT** (BIND)" |
-				BIND "Left" "say_team **STICKY TRAP LEFT** (BIND)" |
-				BIND "Right" "say_team **STICKY TRAP RIGHT** (BIND)" |
+				"[M/P]" {
+					BIND "Mid" "say_team **STICKY TRAP MID** (BIND)" |
+					BIND "Point" "say_team **STICKY TRAP POINT** (BIND)" |
+				}
+				"[L/R]" {
+					BIND "Left" "say_team **STICKY TRAP LEFT** (BIND)" |
+					BIND "Right" "say_team **STICKY TRAP RIGHT** (BIND)" |
+				}
+				"[U/D]" {
+					BIND "Up" "say_team **STICKY TRAP UPPER** (BIND)" |
+					BIND "Down" "say_team **STICKY TRAP LOWER** (BIND)" |
+				}
 			}
 			"[Sentry]" {
-				BIND "Mid" "say_team **SENTRY MID** (BIND)" |
-				BIND "Point" "say_team **SENTRY POINT** (BIND)" |
-				BIND "Left" "say_team **SENTRY LEFT** (BIND)" |
-				BIND "Right" "say_team **SENTRY RIGHT** (BIND)" |
+				"[M/P]" {
+					BIND "Mid" "say_team **SENTRY MID** (BIND)" |
+					BIND "Point" "say_team **SENTRY POINT** (BIND)" |
+				}
+				"[L/R]" {
+					BIND "Left" "say_team **SENTRY LEFT** (BIND)" |
+					BIND "Right" "say_team **SENTRY RIGHT** (BIND)" |
+				}
+				"[U/D]" {
+					BIND "Up" "say_team **SENTRY UPPER** (BIND)" |
+					BIND "Down" "say_team **SENTRY LOWER** (BIND)" |
+				}
 			}
 			"[Push]" {
 				BIND "Mid" "say_team **ENEMY PUSH MID** (BIND)" |
-				BIND "Left" "say_team **ENEMY PUSH LEFT** (BIND)" |
-				BIND "Right" "say_team **ENEMY PUSH RIGHT** (BIND)" |
+				"[L/R]" {
+					BIND "Left" "say_team **ENEMY PUSH LEFT** (BIND)" |
+					BIND "Right" "say_team **ENEMY PUSH RIGHT** (BIND)" |
+				}
+				"[U/D]" {
+					BIND "Up" "say_team **ENEMY PUSH UPPER** (BIND)" |
+					BIND "Down" "say_team **ENEMY PUSH LOWER** (BIND)" |
+				}
 			}
 			"[Flank]" {
-				BIND "Left" "say_team **ENEMY FLANKER(S) LEFT** (BIND)" |
-				BIND "Right" "say_team **ENEMY FLANKER(S) RIGHT** (BIND)" |
-				BIND "Up" "say_team **ENEMY FLANKER(S) TOP** (BIND)" |
-				BIND "Down" "say_team **ENEMY FLANKER(S) BOTTOM** (BIND)" |
+				"[L/R]" {
+					BIND "Left" "say_team **ENEMY FLANKER(S) LEFT** (BIND)" |
+					BIND "Right" "say_team **ENEMY FLANKER(S) RIGHT** (BIND)" |
+				}
+				"[U/D]" {
+					BIND "Up" "say_team **ENEMY FLANKER(S) UPPER** (BIND)" |
+					BIND "Down" "say_team **ENEMY FLANKER(S) LOWER** (BIND)" |
+				}
 				BIND "Back" "say_team **ENEMY FLANKER(S) BACK** (BIND)" |
 			}
 		}
@@ -150,28 +178,28 @@
 	}
 	"[Voicelines]" {
 		"[Alerts]" {
-			BIND "Spy!" "voicemenu 1 1" |
-			BIND "Sentry Ahead!" "voicemenu 1 2" |
-			BIND "Incoming!"	"voicemenu 1 0" |
+			NOEXIT BIND "Spy!" "voicemenu 1 1" |
+			NOEXIT BIND "Sentry Ahead!" "voicemenu 1 2" |
+			NOEXIT BIND "Incoming!"	"voicemenu 1 0" |
 		}
 		"[Orders]" {
-			BIND "Go!" "voicemenu 0 2" |
-			BIND "No"	"voicemenu 0 7" |
-			BIND "Yes"	"voicemenu 0 6" |
-			"[Need Building]" {
-				BIND "Teleporter" "voicemenu 1 3" |
-				BIND "Dispenser" "voicemenu 1 4" |
-				BIND "Sentry" "voicemenu 1 5" |
+			NOEXIT BIND "Go!" "voicemenu 0 2" |
+			NOEXIT BIND "No"	"voicemenu 0 7" |
+			NOEXIT BIND "Yes"	"voicemenu 0 6" |
+			"[Need Build]" {
+				NOEXIT BIND "Teleporter" "voicemenu 1 3" |
+				NOEXIT BIND "Dispenser" "voicemenu 1 4" |
+				NOEXIT BIND "Sentry" "voicemenu 1 5" |
 			}
 		}
 		"[Battle Cry/Cheers/Jeers/Thanks]" {
-			BIND "Battle Cry" "voicemenu 2 1" |
-			BIND "Cheers" "voicemenu 2 2" |
-			BIND "Jeers" "voicemenu 2 3" |
+			NOEXIT BIND "Battle Cry" "voicemenu 2 1" |
+			NOEXIT BIND "Cheers" "voicemenu 2 2" |
+			NOEXIT BIND "Jeers" "voicemenu 2 3" |
 		}
 		"[Misc]" {
-			BIND "Thanks!" "voicemenu 0 1" |
-			BIND "Nice Shot!" "voicemenu 2 6" |
+			NOEXIT BIND "Thanks!" "voicemenu 0 1" |
+			NOEXIT BIND "Nice Shot!" "voicemenu 2 6" |
 		}
 	}
 	"[Commands]" {
@@ -186,7 +214,7 @@
 				BIND "Kill" "kill" |
 				BIND "Explode" "explode" |
 			}
-			BIND "Fixme" "cmd demorestart; snd_restart; hud_reloadscheme; cc_lang english; cc_lang customvoicemenu" |
+			BIND "fixme" "cmd demorestart; snd_restart; hud_reloadscheme; cc_lang english; cc_lang customvoicemenu; heartbeat" |
 			BIND "retry" "retry" |
 		}
 		"[Common]" {
@@ -215,5 +243,37 @@
 			TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_chat=off; voice_chat " "<clr:100,255,100>Enable Voice Chat"	"voice_chat=on; voice_chat" |
 			TOGGLE BIND "<clr:100,255,100>Debug Mode On"	"debug=on; debug"	"<clr:255,100,100>Debug Mode Off" "debug=minimal; debug" | 
 		}
+	}
+	NOEXIT BIND "[Class Specific]" "ac.cs_page" |
+}
+
+// Class Specific Pages
+"soldier page" {
+	BIND "Banner Ready" "say_team **BANNER PREPPED** (BIND)" |
+}
+"engineer page" {
+	"[Build Up]" {
+		BIND "Teleporter" "say_team Teleporter Up!" |
+		BIND "Dispenser" "say_team Dispenser Up!" |
+	}
+}
+"medic page" {
+	"[Über]" {
+		"[10-30]" {
+			BIND "10%" "say_team **TEAM 10% ÜBER** (BIND)" |
+			BIND "20%" "say_team **TEAM 20% ÜBER** (BIND)" |
+			BIND "30%" "say_team **TEAM 30% ÜBER** (BIND)" |
+		}
+		"[40-60]" {
+			BIND "40%" "say_team **TEAM 40% ÜBER** (BIND)" |
+			BIND "50%" "say_team **TEAM 50% ÜBER** (BIND)" |
+			BIND "60%" "say_team **TEAM 60% ÜBER** (BIND)" |
+		}
+		"[70-90]" {
+			BIND "70%" "say_team **TEAM 70% ÜBER** (BIND)" |
+			BIND "80%" "say_team **TEAM 80% ÜBER** (BIND)" |
+			BIND "90%" "say_team **TEAM 90% ÜBER** (BIND)" |
+		}
+		BIND "100%" "say_team **TEAM ÜBER PREPPED** (BIND)" |
 	}
 }
