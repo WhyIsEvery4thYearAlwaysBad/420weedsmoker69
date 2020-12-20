@@ -9,7 +9,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			BIND "Fallback"	"say_team FALLBACK! FALLBACK! (BIND)" |
 			BIND "Push"	"say_team PUSH! PUSH! (BIND)" |
 			BIND "Hold"	"say_team HOLD! HOLD! (BIND)" |
-			BIND "Flank!"	"say_team Flank the enemy, dimwits! (BIND)" |
+			BIND "Flank!"	"say_team Flank the enemy dimwits! (BIND)" |
 		}
 		"[Buildings]" {
 			BIND "Sentry" "say_team Need a sentry 'ere! (BIND)" |
@@ -20,11 +20,11 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 		"[Chat Binds]" {
 			// NO MORE ÜBERSAW OVERRATED! PLEASE!
 			"[Common]" {
-				BIND "Übersaw cant hit." "say You're not hitting me with the overrated Übersaw mate! (BIND)" |
-				BIND "Annoying Binds" "say Just mute me from the scoreboard. (do tf_scoreboard_mouse_mode 1) (BIND)"
+				BIND "Übersaw cant hit." "say You're not hitting me with the Übersaw mate! (BIND)" |
+				BIND "Annoying Binds" "say Just mute me from the scoreboard. (do tf_scoreboard_mouse_mode 1) (BIND)" |
 			}
 			"[Bind Talk]" {
-				BIND "Bind Count"	"say I currently have 130 binds. 117 of which are chat binds." |
+				BIND "Bind Count"	"say I currently have 131 binds. 118 of which are chat binds." |
 				BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
 				BIND "CVMGen Link" "say Link to the generator: https://github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
 			}
