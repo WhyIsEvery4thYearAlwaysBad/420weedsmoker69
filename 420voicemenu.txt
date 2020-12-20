@@ -1,29 +1,30 @@
 // Compile with voicemenu generator.
 format = "<clr:234,209,174><B>$(nkey). $(str)<B> "
-predisplay_time="0"
-resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9"
+predisplay_time = "0"
+linger_time = "0"
+resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9"
 "root" {
 	"[Common]" {
 		"[Strategic]" {
-			BIND "Fallback"	"say_team **FALLBACK! FALLBACK!** (BIND)" |
-			BIND "Push"	"say_team **PUSH! PUSH!** (BIND)" |
-			BIND "Hold"	"say_team **HOLD! HOLD!** (BIND)" |
+			BIND "Fallback"	"say_team FALLBACK! FALLBACK! (BIND)" |
+			BIND "Push"	"say_team PUSH! PUSH! (BIND)" |
+			BIND "Hold"	"say_team HOLD! HOLD! (BIND)" |
 			BIND "Flank!"	"say_team Flank the enemy, dimwits! (BIND)" |
 		}
 		"[Buildings]" {
-			BIND "Sentry" "say_team **NEED SENTRY** (BIND)" |
-			BIND "Disp" "say_team **NEED DISPENSER** (BIND)" |
-			BIND "Tele" "say_team **NEED TELE** (BIND)" |
-			BIND "Move Up" "say_team **MOVE BUILDS UP** (BIND)" |
+			BIND "Sentry" "say_team Need a sentry 'ere! (BIND)" |
+			BIND "Disp" "say_team Need a dispenser 'ere! (BIND)" |
+			BIND "Tele" "say_team Need a teleporter 'ere! (BIND)" |
+			BIND "Move Up" "say_team Move your buildings UP! (BIND)" |
 		}
 		"[Chat Binds]" {
-			"[Hashtags]" {
-				BIND "Übersaw" "say #ÜbersawIsOverrated" |
-				BIND "Bonk" "say #BonkAtomicPunchIsUnderrated" |
-				BIND "Amp" "say #AmputatorIsUnderrated" |
+			// NO MORE ÜBERSAW OVERRATED! PLEASE!
+			"[Common]" {
+				BIND "Übersaw cant hit." "say You're not hitting me with the overrated Übersaw mate! (BIND)" |
+				BIND "Annoying Binds" "say Just mute me from the scoreboard. (do tf_scoreboard_mouse_mode 1) (BIND)"
 			}
 			"[Bind Talk]" {
-				BIND "Bind Count"	"say I currently have 136 binds. 115 of which are chat binds." |
+				BIND "Bind Count"	"say I currently have 130 binds. 117 of which are chat binds." |
 				BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
 				BIND "CVMGen Link" "say Link to the generator: https://github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
 			}
@@ -35,9 +36,9 @@ resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind
 					BIND "Amp Spy" "say ATTENTION ALL AMPUTATOR MEDS: Taunt behind a wall to protect yourself from backstabs!" |
 				}
 				"[All]" {
-				BIND "No near übersaw" "say ATTENTION ALL PLAYERS: STAY AWAY FROM THE ÜBERSAW MEDIC! Use your ranged weapon instead." |
-				BIND "Reserve Health Kits for Medic" "say ATTENTION ALL PLAYERS: Reserve Health kits for your Medic!" |
-				BIND "Resrerve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer!" |
+					BIND "No near übersaw" "say ATTENTION ALL PLAYERS: STAY AWAY FROM THE ÜBERSAW MEDIC! Use your ranged weapon instead." |
+					BIND "Reserve Health Kits for Medic" "say ATTENTION ALL PLAYERS: Reserve Health kits for your Medic!" |
+					BIND "Resrerve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer!" |
 				}
 				BIND "Upgrade Your Engi's Buildings!" "say_team ATTENTION TEAM PLAYERS: Upgrade your engi's buildings when free!" |
 				TOGGLE BIND "Let RTR sap! (1)" "say_team ATTENTION TEAM PLAYERS: Let enemy buildings sapped by RTR be sapped to death," "Let RTR sap! (2)" "say_team so that the engineer doesn't have access to his buildings." |
@@ -65,7 +66,7 @@ resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind
 						BIND "80%" "say_team **ENEMY ÜBER 80%** (BIND)" |
 						BIND "90%" "say_team **ENEMY ÜBER 90%** (BIND)" |
 					}
-					BIND "100%" "say_team **ENEMY ÜBER PREPPED** (BIND)" |
+					BIND "100%" "say_team **ENEMY ÜBER 100%** (BIND)" |
 					BIND "Faked Über!" "say_team **ENEMY FAKED ÜBER** (BIND)" |
 				}
 				BIND "Banner Prepped!" "say_team **ENEMY BANNER PREPPED** (BIND)" |
@@ -175,6 +176,26 @@ resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind
 			}
 		}
 		BIND "Our Builds Sapped!" "say_team **TEAM BUILDS BEING SAPPED** (BIND)" |
+		"[Team]" {
+			"[Über]" {
+				"[10-30]" {
+					BIND "10%" "say_team **TEAM ÜBER 10%** (BIND)" |
+					BIND "20%" "say_team **TEAM ÜBER 20%** (BIND)" |
+					BIND "30%" "say_team **TEAM ÜBER 30%** (BIND)" |
+				}
+				"[40-60]" {
+					BIND "40%" "say_team **TEAM ÜBER 40%** (BIND)" |
+					BIND "50%" "say_team **TEAM ÜBER 50%** (BIND)" |
+					BIND "60%" "say_team **TEAM ÜBER 60%** (BIND)" |
+				}
+				"[70-90]" {
+					BIND "70%" "say_team **TEAM ÜBER 70%** (BIND)" |
+					BIND "80%" "say_team **TEAM ÜBER 80%** (BIND)" |
+					BIND "90%" "say_team **TEAM ÜBER 90%** (BIND)" |
+				}
+				BIND "100%" "say_team **TEAM ÜBER 100%** (BIND)" |
+			}
+		}
 	}
 	"[Voicelines]" {
 		"[Alerts]" {
@@ -214,29 +235,17 @@ resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind
 				BIND "Kill" "kill" |
 				BIND "Explode" "explode" |
 			}
-			BIND "fixme" "cmd demorestart; snd_restart; hud_reloadscheme; cc_lang english; cc_lang customvoicemenu; heartbeat" |
-			BIND "retry" "retry" |
-		}
-		"[Common]" {
-			BIND "/vscramble" "say /vscramble" |
-			BIND "/valltalk" "say /valltalk" |
-			BIND "/rtd" "say /rtd" |
-			"[VSH]" {
-				BIND "/weaponstats" "say /weaponstats" |
+			"[Debug]" {
+				BIND "fixme" "cmd demorestart; snd_restart; hud_reloadscheme; heartbeat; cc_lang english; cc_lang customvoicemenu" |
+				BIND "retry" "retry" |
 			}
 		}
-		"[Specific]" {
-			"[Creators]" {
-				BIND "/contracker" "say /contracker" |
-				BIND "/loadout" "say /loadout" |
-				BIND "/inventory" "say /inventory" |
-				BIND "/profile" "say /profile" |
+		"[Game]" {
+			"[Eureka Teleport]" {
+				BIND "Ent" "eureka_teleport 0" |
+				BIND "Exit" "eureka_teleport 1" |
 			}
-			"[Potato]" {
-				BIND "/tour" "say /tour" |
-				BIND "/restart" "say /restart" |
-				BIND "/bug" "say /bug" |
-			}
+			BIND "Fake Über" "voicemenu 1 7; say_team FAKED ÜBER" |
 		}
 		"[Options]" {
 			TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages=off; messages"	"<clr:100,255,100>Enable Text Chat"	"messages=on; messages" |
@@ -249,7 +258,7 @@ resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind
 
 // Class Specific Pages
 "soldier page" {
-	BIND "Banner Ready" "say_team **BANNER PREPPED** (BIND)" |
+	BIND "Banner Ready" "say_team Banner Prepped! (BIND)" |
 }
 "engineer page" {
 	"[Build Up]" {
@@ -258,22 +267,10 @@ resetkeys="bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind
 	}
 }
 "medic page" {
-	"[Über]" {
-		"[10-30]" {
-			BIND "10%" "say_team **TEAM 10% ÜBER** (BIND)" |
-			BIND "20%" "say_team **TEAM 20% ÜBER** (BIND)" |
-			BIND "30%" "say_team **TEAM 30% ÜBER** (BIND)" |
-		}
-		"[40-60]" {
-			BIND "40%" "say_team **TEAM 40% ÜBER** (BIND)" |
-			BIND "50%" "say_team **TEAM 50% ÜBER** (BIND)" |
-			BIND "60%" "say_team **TEAM 60% ÜBER** (BIND)" |
-		}
-		"[70-90]" {
-			BIND "70%" "say_team **TEAM 70% ÜBER** (BIND)" |
-			BIND "80%" "say_team **TEAM 80% ÜBER** (BIND)" |
-			BIND "90%" "say_team **TEAM 90% ÜBER** (BIND)" |
-		}
-		BIND "100%" "say_team **TEAM ÜBER PREPPED** (BIND)" |
+	"[Medgun]" {
+		BIND "Stock" "say_team Going Invuln! (BIND)" |
+		BIND "Quick" "say_team Going Quickfix! (BIND)" |
+		BIND "Kritz" "say_team Going Kritz! (BIND)" |
+		BIND "Vacc" "say_team Going Vacc! (BIND)" |
 	}
 }
