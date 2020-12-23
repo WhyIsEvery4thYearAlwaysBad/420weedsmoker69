@@ -18,13 +18,13 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			BIND "Move Up" "say_team Move your buildings UP! (BIND)" |
 		}
 		"[Chat Binds]" {
-			// NO MORE ÜBERSAW OVERRATED! PLEASE!
+			// NO MORE ÜBERSAW OVERRATED! PLEASE! Actually nvm
 			"[Common]" {
-				BIND "Übersaw cant hit." "say You're not hitting me with the Übersaw mate! (BIND)" |
-				BIND "Annoying Binds" "say Just mute me from the scoreboard. (do tf_scoreboard_mouse_mode 1) (BIND)" |
+				BIND "Übersaw cant hit." "say You're not getting anything with the overrated Übersaw mate! (BIND)" |
+				BIND "Annoying Binds" "say Just mute me from the scoreboard if you hate my binds. (Do tf_scoreboard_mouse_mode 1 or 2 in console) (BIND)" |
 			}
 			"[Bind Talk]" {
-				BIND "Bind Count"	"say I currently have 131 binds. 118 of which are chat binds." |
+				BIND "Bind Count"	"say I currently have 134 binds. 121 of which are chat binds." |
 				BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
 				BIND "CVMGen Link" "say Link to the generator: https://github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
 			}
@@ -247,10 +247,18 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			}
 			BIND "Fake Über" "voicemenu 1 7; say_team FAKED ÜBER" |
 		}
+		"[Server]" {
+			"[Med v. Engi]" {
+				BIND "/zs_perks" "say /zs_perks" |
+			}
+		}
 		"[Options]" {
-			TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages=off; messages"	"<clr:100,255,100>Enable Text Chat"	"messages=on; messages" |
-			TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_chat=off; voice_chat " "<clr:100,255,100>Enable Voice Chat"	"voice_chat=on; voice_chat" |
-			TOGGLE BIND "<clr:100,255,100>Debug Mode On"	"debug=on; debug"	"<clr:255,100,100>Debug Mode Off" "debug=minimal; debug" | 
+			TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages_off"	"<clr:100,255,100>Enable Text Chat"	"messages_on" |
+			TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_chat_off" "<clr:100,255,100>Enable Voice Chat"	"voice_chat_on" |
+			"[Debug]" {
+				TOGGLE BIND "Show FPS" "cl_showfps 2" "Hide FPS" "cl_showfps 0" |
+				TOGGLE BIND "Show net_graph" "net_graph 4" "Hide net_graph" "net_graph 0" |
+			}
 		}
 	}
 	NOEXIT BIND "[Class Specific]" "ac.cs_page" |
