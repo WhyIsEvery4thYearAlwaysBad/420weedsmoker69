@@ -22,11 +22,24 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			"[Common]" {
 				BIND "Übersaw cant hit." "say You're not getting anything with the overrated Übersaw mate! (BIND)" |
 				BIND "Annoying Binds" "say Just mute me from the scoreboard if you hate my binds. (Do tf_scoreboard_mouse_mode 1 or 2 in console) (BIND)" |
+				"[Bind Talk]" {
+					BIND "Bind Count"	"say I currently have 139 binds. 126 of which are chat binds." |
+					BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
+					BIND "CVMGen Link" "say Link to the generator: https://github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
+				}
+				BIND "MiningCraft" "say hEY gOyS iM MOiNInG FoR DOiAmoNDS!!" |
 			}
-			"[Bind Talk]" {
-				BIND "Bind Count"	"say I currently have 134 binds. 121 of which are chat binds." |
-				BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
-				BIND "CVMGen Link" "say Link to the generator: https://github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
+			"[McHeavies]" {
+				"[Ordering]" {
+					BIND "Welcome" "say Welcome to McHeavies, take your order." |
+					BIND "Menu" "say We have Fish Cakes, Sandviches, Snickers, Steaks, and Bananas." |
+					BIND "Ordered" "say Your order will be here in a moment." |
+					BIND "Unsupported Item" "say We do not have that item, please choose something from the menu." |
+				}
+				"[Done]" {
+					BIND "Order Ready" "say Your order is ready." |
+					BIND "Order Again" "say Thank you for ordering McHeavies! Please come again." |
+				}
 			}
 			"[PSAs]" {
 				"[Medic]" {
@@ -43,7 +56,6 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 				BIND "Upgrade Your Engi's Buildings!" "say_team ATTENTION TEAM PLAYERS: Upgrade your engi's buildings when free!" |
 				TOGGLE BIND "Let RTR sap! (1)" "say_team ATTENTION TEAM PLAYERS: Let enemy buildings sapped by RTR be sapped to death," "Let RTR sap! (2)" "say_team so that the engineer doesn't have access to his buildings." |
 			}
-			BIND "Leaving Early" "say I'm leaving early on the last wave so I can save my ticket." |
 		}
 		BIND "Accidental Bind" "say oops accidental bind." |
 	}
