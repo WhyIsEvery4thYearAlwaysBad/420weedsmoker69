@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 "LightmappedGeneric"
 {
 	"$basetexture" "vgui/logos/soundspraycampign"
 	"$translucent" 1
 }
-=======
-"LightmappedGeneric"
-{
-	"$basetexture" "vgui/logos/soundspraycampign"
-	"$translucent" 1
-}
->>>>>>> a6bde281808e2a02960549ab18a962b07a26d594

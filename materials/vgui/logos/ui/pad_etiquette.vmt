@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 "UnlitGeneric"
 {
 	"$basetexture" "Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/custom/420weedsmoker69/sprays/pad_etiquette"
 	"$translucent" 1
 }
-=======
-"UnlitGeneric"
-{
-	"$basetexture" "Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/custom/420weedsmoker69/sprays/pad_etiquette"
-	"$translucent" 1
-}
->>>>>>> a6bde281808e2a02960549ab18a962b07a26d594
