@@ -4,6 +4,7 @@ cfg\demoviewer.cfg
 cfg\settings_default.scr
 cfg\user_default.scr
 cfg\config\home.cfg
+cfg\config\demoview.cfg
 cfg\config\school.cfg
 cfg\user\autoexec.cfg
 cfg\user\demoman.cfg
@@ -29,8 +30,11 @@ materials\vgui\logos\ui\pad_etiquette.vmt
 materials\vgui\logos\ui\soundspraycampign.vmt
 materials\vgui\logos\ui\teleporter_etiquette.vmt
 materials\vgui\logos\ui\mcheaviesad.vmt
+materials\vgui\crosshairs\democrosshair.vmt
+materials\vgui\crosshairs\democrosshair.vtf
+materials\vgui\crosshairs\meleecrosshair.vmt
+materials\vgui\crosshairs\meleecrosshair.vtf
 scripts\kb_act.lst
-scripts\voicecommands.txt
 sound\soundspray.wav
 sound\startuptheme.mp3
 sound\misc\tf_domination.mp3
