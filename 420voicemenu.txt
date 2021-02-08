@@ -7,7 +7,23 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 	"[Common]" {
 		"[Strategic]" {
 			BIND "Fallback"	"say_team FALLBACK! FALLBACK! (BIND)" |
-			BIND "Push"	"say_team PUSH! PUSH! (BIND)" |
+			"[Push]" {
+				BIND "Mid" "say_team PUSH MID (BIND)" |
+				"[L/R]" {
+					BIND "Left" "say_team PUSH LEFT (BIND)" |
+					BIND "Right" "say_team PUSH RIGHT (BIND)" |
+				}
+				"[Upper]" {
+					BIND "Upper" "say_team PUSH UPPER (BIND)" |
+					BIND "Left" "say_team PUSH UPPER LEFT (BIND)" |
+					BIND "Right" "say_team PUSH UPPER RIGHT (BIND)" |
+				}
+				"[Lower]" {
+					BIND "Lower" "say_team PUSH LOWER (BIND)" |
+					BIND "Left" "say_team PUSH LOWER LEFT (BIND)" |
+					BIND "Right" "say_team PUSH LOWER RIGHT (BIND)" |
+				}
+			}
 			BIND "Hold"	"say_team HOLD! HOLD! (BIND)" |
 			BIND "When push?"	"say_team When will we push?" |
 			BIND "Über me!" "say_team Über me medic! (BIND)" |
@@ -31,6 +47,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Scouts! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Scouts! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Scouts! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Scouts! (BIND)" |
 					}
 					"[Soldier]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team Need a Soldier! (BIND)" |
@@ -42,6 +59,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Soldiers! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Soldiers! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Soldiers! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Soldiers! (BIND)" |
 					}
 					"[Pyro]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team Need a Pyro! (BIND)" |
@@ -53,6 +71,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Pyros! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Pyros! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Pyros! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Pyros! (BIND)" |
 					}
 				}
 				"[Dem/Heav/Engi]" {
@@ -66,6 +85,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Demos! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Demos! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Demos! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Demos! (BIND)" |
 					}
 					"[Heavy]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team Need a Heavy! (BIND)" |
@@ -77,6 +97,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Heavies! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Heavies! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Heavies! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Heavies! (BIND)" |
 					}
 					"[Engi]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team Need a Engi! (BIND)" |
@@ -88,6 +109,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Engis! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Engis! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Engis! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Engis! (BIND)" |
 					}
 				}
 				"[Med/Sniper/Spy]" {
@@ -101,6 +123,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Meds! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Meds! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Meds! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Meds! (BIND)" |
 					}
 					"[Sniper]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team Need a Sniper! (BIND)" |
@@ -112,6 +135,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Snipers! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Snipers! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Snipers! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Snipers! (BIND)" |
 					}
 					"[Spy]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team Need a Spy! (BIND)" |
@@ -123,6 +147,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team Need 7 Spies! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 8 Spies! (BIND)" |
 						NOFORMAT BIND " " "say_team Need 9 Spies! (BIND)" |
+						NOFORMAT BIND " " "say_team Need no Spies! (BIND)" |
 					}
 				}
 			}
@@ -134,10 +159,10 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			}
 		}
 		"[Chat Binds]" {
-			// NO MORE ÜBERSAW OVERRATED! PLEASE! SERIOUSLY YOU'LL GET HATED MORE IF YOU KEEP SPAMMING "ÜBERSAW OVERRATED" BINDS!
+			// NO MORE ÜBERSAW OVERRATED PLEASE! SERIOUSLY YOU'LL GET HATED MORE IF YOU KEEP SPAMMING "ÜBERSAW OVERRATED" BINDS!
 			"[Common]" {
 				"[Bind Talk]" {
-					BIND "Bind Count"	"say I currently have 530 binds. 492 of which are chat binds." |
+					BIND "Bind Count"	"say I currently have 1004 binds. 966 of which are chat binds." |
 					BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
 					BIND "CVMGen Link" "say Link to the generator: github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
 					BIND "Annoying Binds" "say Just mute me from the scoreboard if you hate my binds. (Do tf_scoreboard_mouse_mode 1 or 2 in console to do so) (BIND)" |
@@ -181,6 +206,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 10% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 10% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 10% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 10% (BIND)" |
 						}
 						"[20%]" {
 							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 20% (BIND)" |
@@ -192,6 +218,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 20% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 20% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 20% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 20% (BIND)" |
 						}
 						"[30%]" {
 							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 30% (BIND)" |
@@ -203,6 +230,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 30% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 30% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 30% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 30% (BIND)" |
 						}
 					}
 					"[40-60]" {
@@ -216,6 +244,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 40% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 40% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 40% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 40% (BIND)" |
 						}
 						"[50%]" {
 							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 50% (BIND)" |
@@ -227,6 +256,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 50% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 50% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 50% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 50% (BIND)" |
 						}
 						"[60%]" {
 							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 60% (BIND)" |
@@ -238,6 +268,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 60% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 60% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 60% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 60% (BIND)" |
 						}
 					}
 					"[70-90]" {
@@ -251,6 +282,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 70% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 70% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 70% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 70% (BIND)" |
 						}
 						"[80%]" {
 							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 80% (BIND)" |
@@ -262,6 +294,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 80% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 80% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 80% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 80% (BIND)" |
 						}
 						"[90%]" {
 							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 90% (BIND)" |
@@ -273,6 +306,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 90% (BIND)" |
 							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 90% (BIND)" |
 							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 90% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 90% (BIND)" |
 						}
 					}
 					"[100%]" {
@@ -285,6 +319,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 100% (BIND)" |
 						NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 100% (BIND)" |
 						NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 100% (BIND)" |
+						NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 100% (BIND)" |
 					}
 					BIND "Faked Über!" "say_team ENEMY FAKED ÜBER (BIND)" |
 				}
@@ -307,6 +342,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team ENEMY RUN 7 INVULN (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 8 INVULN (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 9 INVULN (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN NO INVULN (BIND)" |
 					}
 					"[Kritz]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY RUN 1 KRITZ (BIND)" |
@@ -318,6 +354,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team ENEMY RUN 7 KRITZ (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 8 KRITZ (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 9 KRITZ (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN NO KRITZ (BIND)" |
 					}
 					"[Quickie]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY RUN 1 QUICKIE (BIND)" |
@@ -329,6 +366,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team ENEMY RUN 7 QUICKIE (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 8 QUICKIE (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 9 QUICKIE (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN NO QUICKIE (BIND)" |
 					}
 					"[Vacc]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY RUN 1 VACC (BIND)" |
@@ -340,6 +378,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team ENEMY RUN 7 VACCS (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 8 VACCS (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 9 VACCS (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN NO VACCS (BIND)" |
 					}
 					BIND "None" "say_team ENEMY RUN NO MEDIGUNS (BIND)" |
 				}
@@ -354,6 +393,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team ENEMY RUN 7 BUFF BANNERS (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 8 BUFF BANNERS (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 9 BUFF BANNERS (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN NO BUFF BANNERS (BIND)" |
 					}
 					"[Battals]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY RUN BATTALS (BIND)" |
@@ -365,33 +405,21 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team ENEMY RUN 7 BATTALS (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 8 BATTALS (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 9 BATTALS (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN NO BATTALS (BIND)" |
 					}
 					"[Conch]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY RUN CONCH (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 2 CONCHES (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 3 CONCHES (BIND)" |
 						NOFORMAT BIND " " "say_team ENEMY RUN 4 CONCHES (BIND)" |
-						NOFORMAT BIND " " "say_team ENEMY RUN 5 CONCH (BIND)" |
-						NOFORMAT BIND " " "say_team ENEMY RUN 6 CONCH (BIND)" |
-						NOFORMAT BIND " " "say_team ENEMY RUN 7 CONCH (BIND)" |
-						NOFORMAT BIND " " "say_team ENEMY RUN 8 CONCH (BIND)" |
-						NOFORMAT BIND " " "say_team ENEMY RUN 9 CONCH (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN 5 CONCHES (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN 6 CONCHES (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN 7 CONCHES (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN 8 CONCHES (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN 9 CONCHES (BIND)" |
+						NOFORMAT BIND " " "say_team ENEMY RUN NO CONCHES (BIND)" |
 					}
 					BIND "None" "say_team ENEMY RUN NO BANNERS (BIND)" |
-				}
-			}
-			"[Builds]" {
-				"[Tele]" {
-					BIND "Up" "say_team ENEMY TELE UP (BIND)" |
-					BIND "Down" "say_team ENEMY TELE DOWN (BIND)" |
-				}
-				"[Disp]" {
-					BIND "Up" "say_team ENEMY DISPENSER UP (BIND)" |
-					BIND "Down" "say_team ENEMY DISPENSER DOWN (BIND)" |
-				}
-				"[Sentry]" {
-					BIND "Up" "say_team ENEMY SENTRY UP (BIND)" |
-					BIND "Down" "say_team ENEMY SENTRY DOWN (BIND)" |
 				}
 			}
 		}
@@ -427,6 +455,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 SNIPERS MID (BIND)" |
 						NOFORMAT BIND " " "say_team 8 SNIPERS MID (BIND)" |
 						NOFORMAT BIND " " "say_team 9 SNIPERS MID (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS MID (BIND)" |
 					}
 					"[Point]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team SNIPER POINT (BIND)" |
@@ -438,6 +467,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 SNIPERS POINT (BIND)" |
 						NOFORMAT BIND " " "say_team 8 SNIPERS POINT (BIND)" |
 						NOFORMAT BIND " " "say_team 9 SNIPERS POINT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS POINT (BIND)" |
 					}
 				}
 				"[L/R]" {
@@ -451,6 +481,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 SNIPERS LEFT (BIND)" |
 						NOFORMAT BIND " " "say_team 8 SNIPERS LEFT (BIND)" |
 						NOFORMAT BIND " " "say_team 9 SNIPERS LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS LEFT (BIND)" |
 					}
 					"[Right]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team SNIPER RIGHT (BIND)" |
@@ -462,9 +493,10 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 SNIPERS RIGHT (BIND)" |
 						NOFORMAT BIND " " "say_team 8 SNIPERS RIGHT (BIND)" |
 						NOFORMAT BIND " " "say_team 9 SNIPERS RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS RIGHT (BIND)" |
 					}
 				}
-				"[U/D]" {
+				"[Up]" {
 					"[Up]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team SNIPER UPPER (BIND)" |
 						NOFORMAT BIND " " "say_team 2 SNIPERS UPPER (BIND)" |
@@ -475,8 +507,35 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 SNIPERS UPPER (BIND)" |
 						NOFORMAT BIND " " "say_team 8 SNIPERS UPPER (BIND)" |
 						NOFORMAT BIND " " "say_team 9 SNIPERS UPPER (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS UPPER (BIND)" |
 					}
-					"[Down]" {
+					"[Left]" {
+						NOFORMAT BIND "<B>How many?<B>" "say_team SNIPER UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 2 SNIPERS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 3 SNIPERS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 4 SNIPERS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 5 SNIPERS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 6 SNIPERS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 7 SNIPERS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 8 SNIPERS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 9 SNIPERS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS UPPER LEFT (BIND)" |
+					}
+					"[Right]" {
+						NOFORMAT BIND "<B>How many?<B>" "say_team SNIPER UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 2 SNIPERS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 3 SNIPERS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 4 SNIPERS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 5 SNIPERS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 6 SNIPERS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 7 SNIPERS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 8 SNIPERS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 9 SNIPERS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS UPPER RIGHT (BIND)" |
+					}
+				}
+				"[Lower]" {
+					"[Lower]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team SNIPER LOWER (BIND)" |
 						NOFORMAT BIND " " "say_team 2 SNIPERS LOWER (BIND)" |
 						NOFORMAT BIND " " "say_team 3 SNIPERS LOWER (BIND)" |
@@ -486,6 +545,31 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 SNIPERS LOWER (BIND)" |
 						NOFORMAT BIND " " "say_team 8 SNIPERS LOWER (BIND)" |
 						NOFORMAT BIND " " "say_team 9 SNIPERS LOWER (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS LOWER (BIND)" |
+					}
+					"[Left]" {
+						NOFORMAT BIND "<B>How many?<B>" "say_team SNIPER LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 2 SNIPERS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 3 SNIPERS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 4 SNIPERS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 5 SNIPERS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 6 SNIPERS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 7 SNIPERS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 8 SNIPERS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 9 SNIPERS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS LOWER LEFT (BIND)" |
+					}
+					"[Right]" {
+						NOFORMAT BIND "<B>How many?<B>" "say_team SNIPER LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 2 SNIPERS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 3 SNIPERS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 4 SNIPERS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 5 SNIPERS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 6 SNIPERS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 7 SNIPERS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 8 SNIPERS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 9 SNIPERS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 SNIPERS LOWER RIGHT (BIND)" |
 					}
 				}
 			}
@@ -501,6 +585,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 STICKY TRAPS MID (BIND)" |
 						NOFORMAT BIND " " "say_team 8 STICKY TRAPS MID (BIND)" |
 						NOFORMAT BIND " " "say_team 9 STICKY TRAPS MID (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS MID (BIND)" |
 					}
 					"[Point]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team STICKY TRAP POINT (BIND)" |
@@ -512,6 +597,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 STICKY TRAPS POINT (BIND)" |
 						NOFORMAT BIND " " "say_team 8 STICKY TRAPS POINT (BIND)" |
 						NOFORMAT BIND " " "say_team 9 STICKY TRAPS POINT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS POINT (BIND)" |
 					}
 				}
 				"[L/R]" {
@@ -525,6 +611,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 STICKY TRAPS LEFT (BIND)" |
 						NOFORMAT BIND " " "say_team 8 STICKY TRAPS LEFT (BIND)" |
 						NOFORMAT BIND " " "say_team 9 STICKY TRAPS LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS LEFT (BIND)" |
 					}
 					"[Right]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team STICKY TRAP RIGHT (BIND)" |
@@ -536,9 +623,10 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 STICKY TRAPS RIGHT (BIND)" |
 						NOFORMAT BIND " " "say_team 8 STICKY TRAPS RIGHT (BIND)" |
 						NOFORMAT BIND " " "say_team 9 STICKY TRAPS RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS RIGHT (BIND)" |
 					}
 				}
-				"[U/D]" {
+				"[Up]" {
 					"[Up]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team STICKY TRAP UPPER (BIND)" |
 						NOFORMAT BIND " " "say_team 2 STICKY TRAPS UPPER (BIND)" |
@@ -549,7 +637,34 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 STICKY TRAPS UPPER (BIND)" |
 						NOFORMAT BIND " " "say_team 8 STICKY TRAPS UPPER (BIND)" |
 						NOFORMAT BIND " " "say_team 9 STICKY TRAPS UPPER (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS UPPER (BIND)" |
 					}
+					"[Left]" {
+						NOFORMAT BIND "<B>How many?<B>" "say_team STICKY TRAP UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 2 STICKY TRAPS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 3 STICKY TRAPS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 4 STICKY TRAPS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 5 STICKY TRAPS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 6 STICKY TRAPS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 7 STICKY TRAPS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 8 STICKY TRAPS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 9 STICKY TRAPS UPPER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS UPPER LEFT (BIND)" |
+					}
+					"[Right]" {
+						NOFORMAT BIND "<B>How many?<B>" "say_team STICKY TRAP UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 2 STICKY TRAPS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 3 STICKY TRAPS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 4 STICKY TRAPS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 5 STICKY TRAPS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 6 STICKY TRAPS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 7 STICKY TRAPS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 8 STICKY TRAPS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 9 STICKY TRAPS UPPER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS UPPER RIGHT (BIND)" |
+					}
+				}
+				"[Down]" {
 					"[Down]" {
 						NOFORMAT BIND "<B>How many?<B>" "say_team STICKY TRAP LOWER (BIND)" |
 						NOFORMAT BIND " " "say_team 2 STICKY TRAPS LOWER (BIND)" |
@@ -560,80 +675,553 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						NOFORMAT BIND " " "say_team 7 STICKY TRAPS LOWER (BIND)" |
 						NOFORMAT BIND " " "say_team 8 STICKY TRAPS LOWER (BIND)" |
 						NOFORMAT BIND " " "say_team 9 STICKY TRAPS LOWER (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS LOWER (BIND)" |
+					}
+					"[Left]" {
+						NOFORMAT BIND "<B>How many?<B>" "say_team STICKY TRAP LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 2 STICKY TRAPS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 3 STICKY TRAPS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 4 STICKY TRAPS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 5 STICKY TRAPS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 6 STICKY TRAPS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 7 STICKY TRAPS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 8 STICKY TRAPS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 9 STICKY TRAPS LOWER LEFT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS LOWER LEFT (BIND)" |
+					}
+					"[Right]" {
+						NOFORMAT BIND "<B>How many?<B>" "say_team STICKY TRAP LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 2 STICKY TRAPS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 3 STICKY TRAPS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 4 STICKY TRAPS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 5 STICKY TRAPS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 6 STICKY TRAPS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 7 STICKY TRAPS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 8 STICKY TRAPS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 9 STICKY TRAPS LOWER RIGHT (BIND)" |
+						NOFORMAT BIND " " "say_team 0 STICKY TRAPS LOWER RIGHT (BIND)" |
 					}
 				}
 			}
-			"[Sentry]" {
-				"[M/P]" {
-					"[Mid]" {
-						NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY MID (BIND)" |
-						NOFORMAT BIND " " "say_team 2 SENTRIES MID (BIND)" |
-						NOFORMAT BIND " " "say_team 3 SENTRIES MID (BIND)" |
-						NOFORMAT BIND " " "say_team 4 SENTRIES MID (BIND)" |
-						NOFORMAT BIND " " "say_team 5 SENTRIES MID (BIND)" |
-						NOFORMAT BIND " " "say_team 6 SENTRIES MID (BIND)" |
-						NOFORMAT BIND " " "say_team 7 SENTRIES MID (BIND)" |
-						NOFORMAT BIND " " "say_team 8 SENTRIES MID (BIND)" |
-						NOFORMAT BIND " " "say_team 9 SENTRIES MID (BIND)" |
+			"[Builds]" {
+				"[Tele]" {
+					"[M/P]" {
+						"[Mid]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE MID (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES MID (BIND)" |
+						}
+						"[Point]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES POINT (BIND)" |
+						}
 					}
-					"[Point]" {
-						NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY POINT (BIND)" |
-						NOFORMAT BIND " " "say_team 2 SENTRIES POINT (BIND)" |
-						NOFORMAT BIND " " "say_team 3 SENTRIES POINT (BIND)" |
-						NOFORMAT BIND " " "say_team 4 SENTRIES POINT (BIND)" |
-						NOFORMAT BIND " " "say_team 5 SENTRIES POINT (BIND)" |
-						NOFORMAT BIND " " "say_team 6 SENTRIES POINT (BIND)" |
-						NOFORMAT BIND " " "say_team 7 SENTRIES POINT (BIND)" |
-						NOFORMAT BIND " " "say_team 8 SENTRIES POINT (BIND)" |
-						NOFORMAT BIND " " "say_team 9 SENTRIES POINT (BIND)" |
+					"[L/R]" {
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES LEFTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES LEFTSIDE (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES RIGHTSIDE (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES RIGHTSIDE (BIND)" |
+						}
 					}
-				}
-				"[L/R]" {
-					"[Left]" {
-						NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LEFT (BIND)" |
-						NOFORMAT BIND " " "say_team 2 SENTRIES LEFT (BIND)" |
-						NOFORMAT BIND " " "say_team 3 SENTRIES LEFT (BIND)" |
-						NOFORMAT BIND " " "say_team 4 SENTRIES LEFT (BIND)" |
-						NOFORMAT BIND " " "say_team 5 SENTRIES LEFT (BIND)" |
-						NOFORMAT BIND " " "say_team 6 SENTRIES LEFT (BIND)" |
-						NOFORMAT BIND " " "say_team 7 SENTRIES LEFT (BIND)" |
-						NOFORMAT BIND " " "say_team 8 SENTRIES LEFT (BIND)" |
-						NOFORMAT BIND " " "say_team 9 SENTRIES LEFT (BIND)" |
-					}
-					"[Right]" {
-						NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY RIGHT (BIND)" |
-						NOFORMAT BIND " " "say_team 2 SENTRIES RIGHT (BIND)" |
-						NOFORMAT BIND " " "say_team 3 SENTRIES RIGHT (BIND)" |
-						NOFORMAT BIND " " "say_team 4 SENTRIES RIGHT (BIND)" |
-						NOFORMAT BIND " " "say_team 5 SENTRIES RIGHT (BIND)" |
-						NOFORMAT BIND " " "say_team 6 SENTRIES RIGHT (BIND)" |
-						NOFORMAT BIND " " "say_team 7 SENTRIES RIGHT (BIND)" |
-						NOFORMAT BIND " " "say_team 8 SENTRIES RIGHT (BIND)" |
-						NOFORMAT BIND " " "say_team 9 SENTRIES RIGHT (BIND)" |
-					}
-				}
-				"[U/D]" {
 					"[Up]" {
-						NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY UPPER (BIND)" |
-						NOFORMAT BIND " " "say_team 2 SENTRIES UPPER (BIND)" |
-						NOFORMAT BIND " " "say_team 3 SENTRIES UPPER (BIND)" |
-						NOFORMAT BIND " " "say_team 4 SENTRIES UPPER (BIND)" |
-						NOFORMAT BIND " " "say_team 5 SENTRIES UPPER (BIND)" |
-						NOFORMAT BIND " " "say_team 6 SENTRIES UPPER (BIND)" |
-						NOFORMAT BIND " " "say_team 7 SENTRIES UPPER (BIND)" |
-						NOFORMAT BIND " " "say_team 8 SENTRIES UPPER (BIND)" |
-						NOFORMAT BIND " " "say_team 9 SENTRIES UPPER (BIND)" |
+						"[Up]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES UPPER (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES UPPER LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES UPPER RIGHT (BIND)" |
+						}
 					}
-					"[Down]" {
-						NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LOWER (BIND)" |
-						NOFORMAT BIND " " "say_team 2 SENTRIES LOWER (BIND)" |
-						NOFORMAT BIND " " "say_team 3 SENTRIES LOWER (BIND)" |
-						NOFORMAT BIND " " "say_team 4 SENTRIES LOWER (BIND)" |
-						NOFORMAT BIND " " "say_team 5 SENTRIES LOWER (BIND)" |
-						NOFORMAT BIND " " "say_team 6 SENTRIES LOWER (BIND)" |
-						NOFORMAT BIND " " "say_team 7 SENTRIES LOWER (BIND)" |
-						NOFORMAT BIND " " "say_team 8 SENTRIES LOWER (BIND)" |
-						NOFORMAT BIND " " "say_team 9 SENTRIES LOWER (BIND)" |
+					"[Low]" {
+						"[Low]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES LOWER (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES LOWER LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY TELE LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY TELES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY TELES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY TELES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY TELES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY TELES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY TELES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY TELES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY TELES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY TELES LOWER RIGHT (BIND)" |
+						}
+					}
+				}
+				"[Dispenser]" {
+					"[M/P]" {
+						"[Mid]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER MID (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS MID (BIND)" |
+						}
+						"[Point]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS POINT (BIND)" |
+						}
+					}
+					"[L/R]" {
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS RIGHT (BIND)" |
+						}
+					}
+					"[Up]" {
+						"[Up]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS UPPER (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS RIGHT (BIND)" |
+						}
+					}
+					"[Low]" {
+						"[Low]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS LOWER (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS LOWER LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team ENEMY DISPENSER LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY DISPENSERS LOWER RIGHT (BIND)" |
+						}
+					}
+				}
+				"[Sentry]" {
+					"[M/P]" {
+						"[Mid]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY MID (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES MID (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES MID (BIND)" |
+						}
+						"[Point]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES POINT (BIND)" |
+						}
+					}
+					"[L/R]" {
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES RIGHT (BIND)" |
+						}
+					}
+					"[Up]" {
+						"[Up]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES UPPER (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES UPPER LEFT (BIND)" |
+						}	
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES UPPER RIGHT (BIND)" |
+						}	
+					}
+					"[Low]" {
+						"[Low]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES LOWER (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES LOWER LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SENTRIES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SENTRIES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SENTRIES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SENTRIES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SENTRIES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SENTRIES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SENTRIES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SENTRIES LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SENTRIES LOWER RIGHT (BIND)" |
+						}
+					}
+				}
+				"[Nest]" {
+					"[M/P]" {
+						"[Mid]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SEN NEST MID (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS MID (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS MID (BIND)" |
+						}
+						"[Point]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SEN NEST POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS POINT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS POINT (BIND)" |
+						}
+					}
+					"[L/R]" {
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SEN NEST LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SEN NEST RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS RIGHT (BIND)" |
+						}
+					}
+					"[Up]" {
+						"[Up]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SEN NEST UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS UPPER (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS UPPER (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SEN NEST UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS UPPER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS UPPER LEFT (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SEN NEST UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS UPPER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS UPPER RIGHT (BIND)" |
+						}
+					}
+					"[Low]" {
+						"[Low]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS LOWER (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS LOWER (BIND)" |
+						}
+						"[Left]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS LOWER LEFT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS LOWER LEFT (BIND)" |
+						}
+						"[Right]" {
+							NOFORMAT BIND "<B>How many?<B>" "say_team SENTRY LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 2 SEN NESTS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 3 SEN NESTS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 4 SEN NESTS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 5 SEN NESTS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 6 SEN NESTS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 7 SEN NESTS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 8 SEN NESTS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 9 SEN NESTS LOWER RIGHT (BIND)" |
+							NOFORMAT BIND " " "say_team 0 SEN NESTS LOWER RIGHT (BIND)" |
+						}
 					}
 				}
 			}
@@ -643,9 +1231,17 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 					BIND "Left" "say_team ENEMY PUSH LEFT (BIND)" |
 					BIND "Right" "say_team ENEMY PUSH RIGHT (BIND)" |
 				}
-				"[U/D]" {
-					BIND "Up" "say_team ENEMY PUSH UPPER (BIND)" |
-					BIND "Down" "say_team ENEMY PUSH LOWER (BIND)" |
+				"[U/L]" {
+					"[Up]" {
+						BIND "Up" "say_team ENEMY PUSH UPPER (BIND)" |
+						BIND "Left" "say_team ENEMY PUSH UPPER LEFT (BIND)" |
+						BIND "Right" "say_team ENEMY PUSH UPPER LEFT (BIND)" |
+					}
+					"[Lower]" {
+						BIND "Lower" "say_team ENEMY PUSH LOWER (BIND)" |
+						BIND "Left" "say_team ENEMY PUSH LOWER LEFT (BIND)" |
+						BIND "Right" "say_team ENEMY PUSH LOWER RIGHT (BIND)" |
+					}
 				}
 			}
 			"[Flank]" {
@@ -653,9 +1249,17 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 					BIND "Left" "say_team ENEMY FLANKER(S) LEFT (BIND)" |
 					BIND "Right" "say_team ENEMY FLANKER(S) RIGHT (BIND)" |
 				}
-				"[U/D]" {
-					BIND "Up" "say_team ENEMY FLANKER(S) UPPER (BIND)" |
-					BIND "Down" "say_team ENEMY FLANKER(S) LOWER (BIND)" |
+				"[U/L]" {
+					"[Up]" {
+						BIND "Up" "say_team ENEMY FLANKER(S) UPPER (BIND)" |
+						BIND "Left" "say_team ENEMY FLANKER(S) UPPER LEFT (BIND)" |
+						BIND "Left" "say_team ENEMY FLANKER(S) UPPER RIGHT (BIND)" |
+					}
+					"[Lower]" {
+						BIND "Lower" "say_team ENEMY FLANKER(S) LOWER (BIND)" |
+						BIND "Left" "say_team ENEMY FLANKER(S) LOWER LEFT (BIND)" |
+						BIND "Right" "say_team ENEMY FLANKER(S) LOWER RIGHT (BIND)" |
+					}
 				}
 				BIND "Back" "say_team ENEMY FLANKER(S) BACK (BIND)" |
 			}
