@@ -195,131 +195,517 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 		"[Info]" {
 			"[Meters]" {
 				"[Über]" {
-					"[10-30]" {
-						"[10%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 10% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 10% (BIND)" |
+					"[Stock]" {
+						"[10-30]" {
+							"[10%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 10% (BIND)" |
+							}
+							"[20%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 20% (BIND)" |
+							}
+							"[30%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 30% (BIND)" |
+							}
 						}
-						"[20%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 20% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 20% (BIND)" |
+						"[40-60]" {
+							"[40%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 40% (BIND)" |
+							}
+							"[50%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 50% (BIND)" |
+							}
+							"[60%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 60% (BIND)" |
+							}
 						}
-						"[30%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 30% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 30% (BIND)" |
+						"[70-90]" {
+							"[70%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 70% (BIND)" |
+							}
+							"[80%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 80% (BIND)" |
+							}
+							"[90%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 90% (BIND)" |
+							}
+						}
+						"[100%]" {
+							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY STOCK ÜBER 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY STOCK ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY STOCK ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY STOCK ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY STOCK ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY STOCK ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY STOCK ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY STOCK ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY STOCK ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY STOCK ÜBERS 100% (BIND)" |
 						}
 					}
-					"[40-60]" {
-						"[40%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 40% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 40% (BIND)" |
+					"[Kritz]" {
+						"[10-30]" {
+							"[10%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 10% (BIND)" |
+							}
+							"[20%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 20% (BIND)" |
+							}
+							"[30%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 30% (BIND)" |
+							}
 						}
-						"[50%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 50% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 50% (BIND)" |
+						"[40-60]" {
+							"[40%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 40% (BIND)" |
+							}
+							"[50%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 50% (BIND)" |
+							}
+							"[60%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 60% (BIND)" |
+							}
 						}
-						"[60%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 60% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 60% (BIND)" |
+						"[70-90]" {
+							"[70%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 70% (BIND)" |
+							}
+							"[80%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 80% (BIND)" |
+							}
+							"[90%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 90% (BIND)" |
+							}
+						}
+						"[100%]" {
+							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY KRITZ ÜBER 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY KRITZ ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY KRITZ ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY KRITZ ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY KRITZ ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY KRITZ ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY KRITZ ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY KRITZ ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY KRITZ ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY KRITZ ÜBERS 100% (BIND)" |
 						}
 					}
-					"[70-90]" {
-						"[70%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 70% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 70% (BIND)" |
+					"[Quick]" {
+						"[10-30]" {
+							"[10%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 10% (BIND)" |
+							}
+							"[20%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 20% (BIND)" |
+							}
+							"[30%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 30% (BIND)" |
+							}
 						}
-						"[80%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 80% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 80% (BIND)" |
+						"[40-60]" {
+							"[40%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 40% (BIND)" |
+							}
+							"[50%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 50% (BIND)" |
+							}
+							"[60%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 60% (BIND)" |
+							}
 						}
-						"[90%]" {
-							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 90% (BIND)" |
-							NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 90% (BIND)" |
+						"[70-90]" {
+							"[70%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 70% (BIND)" |
+							}
+							"[80%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 80% (BIND)" |
+							}
+							"[90%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 90% (BIND)" |
+							}
+						}
+						"[100%]" {
+							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY QUICKIE ÜBER 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY QUICKIE ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY QUICKIE ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY QUICKIE ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY QUICKIE ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY QUICKIE ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY QUICKIE ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY QUICKIE ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY QUICKIE ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY QUICKIE ÜBERS 100% (BIND)" |
 						}
 					}
-					"[100%]" {
-						NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY ÜBER 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 2 ENEMY ÜBERS 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 3 ENEMY ÜBERS 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 4 ENEMY ÜBERS 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 5 ENEMY ÜBERS 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 6 ENEMY ÜBERS 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 7 ENEMY ÜBERS 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 8 ENEMY ÜBERS 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 9 ENEMY ÜBERS 100% (BIND)" |
-						NOFORMAT BIND " " "say_team 0 ENEMY ÜBERS 100% (BIND)" |
+					"[Vacc]" {
+						"[10-30]" {
+							"[10%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 10% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 10% (BIND)" |
+							}
+							"[20%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 20% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 20% (BIND)" |
+							}
+							"[30%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 30% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 30% (BIND)" |
+							}
+						}
+						"[40-60]" {
+							"[40%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 40% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 40% (BIND)" |
+							}
+							"[50%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 50% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 50% (BIND)" |
+							}
+							"[60%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 60% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 60% (BIND)" |
+							}
+						}
+						"[70-90]" {
+							"[70%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 70% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 70% (BIND)" |
+							}
+							"[80%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 80% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 80% (BIND)" |
+							}
+							"[90%]" {
+								NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 90% (BIND)" |
+								NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 90% (BIND)" |
+							}
+						}
+						"[100%]" {
+							NOFORMAT BIND "<B>How many meds?<B>" "say_team 1 ENEMY VACC ÜBER 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 2 ENEMY VACC ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 3 ENEMY VACC ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 4 ENEMY VACC ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 5 ENEMY VACC ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 6 ENEMY VACC ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 7 ENEMY VACC ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 8 ENEMY VACC ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 9 ENEMY VACC ÜBERS 100% (BIND)" |
+							NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 100% (BIND)" |
+						}
 					}
 					BIND "Faked Über!" "say_team ENEMY FAKED ÜBER (BIND)" |
 				}
