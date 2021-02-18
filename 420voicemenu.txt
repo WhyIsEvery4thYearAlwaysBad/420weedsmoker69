@@ -1253,7 +1253,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 					"[Up]" {
 						BIND "Up" "say_team ENEMY FLANKER(S) UPPER (BIND)" |
 						BIND "Left" "say_team ENEMY FLANKER(S) UPPER LEFT (BIND)" |
-						BIND "Left" "say_team ENEMY FLANKER(S) UPPER RIGHT (BIND)" |
+						BIND "Right" "say_team ENEMY FLANKER(S) UPPER RIGHT (BIND)" |
 					}
 					"[Lower]" {
 						BIND "Lower" "say_team ENEMY FLANKER(S) LOWER (BIND)" |
