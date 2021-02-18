@@ -162,6 +162,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			// NO MORE ÜBERSAW OVERRATED PLEASE! SERIOUSLY YOU'LL GET HATED MORE IF YOU KEEP SPAMMING "ÜBERSAW OVERRATED" BINDS!
 			"[Common]" {
 				"[Bind Talk]" {
+					BIND "Bind Count"	"say I currently have 1305 binds. 1266 of which are chat binds." |
 					BIND "Bind Count"	"say I currently have 1004 binds. 966 of which are chat binds." |
 					BIND "CVM Explanation"	"say All of my binds are organized into custom voicemenus which themselves are nested in each other." |
 					BIND "CVMGen Link" "say Link to the generator: github.com/WhyIsEvery4thYearAlwaysBad/VoicemenuGenerator" |
