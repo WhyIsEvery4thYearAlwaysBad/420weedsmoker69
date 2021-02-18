@@ -3,9 +3,8 @@ cfg\definitions.cfg
 cfg\demoviewer.cfg
 cfg\settings_default.scr
 cfg\user_default.scr
-cfg\config\home.cfg
+cfg\config\main.cfg
 cfg\config\demoview.cfg
-cfg\config\school.cfg
 cfg\user\autoexec.cfg
 cfg\user\demoman.cfg
 cfg\user\engineer.cfg
@@ -13,6 +12,7 @@ cfg\user\game_overrides.cfg
 cfg\user\heavyweapons.cfg
 cfg\user\medic.cfg
 cfg\user\modules.cfg
+cfg\user\pre_comfig.cfg
 cfg\user\pyro.cfg
 cfg\user\scout.cfg
 cfg\user\sniper.cfg
