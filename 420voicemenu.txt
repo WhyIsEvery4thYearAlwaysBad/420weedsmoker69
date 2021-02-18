@@ -1306,6 +1306,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			}
 			"[Debug]" {
 				BIND "fixme" "cmd demorestart; snd_restart; hud_reloadscheme; heartbeat; cc_lang english; cc_lang customvoicemenu" |
+				BIND "Reload Hud" "hud_reloadscheme" |
 				BIND "retry" "retry" |
 			}
 		}
