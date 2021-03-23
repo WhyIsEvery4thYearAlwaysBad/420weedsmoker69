@@ -1,6 +1,6 @@
 "LightmappedGeneric"
 {
-	"$basetexture" "vgui/logos/mcheaviesad"
+	"$basetexture" "VGUI/logos/soldierhitground"
 	"$nolod" 1
 	"$translucent" 1
 	"$vertexalpha" 1
