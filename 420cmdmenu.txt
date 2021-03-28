@@ -2774,7 +2774,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 					NOFORMAT BIND "[1]    [5]    [3]<B>" "say_team ENEMY PUSH LOWER (TEAM SIDE) (BIND)" |
 				}
 			}
-			"[X]" {
+			"[Flank]" {
 				NOFORMAT "<clr:234,209,174><B>        [4]      <cr>" {
 					NOFORMAT BIND "<clr:234,209,174><B>How many?<B>" "say_team FLANKER LEFT (BIND)" |
 					NOFORMAT BIND " " "say_team 2 FLANKERS LEFT (BIND)" |
