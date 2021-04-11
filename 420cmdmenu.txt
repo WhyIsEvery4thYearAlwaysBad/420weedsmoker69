@@ -3,6 +3,7 @@ format = "<clr:234,209,174><B>$(nkey). $(str)<B> <cr>"
 predisplay_time = "0"
 linger_time = "0"
 resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9; bind 0 ac.0"
+display = "caption"
 "root" {
 	"[Common]" {
 		"[Strategic]" {
@@ -431,7 +432,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 					BIND "Conch" "say_team Need Concheror! (BIND)" |
 					BIND "None" "say_team Need no Banner! (BIND)" |
 				}
-				BIND "B!AP" "say_team Need Bonk! Atomic Punch scout! (BIND)" |
+				BIND "Bonk!" "say_team Need Bonk! Atomic Punch scout! (BIND)" |
 			}
 			"[Buildings]" {
 				BIND "Sentry" "say_team Need a sentry 'ere! (BIND)" |
@@ -444,11 +445,11 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			// NO MORE ÜBERSAW OVERRATED PLEASE! SERIOUSLY YOU'LL GET HATED MORE IF YOU KEEP SPAMMING "ÜBERSAW OVERRATED" BINDS!
 			"[Common]" {
 				"[Bind Talk]" {
-					BIND "Bind Count"	"say I currently have 2318 effective binds (7 of them are disabled). 2285 of them are chat binds. (BIND)" |
-					BIND "CVM Explanation"	"say All of my binds are organized into nested command menus (voicemenus that run commands) that are displayed to me by captions. (BIND)" |
+					BIND "Bind Count"	"say I currently have 2350 effective binds. 2284 of them are chat binds. (BIND)" |
+					BIND "CMenu Explanation"	"say All of my binds are organized into nested voicemenus that are displayed to me by captions. (BIND)" |
 					"[Generator]" {
-						BIND "CMGen Explanation" "say I made a generator for these command menus because they take so long to make otherwise. (BIND)" |
-						BIND "CMGen Link" "say My command menu generator link: github.com/WhyIsEvery4thYearAlwaysBad/CmdMenuGenerator (copy and paste it) (BIND)" |
+						BIND "CMGen Explanation" "say I made a generator for these bind-voicemenus because they take so long to make otherwise. (BIND)" |
+						BIND "CMGen Link" "say My bind-voicemenu generator link: github.com/WhyIsEvery4thYearAlwaysBad/CmdMenuGenerator (copy and paste it) (BIND)" |
 					}
 					BIND "Annoying Binds" "say Just mute me from the scoreboard if you hate my binds. (Do tf_scoreboard_mouse_mode 1 or 2 in console to do so) (BIND)" |
 				}
@@ -459,7 +460,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						BIND "Other mods" "say Try out some more performance mods located here: docs.mastercomfig.com/en/latest/customization/see_also (copy and paste it) (BIND)" |
 					}
 					"[Frame]" {
-						BIND "Frametime > FPS" "say Frametime is the superior performance metric to frames per second because they give more info. Change my mind! (BIND)" |
+						BIND "Frametime > FPS" "say Frame time is better than frame rate because frame time gives more info. Change my mind! (BIND)" |
 						BIND "Frametime Recommendation" "say I recommend using frametimes/frame pacing instead of frames per second, because they give more granular info. (BIND)" |
 					}
 					"[Network]" {
@@ -468,10 +469,6 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 					}
 				}
 				BIND "MiningCraft" "say hEY gOyS iM MOiNInG FoR DOiAmoNDS!! (BIND)" |
-			}
-			"[Trade]" {
-				BIND "Ham Shank KS Fab" "say Selling Ham Shank KS Fabricator for 8 ref on backpack.tf! (BIND)" |
-				BIND "Radigan Conagher" "say Selling Radigan Conagher Paint for 4 ref on backpack.tf! (BIND)" |
 			}
 			"[PSAs]" {
 				"[Gameplay]" {
@@ -490,7 +487,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 						BIND "Reserve Health Kits for Medic" "say ATTENTION ALL PLAYERS: Reserve Health kits for your Medic! (BIND)" |
 						BIND "Reserve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer! (BIND)" |
 						BIND "Stop staying in sightlines" "say ATTENTION ALL PLAYERS: Stop standing in sniper sightlines if a Sniper is there! Please take cover until it is safe instead! (BIND)" |
-						
+
 					}
 				}
 				"[Options]" {
@@ -1017,14 +1014,17 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 							NOFORMAT BIND " " "say_team 0 ENEMY VACC ÜBERS 100% (BIND)" |
 						}
 					}
-					BIND "Faked Über!" "say_team ENEMY FAKED ÜBER (BIND)" |
+					"[Misc]" {
+						BIND "Faked Über!" "say_team ENEMY FAKED ÜBER! (BIND)" |
+						BIND "Dropped Über!" "say_team ENEMY ÜBER DROPPED! (BIND)" |
+					}
 				}
 				"[Banner Prep]" {
-					BIND "Buf" "say_team ENEMY BUFF BANNER PREPPED (BIND)" |
-					BIND "Bat" "say_team ENEMY BATTALS PREPPED (BIND)" |
-					BIND "Con" "say_team ENEMY CONCH PREPPED (BIND)" |
+					BIND "Buf" "say_team ENEMY BUFF BANNER PREPPED! (BIND)" |
+					BIND "Bat" "say_team ENEMY BATTALS PREPPED! (BIND)" |
+					BIND "Con" "say_team ENEMY CONCH PREPPED! (BIND)" |
 				}
-				BIND "Phlog Prepped!" "say_team ENEMY PHLOG PREPPED (BIND)" |
+				BIND "Phlog Full!" "say_team ENEMY PHLOG METER FULL! (BIND)" |
 			}
 			"[Weapons]"{
 				"[Medgun]" {
@@ -1746,7 +1746,7 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 				}
 			}
 			"[Builds]" {
-				"[X]" {
+				"[Tele]" {
 					NOFORMAT "<clr:234,209,174><B>        [4]      <cr>" {
 						NOFORMAT BIND "<clr:234,209,174><B>How many?<B>" "say_team ENEMY TELE LEFT (BIND)" |
 						NOFORMAT BIND " " "say_team 2 ENEMY TELES LEFT (BIND)" |
@@ -3097,9 +3097,8 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 			}
 		}
 		"[Options]" {
-			NOEXIT TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages_off; exec $cmenu_options"	"<clr:100,255,100>Enable Text Chat"	"messages_on; exec $cmenu_options" |
-			// Disabling this because it's a pain in the ass to reenable through mastercomfig. (By retrying)
-			// NOEXIT TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_chat_off; exec $cmenu_options" "<clr:100,255,100>Enable Voice Chat"	"voice_chat_on; exec $cmenu_options" |
+			NOEXIT TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages_off; exec $cmenu_options"	"<clr:100,255,100>Enable Text Chat"	"messages_on; exec $cmenu_options_1" |
+			NOEXIT TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_modenable 0; exec $cmenu_options_1" "<clr:100,255,100>Enable Voice Chat"	"voice_modenable 1; exec $cmenu_options_1" |
 			"[Debug]" {
 				NOEXIT TOGGLE BIND "Show FPS" "cl_showfps 2; exec $cmenu_debug_1" "Hide FPS" "cl_showfps 0; exec $cmenu_debug_1" |
 				NOEXIT TOGGLE BIND "Show net_graph" "net_graph 4; exec $cmenu_debug_1" "Hide net_graph" "net_graph 0; exec $cmenu_debug_1" |
@@ -3121,6 +3120,10 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 		BIND "Battals" "say_team Battals Prepped! (BIND)" |
 		BIND "Conch" "say_team Conch Prepped! (BIND)" |
 	}
+}
+"pyro page" {
+	BIND "Phlog Meter full" "say_team MY PHLOG METER FULL! (BIND)" |
+	BIND "Gas Meter full" "say_team MY GAS PASSER METER FULL! (BIND)" |
 }
 "engineer page" {
 	"[Build Up]" {
@@ -3163,20 +3166,81 @@ resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bi
 	BIND "Fake Über" "cmd voicemenu 1 7; say_team **FAKED ÜBER** (BIND)" |
 	BIND "Push Pocket" "say_team **PUSH IN with me my pocket! (BIND)" |
 }
-// Custom voicemenu for nav mesh editing
+// CMenu for nav mesh editing
 "Nav Mesh editor" {
 	TOGGLE BIND "Enable Nav Editing" "nav_edit 1; tf_show_mesh_decoration 1; tf_show_mesh_decoration_manual 1" "Disable Nav Editing" "nav_edit 0; tf_show_mesh_decoration 0; tf_show_mesh_decoration_manual 0" |
-	"[Mark]" {
-		BIND "Sentry Spot" "tf_mark SENTRY_SPOT" |
-		BIND "Sniper Spot" "tf_mark SNIPER_SPOT" |
+	"[Nav Mesh]" {
+		"[Select]" {
+			BIND "nav_mark" "nav_mark" |
+			TOGGLE BIND "Start Area Select" "nav_begin_drag_selecting" "End Area Select" "nav_end_drag_selecting" |
+			TOGGLE BIND "Start Area Deselect" "nav_begin_drag_deselecting" "End Area Select" "nav_end_drag_deselecting" |
+			BIND "Flood Select" "nav_flood_select" |
+		}
+		"[Edit]" {
+			TOGGLE BIND "(Begin) Create Mesh" "nav_begin_area" "(End) Create Mesh" "nav_end_area" |
+			"[Operations]" {
+				BIND "Split" "nav_split" |
+				BIND "Merge" "nav_merge" |
+				BIND "Splice" "nav_splice" |
+			}
+			"[Delete]" {
+				BIND "Delete" "nav_delete" |
+				BIND "Delete Marked area" "nav_delete_marked" |
+			}
+			"[(Dis)connect]" {
+				BIND "Connect" "nav_connect" |
+				BIND "Disconnect" "nav_disconnect" |
+			}
+		}
+		"[Mark]" {
+			"[Source]" {
+				"[Section 1]" {
+					BIND "nav_crouch" "nav_crouch" |
+					BIND "nav_fog_mark" "nav_fog_mark" |
+					BIND "nav_fog_pick" "nav_fog_pick" |
+					BIND "nav_fog_select_place" "nav_fog_select_place" |
+					BIND "nav_gen_cliffs_approx" "nav_gen_cliffs_approx" |
+					BIND "nav_precise" "nav_precise" |
+					BIND "nav_jump" "nav_jump" |
+					BIND "nav_no_jump" "nav_no_jump" |
+					BIND "nav_stop" "nav_stop" |
+				}
+				"[Section 2]" {
+					BIND "nav_walk" "nav_walk" |
+					BIND "nav_run" "nav_run" |
+					BIND "nav_avoid" "nav_avoid" |
+					BIND "nav_transient" "nav_transient" |
+					BIND "nav_dont_hide" "nav_dont_hide" |
+					BIND "nav_stand" "nav_stand" |
+					BIND "nav_no_hostages" "nav_no_hostages" |
+				}
+			}
+			"[Team Fortress 2]" {
+				BIND "Sentry Spot" "tf_mark SENTRY_SPOT" |
+				BIND "Sniper Spot" "tf_mark SNIPER_SPOT" |
+			}
+		}
+		"[Place]" {
+			BIND "Pick place" "nav_place_pick" |
+			BIND "Mark unnamed place" "nav_mark_unnamed" |
+		}
+		"[Misc]" {
+			BIND "Save generated nav mesh" "nav_save" |
+			BIND "Analyze generated nav mesh" "nav_analyze" |
+		}
 	}
-	"[Select]" {
-		BIND "nav_mark" "nav_mark" |
-		TOGGLE BIND "Start Flood Select" "nav_begin_area" "End Flood Select" "nav_end_area" |
+	"[Generation]" {
+		BIND "Mark walkable" "nav_mark_walkable" |
+		BIND "Clear walkables" "nav_clear_walkable_marks" |
+		"[Generate]" {
+			BIND "Fully Generate Nav Mesh" "nav_generate" |
+			BIND "Incrementally Generate Nav Mesh" "nav_generate_incremental" |
+		}
 	}
-	"[Ops]" {
-		BIND "split" "nav_split" |
-		BIND "merge" "nav_merge" |
+	"[Place]" {
+		BIND "Toggle Place mode" "nav_toggle_place_mode" |
+		BIND "Toggle Place Planting mode" "nav_toggle_place_painting" |
+		BIND "List places" "nav_place_list" |
 	}
-	TOGGLE BIND "Hide from Bots" "nb_blind 1" "Reveal for Bots" "nb_blind" |
+	BIND "toggle nb_blind" "toggle nb_blind" |
 }
