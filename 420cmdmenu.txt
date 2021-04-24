@@ -3097,7 +3097,7 @@ display = "caption"
 			}
 		}
 		"[Options]" {
-			NOEXIT TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages_off; exec $cmenu_options"	"<clr:100,255,100>Enable Text Chat"	"messages_on; exec $cmenu_options_1" |
+			NOEXIT TOGGLE BIND "<clr:255,100,100>Disable Text Chat"	"messages_off; exec $cmenu_options_1"	"<clr:100,255,100>Enable Text Chat"	"messages_on; exec $cmenu_options_1" |
 			NOEXIT TOGGLE BIND "<clr:255,100,100>Disable Voice Chat"	"voice_modenable 0; exec $cmenu_options_1" "<clr:100,255,100>Enable Voice Chat"	"voice_modenable 1; exec $cmenu_options_1" |
 			"[Debug]" {
 				NOEXIT TOGGLE BIND "Show FPS" "cl_showfps 2; exec $cmenu_debug_1" "Hide FPS" "cl_showfps 0; exec $cmenu_debug_1" |
