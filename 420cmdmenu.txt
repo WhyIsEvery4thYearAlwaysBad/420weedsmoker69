@@ -1,5 +1,5 @@
 // Compile with my command menu generator.
-format = "<clr:234,209,174><B>$(nkey). $(str)<B> <cr>"
+format = "<clr:234,209,174><B>$(key). $(title)<B> <cr>"
 predisplay_time = "0"
 linger_time = "0"
 resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9; bind 0 ac.0"
@@ -24,27 +24,30 @@ display = "caption"
 				BIND "Unspecified" "say_team FALLBACK! FALLBACK! (BIND)" |
 			}
 			"[Push]" {
-				/*
-					[1 : UPPER]	[4] [3 : UPPER]
-							[1] [2] [3]
-					[1 : LOWER]	[5] [2 : LOWER]
-				*/
-				NOFORMAT BIND "<clr:234,209,174><B>        [4]      <cr>" "say_team PUSH LEFT (TEAM SIDE) (BIND)" |
-				NOFORMAT BIND "[1]    [2]    [3]<cr>" "say_team PUSH MID (TEAM SIDE) (BIND)" |
-				NOFORMAT BIND " " "say_team PUSH RIGHT (TEAM SIDE) (BIND)" |
-				NOFORMAT "" {
-					NOFORMAT BIND "<clr:234,209,174><B>[1]    [4]    [3]<cr> <cr>" "say_team PUSH UPPER LEFT (TEAM SIDE) (BIND)" |
-					NOEXIT NOFORMAT BIND "" "" |
-					NOFORMAT BIND "        [5]     <B>" "say_team PUSH UPPER RIGHT (TEAM SIDE) (BIND)" |
-					NOFORMAT BIND "" "say_team PUSH UPPER (TEAM SIDE) (BIND)" |
+				"[Pos]" {
+					/*
+						[1 : UPPER]	[4] [3 : UPPER]
+								[1] [2] [3]
+						[1 : LOWER]	[5] [2 : LOWER]
+					*/
+					NOFORMAT BIND "<clr:234,209,174><B>        [4]      <cr>" "say_team PUSH LEFT (TEAM SIDE) (BIND)" |
+					NOFORMAT BIND "[1]    [2]    [3]<cr>" "say_team PUSH MID (TEAM SIDE) (BIND)" |
+					NOFORMAT BIND " " "say_team PUSH RIGHT (TEAM SIDE) (BIND)" |
+					NOFORMAT "" {
+						NOFORMAT BIND "<clr:234,209,174><B>[1]    [4]    [3]<cr> <cr>" "say_team PUSH UPPER LEFT (TEAM SIDE) (BIND)" |
+						NOEXIT NOFORMAT BIND "" "" |
+						NOFORMAT BIND "        [5]     <B>" "say_team PUSH UPPER RIGHT (TEAM SIDE) (BIND)" |
+						NOFORMAT BIND "" "say_team PUSH UPPER (TEAM SIDE) (BIND)" |
+					}
+					NOFORMAT "       [5]      <B>" {
+						NOFORMAT BIND "<clr:234,209,174><B>        [4]     <cr>" "say_team PUSH LOWER LEFT (TEAM SIDE) (BIND)" |
+						NOEXIT NOFORMAT BIND " <cr>" "" |
+						NOFORMAT BIND "" "say_team PUSH LOWER RIGHT (TEAM SIDE) (BIND)" |
+						NOEXIT NOFORMAT BIND "" "" |
+						NOFORMAT BIND "[1]    [5]    [3]<B>" "say_team PUSH LOWER (TEAM SIDE) (BIND)" |
+					}
 				}
-				NOFORMAT "       [5]      <B>" {
-					NOFORMAT BIND "<clr:234,209,174><B>        [4]     <cr>" "say_team PUSH LOWER LEFT (TEAM SIDE) (BIND)" |
-					NOEXIT NOFORMAT BIND " <cr>" "" |
-					NOFORMAT BIND "" "say_team PUSH LOWER RIGHT (TEAM SIDE) (BIND)" |
-					NOEXIT NOFORMAT BIND "" "" |
-					NOFORMAT BIND "[1]    [5]    [3]<B>" "say_team PUSH LOWER (TEAM SIDE) (BIND)" |
-				}
+				BIND "Point" "say_team CAP THE DAMN POINT! (BIND)" |
 			}
 			"[Hold]" {
 				"[Pos]" {
@@ -461,8 +464,8 @@ display = "caption"
 			// NO MORE ÜBERSAW OVERRATED PLEASE! SERIOUSLY YOU'LL GET HATED MORE IF YOU KEEP SPAMMING "ÜBERSAW OVERRATED" BINDS!
 			"[Common]" {
 				"[Bind Talk]" {
-					BIND "Bind Count"	"say I currently have 2477 effective binds. 2346 of them are chat binds. (BIND)" |
-					BIND "CMenu Explanation"	"say All of my binds are organized into nested voicemenus that are displayed to me by captions. (BIND)" |
+					BIND "Bind Count" "say I currently have 2478 effective binds. 2347 of them are chat binds. (BIND)" |
+					BIND "CMenu Explanation" "say All of my binds are organized into nested voicemenus that are displayed to me by captions. (BIND)" |
 					"[Generator]" {
 						BIND "CMGen Explanation" "say I made a generator for these bind-voicemenus because they take so long to make otherwise. (BIND)" |
 						BIND "CMGen Link" "say My bind-voicemenu generator link: github.com/WhyIsEvery4thYearAlwaysBad/CmdMenuGenerator (copy and paste it) (BIND)" |
@@ -1189,6 +1192,7 @@ display = "caption"
 							NOFORMAT BIND " " "say_team 9 ENEMY SOLDIERS RUN GUNBOATS (BIND)" |
 							NOFORMAT BIND " " "say_team 0 ENEMY SOLDIERS RUN GUNBOATS (BIND)" |
 						}
+					}
 				}
 			}
 		}
@@ -3327,4 +3331,10 @@ display = "caption"
 		BIND "List places" "nav_place_list" |
 	}
 	BIND "toggle nb_blind" "toggle nb_blind" |
+}
+
+"calls" {
+	"[Scou/Soldi/Pyr]" {}
+	"[Dem/Heav/Engi]" {}
+	"[Med/Snipe/Spy]" {}
 }
