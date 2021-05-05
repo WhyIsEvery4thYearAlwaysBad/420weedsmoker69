@@ -32,9 +32,12 @@ materials\vgui\logos\antiubersawpropaganda.vmt
 materials\vgui\logos\antiubersawpropaganda.vtf
 materials\vgui\replay\thumbnails\crosshair_jar.vmt
 materials\vgui\replay\thumbnails\crosshair_jar.vtf
+materials\vgui\replay\thumbnails\crosshair_dragons_fury.vmt
+materials\vgui\replay\thumbnails\crosshair_dragons_fury.vtf
 scripts\kb_act.lst
 scripts\chapterbackgrounds.txt
 scripts\tf_weapon_jar.txt
+scripts\tf_weapon_rocketlauncher_fireball.txt
 sound\soundspray.wav
 sound\startuptheme.mp3
 sound\misc\tf_domination.mp3
