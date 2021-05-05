@@ -72,10 +72,10 @@
 		"crosshair"
 		{
 				"file"		"vgui/replay/thumbnails/gas_passer"
-				"x"		"32"
-				"y"		"32"
-				"width"		"32"
-				"height"	"32"
+				"x"		"0"
+				"y"		"0"
+				"width"		"64"
+				"height"	"64"
 		}
 
 		"autoaim"
