@@ -30,8 +30,8 @@ materials\vgui\logos\soldierhitground.vmt
 materials\vgui\logos\soldierhitground.vtf
 materials\vgui\logos\antiubersawpropaganda.vmt
 materials\vgui\logos\antiubersawpropaganda.vtf
-materials\vgui\replay\thumbnails\gas_passer.vmt
-materials\vgui\replay\thumbnails\gas_passer.vtf
+materials\vgui\replay\thumbnails\crosshair_jar.vmt
+materials\vgui\replay\thumbnails\crosshair_jar.vtf
 scripts\kb_act.lst
 scripts\chapterbackgrounds.txt
 scripts\tf_weapon_jar.txt

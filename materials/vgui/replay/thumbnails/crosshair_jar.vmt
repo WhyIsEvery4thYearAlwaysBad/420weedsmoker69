@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-	"$basetexture" "vgui/replay/thumbnails/gas_passer"
+	"$basetexture" "vgui/replay/thumbnails/crosshair_jar"
 	"$translucent" 1
 	"$vertexcolor" 1
 	"$no_fullbright" 1

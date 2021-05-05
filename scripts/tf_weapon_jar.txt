@@ -71,7 +71,7 @@
 
 		"crosshair"
 		{
-				"file"		"vgui/replay/thumbnails/gas_passer"
+				"file"		"vgui/replay/thumbnails/crosshair_jar"
 				"x"		"0"
 				"y"		"0"
 				"width"		"64"
