@@ -4,12 +4,16 @@ This config has its own command menu file you use with the C key. To use it you 
 
 # My Mods
 
-* [TF2 Loadouts Script by Junior](https://github.com/juniorsgithub/tf2-loadouts-script) (**REQUIRED FOR THE LOADOUT BINDS TO WORK!**)
+* [Mastercomfig](mastercomfig.com)
 
-* [No Hats (Bgum)](https://github.com/Fedora31/no-hats-bgum)
+* [budhud](github.com/rbjaxter/budhud)
 
-* [Carlzelph's Particle Limitation Pack](https://www.teamfortress.tv/22586/particle-limitation-pack)
+* [TF2 Loadouts Script by Junior](github.com/juniorsgithub/tf2-loadouts-script) (**REQUIRED FOR THE LOADOUT BINDS TO WORK!**)
 
-* [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
+* [No Hats (Bgum)](github.com/Fedora31/no-hats-bgum)
 
-* [Paysus Animation Overhauls](https://steamcommunity.com/groups/PaysusSkins)
+* [Carlzelph's Particle Limitation Pack](teamfortress.tv/22586/particle-limitation-pack)
+
+* [Ultimate TF2 Visual Fix Pack](github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
+
+* [Paysus Animation Overhauls](steamcommunity.com/groups/PaysusSkins)
