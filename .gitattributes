@@ -1,0 +1,19 @@
+# Text files
+*.txt text eol=lf
+*.md text eol=lf
+# Valve file formats
+*.cfg text eol=crlf
+*.scr text eol=crlf
+*.vmt text eol=crlf
+# Scripts
+*.cmd text eol=crlf
+*.sh text eol=lf
+.git* text eol=lf
+# Binaries
+*.vtf -text
+*.vpk -text
+## Photos
+*.tga -text
+## Sound
+*.mp3 -text
+*.wav -text
