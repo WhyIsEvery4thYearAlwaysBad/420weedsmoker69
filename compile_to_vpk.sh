@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 # This BASH script automatically compiles the config into a VPK.
 cd ~/Documents/Projects/420weedsmoker69
 vpk a 420weedsmoker69.vpk @responsefile.txt
