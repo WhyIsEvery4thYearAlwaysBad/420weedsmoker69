@@ -8,5 +8,4 @@ then
 	read -n1 -p "Errors have occurred! Press enter to continue."
 fi
 # otherwise continue with regular operations.
-cp 420weedsmoker69.vpk "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/custom"
-rm -f 420weedsmoker69.vpk
+mv -f 420weedsmoker69.vpk "/c/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/custom"
