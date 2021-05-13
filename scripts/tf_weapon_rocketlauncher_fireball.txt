@@ -85,8 +85,8 @@ WeaponData
 				"file"		"vgui/replay/thumbnails/crosshair_dragons_fury"
 				"x"		"0"
 				"y"		"0"
-				"width"		"128"
-				"height"	"128"
+				"width"		"64"
+				"height"	"64"
 		}
 		"autoaim"
 		{
