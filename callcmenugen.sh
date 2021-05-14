@@ -268,9 +268,9 @@ main() {
 						do
 								if [ $Amount -eq 1 ] 
 								then
-									echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team ENEMY ${ClassNames[ClassID+SubID]} USE ${Weapon^^} (BIND)\" |"  >> callcmenu_script_result.txt
+									echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team ENEMY ${ClassNames[ClassID+SubID]^^} USE ${Weapon^^} (BIND)\" |"  >> callcmenu_script_result.txt
 								else
-									echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${ClassNames[ClassID+SubID]}S USE ${Weapon^^} (BIND)\" |"  >> callcmenu_script_result.txt
+									echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${ClassNames[ClassID+SubID]^^}S USE ${Weapon^^} (BIND)\" |"  >> callcmenu_script_result.txt
 								fi
 						done
 						echo -e "\t\t\t\t}"  >> callcmenu_script_result.txt
