@@ -316,9 +316,9 @@ main() {
 				do
 					echo -e "\t\t\t\"[${Build^}]\" {" >> callcmenu_script_result.txt
 					# Generate position calls for buildings.
-					gen_pos_calls "${Build^^}"
+					gen_pos_calls "${Build^^}" "\t\t\t\t"
 					# and for destroyed ones.
-					gen_pos_calls "DESTROYED ${Build^^}" "[Destroyed]"
+					gen_pos_calls "DESTROYED ${Build^^}" "\t\t\t\t" "[Destroyed]"
 					echo -e "\t\t\t}" >> callcmenu_script_result.txt
 				done
 			fi
