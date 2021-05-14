@@ -7,225 +7,226 @@ Weapons=( 'bonk! crit-A-Cola Mad\040Milk' 'Buff\040Banner battals conch gunboats
 
 # Function to generate position calls. I know this function can be optimized to not use 19 for loops, but that's too much work.
 # $1 - The name of the thing to make pos calls for. 
-# $2 - The entire CMenu name. Default val: Pos.
+# $2 - Tab count
+# $3 - The entire CMenu name. Default val: Pos.
 gen_pos_calls() {
-	echo -e "\t\t\t\"${2:-[Pos]}\" {" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\tNOFORMAT \"<clr:234,209,174><B>        [4]      <cr>\" {" >> callcmenu_script_result.txt	
+	echo -e "${2}\"${3:-[Pos]}\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\tNOFORMAT \"<clr:234,209,174><B>        [4]      <cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\tNOFORMAT \"[1]    [2]    [3]<cr>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\tNOFORMAT \"[1]    [2]    [3]<cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ] 
-		then echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 MID (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
-		else echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S MID (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		then echo -e "${2}\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 MID (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		else echo -e "${2}\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S MID (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
-		then echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
-		else echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		then echo -e "${2}\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		else echo -e "${2}\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"<clr:234,209,174><B>[1]    [4]    [3]<cr> <cr>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"<clr:234,209,174><B>[1]    [4]    [3]<cr> <cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
-		then echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 UPPER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
-		else echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S UPPER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		then echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 UPPER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		else echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S UPPER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOEXIT NOFORMAT BIND \"\" \"\" |" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"        [5]     <B>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOEXIT NOFORMAT BIND \"\" \"\" |" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"        [5]     <B>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
-		then echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 UPPER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
-		else echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S UPPER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		then echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 UPPER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		else echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S UPPER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
-		then echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 UPPER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
-		else echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S UPPER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		then echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 UPPER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		else echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S UPPER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\tNOFORMAT \"       [5]     [6]<B>\" {" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"<clr:234,209,174><B>        [4]     <cr>\" {" >> callcmenu_script_result.txt
-	for Amount in {1..9} 0
-	do
-		if [ $Amount -eq 1 ]
-		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 LOWER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
-		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S LOWER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
-		fi
-	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOEXIT NOFORMAT BIND \" <cr>\" \"\" |" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\tNOFORMAT \"       [5]     [6]<B>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"<clr:234,209,174><B>        [4]     <cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 LOWER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 LOWER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S LOWER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S LOWER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOEXIT NOFORMAT BIND \"\" \"\" |" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"[1]    [5]    [3]<B>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOEXIT NOFORMAT BIND \" <cr>\" \"\" |" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 LOWER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 LOWER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S LOWER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S LOWER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"<clr:234,209,174><B>        [4]      <cr>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOEXIT NOFORMAT BIND \"\" \"\" |" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"[1]    [5]    [3]<B>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK LEFT LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 LOWER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S LOWER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"[1]    [2]    [3]<cr>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"<clr:234,209,174><B>        [4]      <cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK MID LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK LEFT LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK MID LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"[1]    [2]    [3]<cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK RIGHT LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK MID LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK MID LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOFORMAT \"<clr:234,209,174><B>[1]    [4]    [3]<cr> <cr>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK UPPER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK RIGHT LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK UPPER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOEXIT NOFORMAT BIND \"\" \"\" |" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOFORMAT \"        [5]     <B>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOFORMAT \"<clr:234,209,174><B>[1]    [4]    [3]<cr> <cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK UPPER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK UPPER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK UPPER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK UPPER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOEXIT NOFORMAT BIND \"\" \"\" |" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOFORMAT \"        [5]     <B>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK UPPER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK UPPER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK UPPER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK UPPER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \"      [5]     <clr:255,100,100>[6]<B>\" {" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOFORMAT \"<clr:234,209,174><B>        [4]     <cr>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK LOWER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK UPPER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK LOWER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK UPPER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOEXIT NOFORMAT BIND \" <cr>\" \"\" |" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \"      [5]     <clr:255,100,100>[6]<B>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOFORMAT \"<clr:234,209,174><B>        [4]     <cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK LOWER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK LOWER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK LOWER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK LOWER LEFT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOEXIT NOFORMAT BIND \"\" \"\" |" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t\tNOFORMAT \"[1]    [5]    [3]<B>\" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOEXIT NOFORMAT BIND \" <cr>\" \"\" |" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOFORMAT \"\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK LOWER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK LOWER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK LOWER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK LOWER RIGHT (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOEXIT NOFORMAT BIND \"\" \"\" |" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\tNOFORMAT \"[1]    [5]    [3]<B>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
 		if [ $Amount -eq 1 ]
 		then
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK LOWER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else
-			echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+			echo -e "${2}\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK LOWER (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
 	done
-	echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
-	echo -e "\t\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
+	for Amount in {1..9} 0
+	do
+		if [ $Amount -eq 1 ]
+		then
+			echo -e "${2}\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 BACK (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		else
+			echo -e "${2}\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S BACK (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
+		fi
+	done
+	echo -e "${2}\t\t}" >> callcmenu_script_result.txt
+	echo -e "${2}\t}" >> callcmenu_script_result.txt
+	echo -e "${2}}" >> callcmenu_script_result.txt
 }
 
 # 
