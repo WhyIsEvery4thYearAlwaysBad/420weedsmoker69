@@ -236,6 +236,7 @@ main() {
 	# Get all classes
 	for ClassID in {0..11..3}
 	do
+		# Name the building array "Builds" instead of 'sentry dispenser…'.
 		if [ $ClassID -eq 9 ]
 		then 
 			echo -e "\t\"[${ClassNames[ClassID]^}/${ClassNames[ClassID+1]^}/Builds]\" {" >> callcmenu_script_result.txt
@@ -251,7 +252,7 @@ main() {
 			# Generate position calls for all classes. Not buildings yet tho.
 			if [ $ClassID -eq 9 ] && [ $SubID -eq 2 ]
 			then
-				echo
+				:
 			else
 				gen_pos_calls "${ClassNames[ClassID+SubID]^^}"
 			fi
