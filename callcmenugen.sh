@@ -249,13 +249,13 @@ main() {
 		for SubID in {0..2}
 		do
 			# Dont let the classid go beyond the allowed limit
-			echo -e "\t\t\"[${ClassNames[ClassID+SubID]^}]\" {" >> callcmenu_script_result.txt
 			# Generate position calls for all classes. Not buildings yet tho.
 			if [ $ClassID -eq 9 ] && [ $SubID -eq 2 ]
 			then
-				:
+				echo -e "\t\t\"[Builds]\" {" >> callcmenu_script_result.txt
 			else
-				gen_pos_calls "${ClassNames[ClassID+SubID]^^}"
+				echo -e "\t\t\"[${ClassNames[ClassID+SubID]^}]\" {" >> callcmenu_script_result.txt
+				gen_pos_calls "${ClassNames[ClassID+SubID]^^}" "\t\t\t"
 			fi
 			# Create "has weapon" calls ONLY if the class actually has special weapons defined.
 			if [ ! ${#Weapons[ClassID+SubID]} -eq 0 ]
