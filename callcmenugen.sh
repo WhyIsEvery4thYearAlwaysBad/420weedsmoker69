@@ -302,6 +302,8 @@ main() {
 					done
 					echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
 				done
+				echo -e "\t\t\t\tBIND \"Dead Rang!\" \"say_team SPY DEAD RANG (BIND)\" |"  >> callcmenu_script_result.txt
+				echo -e "\t\t\t\tBIND \"Spy!\" \"say_team SPY - CHECK BACKS! (BIND)\" |"  >> callcmenu_script_result.txt
 				echo -e "\t\t\t}" >> callcmenu_script_result.txt
 			fi
 			# ^ End Spy Disguises
