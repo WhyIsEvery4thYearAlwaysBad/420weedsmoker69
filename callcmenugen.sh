@@ -323,6 +323,86 @@ main() {
 				done
 			fi
 			# </Builds>
+			# <Über calls>
+			if [ $ClassID -eq 6 ] && [ $SubID -eq 0 ]
+			then
+				echo -e "\t\t\t\"[Über]\" {" >> callcmenu_script_result.txt
+				for UberType in "stock" "kritz" "quickie" "vacc"
+				do
+					echo -e "\t\t\t\t\"[${UberType^}]\" {" >> callcmenu_script_result.txt
+					for Digit1 in {1..9} 0
+					do
+						if [ $Digit1 -eq 1 ]
+						then
+							echo -e "\t\t\t\t\tNOFORMAT \"<clr:234,209,174><B>_<B>\" {" >> callcmenu_script_result.txt
+						else
+							echo -e "\t\t\t\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
+						fi
+						for Digit2 in {1..9} 0
+						do
+							if [ $Digit2 -eq 1 ]
+							then
+								if [ $Digit1 -eq 0 ]
+								then
+									echo -e "\t\t\t\t\t\tNOFORMAT \"<clr:234,209,174><B>_<B>\" {" >> callcmenu_script_result.txt
+								else
+									echo -e "\t\t\t\t\t\tNOFORMAT \"<clr:234,209,174><B>${Digit1}_<B>\" {" >> callcmenu_script_result.txt
+								fi
+							else
+								echo -e "\t\t\t\t\t\tNOFORMAT \" \" {" >> callcmenu_script_result.txt
+							fi
+							if [ $Digit1 -eq 0 ]
+							then
+								echo -e "\t\t\t\t\t\t\tKEY = \"ENTER\" NOFORMAT \"<clr:234,209,174><B>${Digit2}_<B>\" {" >> callcmenu_script_result.txt
+								for Amount in {1..9} 0
+								do
+									if [ $Amount -eq 1 ]
+									then
+										echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>Amount: _<B>\" \"say_team ENEMY ${UberType^^} ÜBER ${Digit2}% (BIND)\" |" >> callcmenu_script_result.txt
+									else
+										echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${UberType^^} ÜBERS ${Digit2}% (BIND)\" |" >> callcmenu_script_result.txt
+									fi
+								done
+								echo -e "\t\t\t\t\t\t\t}" >> callcmenu_script_result.txt
+							else
+								echo -e "\t\t\t\t\t\t\tKEY = \"ENTER\" NOFORMAT \"<clr:234,209,174><B>${Digit1}${Digit2}_<B>\" {" >> callcmenu_script_result.txt
+								for Amount in {1..9} 0
+								do
+									if [ $Amount -eq 1 ]
+									then
+										echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>Amount: _<B>\" \"say_team ENEMY ${UberType^^} ÜBER ${Digit1}${Digit2}% (BIND)\" |" >> callcmenu_script_result.txt
+									else
+										echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${UberType^^} ÜBERS ${Digit1}${Digit2}% (BIND)\" |" >> callcmenu_script_result.txt
+									fi
+								done
+								echo -e "\t\t\t\t\t\t\t}" >> callcmenu_script_result.txt
+							fi
+							# Make 100% über bind
+							if [ $Digit1 -eq 1 ] && [ $Digit2 -eq 0 ]
+							then
+								echo -e "\t\t\t\t\t\t\tKEY = \"0\" NOFORMAT \" \" {" >> callcmenu_script_result.txt
+								echo -e "\t\t\t\t\t\t\t\tKEY = \"ENTER\" NOFORMAT \"<clr:234,209,174><B>${Digit1}${Digit2}0_<B>\" {" >> callcmenu_script_result.txt
+								for Amount in {1..9} 0
+								do
+									if [ $Amount -eq 1 ]
+									then
+										echo -e "\t\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>Amount: _<B>\" \"say_team ENEMY ${UberType^^} ÜBER 100% (BIND)\" |" >> callcmenu_script_result.txt
+									else
+										echo -e "\t\t\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${UberType^^} ÜBERS 100% (BIND)\" |" >> callcmenu_script_result.txt
+									fi
+								done
+								echo -e "\t\t\t\t\t\t\t\t}" >> callcmenu_script_result.txt
+								echo -e "\t\t\t\t\t\t\t}" >> callcmenu_script_result.txt
+							fi
+							echo -e "\t\t\t\t\t\t}" >> callcmenu_script_result.txt
+						done
+						echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
+					done
+					echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
+				done
+				echo -e "\t\t\t}" >> callcmenu_script_result.txt
+			fi
+			# </Über>
 			# End class cmenu
 			echo -e "\t\t}" >> callcmenu_script_result.txt
 		done
