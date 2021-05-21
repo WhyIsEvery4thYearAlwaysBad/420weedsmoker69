@@ -229,6 +229,11 @@ gen_pos_calls() {
 	echo -e "${2}}" >> callcmenu_script_result.txt
 }
 
+# $1 - Value (singular)
+# $2 - Value (plural)
+# $3 - Tab Count
+# $4 - CMenu name
+
 # 
 # The main function body.
 
@@ -265,15 +270,11 @@ main() {
 				do
 					for Weapon in ${WeaponGroup[@]}
 					do
-						echo -e "\t\t\t\t\"[${Weapon}]\" {"  >> callcmenu_script_result.txt
-						for Amount in {1..9} 0
+						echo -e "\t\t\t\t\"[${Weapon^}]\" {"  >> callcmenu_script_result.txt
+						echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team ENEMY ${ClassNames[ClassID+SubID]^^} USE ${Weapon^^} (BIND)\" |"  >> callcmenu_script_result.txt
+						for Amount in {2..9} 0
 						do
-								if [ $Amount -eq 1 ] 
-								then
-									echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team ENEMY ${ClassNames[ClassID+SubID]^^} USE ${Weapon^^} (BIND)\" |"  >> callcmenu_script_result.txt
-								else
-									echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${ClassNames[ClassID+SubID]^^}S USE ${Weapon^^} (BIND)\" |"  >> callcmenu_script_result.txt
-								fi
+							echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${ClassNames[ClassID+SubID]^^}S USE ${Weapon^^} (BIND)\" |"  >> callcmenu_script_result.txt
 						done
 						echo -e "\t\t\t\t}"  >> callcmenu_script_result.txt
 					done
@@ -291,14 +292,10 @@ main() {
 					for SubDID in {0..2}
 					do
 						echo -e "\t\t\t\t\t\"[${ClassNames[DisguiseID+SubDID]^}]\" {" >> callcmenu_script_result.txt
-						for Amount in {1..9} 0
+						echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team SPY ${ClassNames[DisguiseID+SubDID]^^} (BIND)\" |" >> callcmenu_script_result.txt
+						for Amount in {2..9} 0
 						do
-							if [ $Amount -eq 1 ]
-							then
-								echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team SPY ${ClassNames[DisguiseID+SubDID]^^} (BIND)\" |" >> callcmenu_script_result.txt
-							else
-								echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} SPY ${ClassNames[DisguiseID+SubDID]^^}S (BIND)\" |" >> callcmenu_script_result.txt
-							fi
+							echo -e "\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} SPY ${ClassNames[DisguiseID+SubDID]^^}S (BIND)\" |" >> callcmenu_script_result.txt
 						done
 						echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
 					done
@@ -323,6 +320,23 @@ main() {
 				done
 			fi
 			# </Builds>
+			# <Banner Calls>
+			if [ $ClassID -eq 0 ] && [ $SubID -eq 1 ]
+			then
+				echo -e "\t\t\t\"[Banners]\" {" >> callcmenu_script_result.txt
+				for Banner in "Buff\040Banner" "Battal" "Conch"
+				do
+					echo -e "\t\t\t\t\"[${Banner}]\" {" >> callcmenu_script_result.txt
+					echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team ENEMY ${Banner^^} PREPPED (BIND)\" |" >> callcmenu_script_result.txt
+					for Num in {2..9} 0
+					do 
+						echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team $Num ENEMY ${Banner^^}S PREPPED (BIND)\" |" >> callcmenu_script_result.txt
+					done
+					echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
+				done
+				echo -e "\t\t\t}" >> callcmenu_script_result.txt
+			fi
+			# </Banner Calls>
 			# <Über calls>
 			if [ $ClassID -eq 6 ] && [ $SubID -eq 0 ]
 			then
@@ -366,14 +380,10 @@ main() {
 								echo -e "\t\t\t\t\t\t\t}" >> callcmenu_script_result.txt
 							else
 								echo -e "\t\t\t\t\t\t\tKEY = \"ENTER\" NOFORMAT \"<clr:234,209,174><B>${Digit1}${Digit2}_<B>\" {" >> callcmenu_script_result.txt
-								for Amount in {1..9} 0
+								echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>Amount: _<B>\" \"say_team ENEMY ${UberType^^} ÜBER ${Digit1}${Digit2}% (BIND)\" |" >> callcmenu_script_result.txt
+								for Amount in {2..9} 0
 								do
-									if [ $Amount -eq 1 ]
-									then
-										echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>Amount: _<B>\" \"say_team ENEMY ${UberType^^} ÜBER ${Digit1}${Digit2}% (BIND)\" |" >> callcmenu_script_result.txt
-									else
-										echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${UberType^^} ÜBERS ${Digit1}${Digit2}% (BIND)\" |" >> callcmenu_script_result.txt
-									fi
+									echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${UberType^^} ÜBERS ${Digit1}${Digit2}% (BIND)\" |" >> callcmenu_script_result.txt
 								done
 								echo -e "\t\t\t\t\t\t\t}" >> callcmenu_script_result.txt
 							fi
@@ -382,14 +392,10 @@ main() {
 							then
 								echo -e "\t\t\t\t\t\t\tKEY = \"0\" NOFORMAT \" \" {" >> callcmenu_script_result.txt
 								echo -e "\t\t\t\t\t\t\t\tKEY = \"ENTER\" NOFORMAT \"<clr:234,209,174><B>${Digit1}${Digit2}0_<B>\" {" >> callcmenu_script_result.txt
-								for Amount in {1..9} 0
+								echo -e "\t\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>Amount: _<B>\" \"say_team ENEMY ${UberType^^} ÜBER 100% (BIND)\" |" >> callcmenu_script_result.txt
+								for Amount in {2..9} 0
 								do
-									if [ $Amount -eq 1 ]
-									then
-										echo -e "\t\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>Amount: _<B>\" \"say_team ENEMY ${UberType^^} ÜBER 100% (BIND)\" |" >> callcmenu_script_result.txt
-									else
-										echo -e "\t\t\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${UberType^^} ÜBERS 100% (BIND)\" |" >> callcmenu_script_result.txt
-									fi
+									echo -e "\t\t\t\t\t\t\t\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ENEMY ${UberType^^} ÜBERS 100% (BIND)\" |" >> callcmenu_script_result.txt
 								done
 								echo -e "\t\t\t\t\t\t\t\t}" >> callcmenu_script_result.txt
 								echo -e "\t\t\t\t\t\t\t}" >> callcmenu_script_result.txt
