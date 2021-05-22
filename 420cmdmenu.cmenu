@@ -1581,6 +1581,44 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 0 ENEMY SOLLYS USE GUNBOATS (BIND)" |
 				}
 			}
+			"[Banners]" {
+				"[Buff Banner]" {
+					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY BUFF BANNER PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 ENEMY BUFF BANNERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 ENEMY BUFF BANNERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 ENEMY BUFF BANNERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 ENEMY BUFF BANNERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 ENEMY BUFF BANNERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 ENEMY BUFF BANNERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 ENEMY BUFF BANNERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 ENEMY BUFF BANNERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 ENEMY BUFF BANNERS PREPPED (BIND)" |
+				}
+				"[Battal]" {
+					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY BATTAL PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 ENEMY BATTALS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 ENEMY BATTALS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 ENEMY BATTALS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 ENEMY BATTALS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 ENEMY BATTALS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 ENEMY BATTALS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 ENEMY BATTALS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 ENEMY BATTALS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 ENEMY BATTALS PREPPED (BIND)" |
+				}
+				"[Conch]" {
+					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY CONCH PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 ENEMY CONCHS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 ENEMY CONCHS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 ENEMY CONCHS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 ENEMY CONCHS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 ENEMY CONCHS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 ENEMY CONCHS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 ENEMY CONCHS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 ENEMY CONCHS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 ENEMY CONCHS PREPPED (BIND)" |
+				}
+			}
 		}
 		"[Pyro]" {
 			"[Pos]" {
