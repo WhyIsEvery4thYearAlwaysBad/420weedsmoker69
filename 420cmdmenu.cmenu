@@ -1246,7 +1246,7 @@ display = "caption"
 				}
 			}
 			"[Weapons]" {
-				"[bonk!]" {
+				"[Bonk!]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY SCOUT USE BONK! (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY SCOUTS USE BONK! (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY SCOUTS USE BONK! (BIND)" |
@@ -1258,7 +1258,7 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 9 ENEMY SCOUTS USE BONK! (BIND)" |
 					NOFORMAT BIND " " "say_team 0 ENEMY SCOUTS USE BONK! (BIND)" |
 				}
-				"[crit-A-Cola]" {
+				"[Crit-A-Cola]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY SCOUT USE CRIT-A-COLA (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY SCOUTS USE CRIT-A-COLA (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY SCOUTS USE CRIT-A-COLA (BIND)" |
@@ -1544,7 +1544,7 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 9 ENEMY SOLLYS USE BUFF BANNER (BIND)" |
 					NOFORMAT BIND " " "say_team 0 ENEMY SOLLYS USE BUFF BANNER (BIND)" |
 				}
-				"[battals]" {
+				"[Battals]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY SOLLY USE BATTALS (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY SOLLYS USE BATTALS (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY SOLLYS USE BATTALS (BIND)" |
@@ -1556,7 +1556,7 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 9 ENEMY SOLLYS USE BATTALS (BIND)" |
 					NOFORMAT BIND " " "say_team 0 ENEMY SOLLYS USE BATTALS (BIND)" |
 				}
-				"[conch]" {
+				"[Conch]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY SOLLY USE CONCH (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY SOLLYS USE CONCH (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY SOLLYS USE CONCH (BIND)" |
@@ -1568,7 +1568,7 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 9 ENEMY SOLLYS USE CONCH (BIND)" |
 					NOFORMAT BIND " " "say_team 0 ENEMY SOLLYS USE CONCH (BIND)" |
 				}
-				"[gunboats]" {
+				"[Gunboats]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY SOLLY USE GUNBOATS (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY SOLLYS USE GUNBOATS (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY SOLLYS USE GUNBOATS (BIND)" |
@@ -1868,7 +1868,7 @@ display = "caption"
 				}
 			}
 			"[Weapons]" {
-				"[phlog]" {
+				"[Phlog]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY PYRO USE PHLOG (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY PYROS USE PHLOG (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY PYROS USE PHLOG (BIND)" |
@@ -2902,7 +2902,7 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 9 ENEMY MEDICS USE STOCK MEDIGUN (BIND)" |
 					NOFORMAT BIND " " "say_team 0 ENEMY MEDICS USE STOCK MEDIGUN (BIND)" |
 				}
-				"[kritz]" {
+				"[Kritz]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY MEDIC USE KRITZ (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY MEDICS USE KRITZ (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY MEDICS USE KRITZ (BIND)" |
@@ -2914,7 +2914,7 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 9 ENEMY MEDICS USE KRITZ (BIND)" |
 					NOFORMAT BIND " " "say_team 0 ENEMY MEDICS USE KRITZ (BIND)" |
 				}
-				"[quickie]" {
+				"[Quickie]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY MEDIC USE QUICKIE (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY MEDICS USE QUICKIE (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY MEDICS USE QUICKIE (BIND)" |
@@ -2926,7 +2926,7 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 9 ENEMY MEDICS USE QUICKIE (BIND)" |
 					NOFORMAT BIND " " "say_team 0 ENEMY MEDICS USE QUICKIE (BIND)" |
 				}
-				"[vacc]" {
+				"[Vacc]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY MEDIC USE VACC (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY MEDICS USE VACC (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY MEDICS USE VACC (BIND)" |
@@ -8946,7 +8946,7 @@ display = "caption"
 				}
 			}
 			"[Weapons]" {
-				"[jarate]" {
+				"[Jarate]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY SNIPER USE JARATE (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY SNIPERS USE JARATE (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY SNIPERS USE JARATE (BIND)" |
@@ -9208,7 +9208,7 @@ display = "caption"
 				}
 			}
 			"[Weapons]" {
-				"[yer]" {
+				"[Yer]" {
 					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY SPY USE YER (BIND)" |
 					NOFORMAT BIND " " "say_team 2 ENEMY SPYS USE YER (BIND)" |
 					NOFORMAT BIND " " "say_team 3 ENEMY SPYS USE YER (BIND)" |
