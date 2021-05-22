@@ -521,6 +521,11 @@ display = "caption"
 				BIND "Let RTR sap!" "say_team ATTENTION TEAM PLAYERS: Don't destroy enemy buildings sapped by RTR, so that the enemy engi can't access his buildings! (BIND)" |
 			}
 		}
+		"[Hashtags]" {
+			BIND "DF underrated" "say #Dragon'sFuryIsUnderrated (BIND)" |
+			BIND "DF Nerf" "say #Dragon'sFuryNeedsANerf (BIND)" |
+			BIND "Gas Passer" "say #GasPasserIsUnderrated (BIND)" |
+		}
 		BIND "Accidental Bind" "say oops accidental bind. (BIND)" |
 	}
 	"[Alerts]" {
