@@ -1942,6 +1942,32 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 0 ENEMY PYROS USE GAS PASSER (BIND)" |
 				}
 			}
+			"[Meters]" {
+				"[Phlog]" {
+					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY PHLOG PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 ENEMY PHLOGS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 ENEMY PHLOGS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 ENEMY PHLOGS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 ENEMY PHLOGS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 ENEMY PHLOGS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 ENEMY PHLOGS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 ENEMY PHLOGS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 ENEMY PHLOGS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 ENEMY PHLOGS PREPPED (BIND)" |
+				}
+				"[Gas Passer]" {
+					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY GAS PASSER PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 ENEMY GAS PASSERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 ENEMY GAS PASSERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 ENEMY GAS PASSERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 ENEMY GAS PASSERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 ENEMY GAS PASSERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 ENEMY GAS PASSERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 ENEMY GAS PASSERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 ENEMY GAS PASSERS PREPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 ENEMY GAS PASSERS PREPPED (BIND)" |
+				}
+			}
 		}
 	}
 	"[Demo/Heavy/Engi]" {
