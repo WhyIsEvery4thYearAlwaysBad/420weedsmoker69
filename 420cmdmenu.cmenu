@@ -559,11 +559,13 @@ display = "caption"
 				BIND "Scoreboard Mouse" "say PSA: Enable the scoreboard mouse mode! It makes muting people and trading with people easier! (BIND)" |
 				BIND "Let RTR sap!" "say_team ATTENTION TEAM PLAYERS: Don't destroy enemy buildings sapped by RTR, so that the enemy engi can't access his buildings! (BIND)" |
 			}
-		}
-		"[Hashtags]" {
-			BIND "DF underrated" "say #Dragon'sFuryIsUnderrated (BIND)" |
-			BIND "DF Nerf" "say #Dragon'sFuryNeedsANerf (BIND)" |
-			BIND "Gas Passer" "say #GasPasserIsUnderrated (BIND)" |
+			"[Hashtags]" {
+				BIND "DF underrated" "say #DragonsFuryIsUnderrated (BIND)" |
+				BIND "DF Nerf" "say #DragonsFuryNeedsANerf (BIND)" |
+				BIND "Gas Passer" "say #GasPasserIsUnderrated (BIND)" |
+				BIND "RTR" "say #RedTapeRecorderIsUnderrated (BIND)" |
+				BIND "Amp" "say #AmputatorIsUnderrated (BIND)" |
+			}
 		}
 		BIND "Accidental Bind" "say oops accidental bind. (BIND)" |
 	}
