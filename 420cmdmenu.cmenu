@@ -560,9 +560,7 @@ display = "caption"
 
 					}
 				}
-				"[Options]" {
-					BIND "Scoreboard Mouse" "say PSA: Enable the scoreboard mouse mode! It makes muting people and trading with people easier! (BIND)" |
-				}
+				BIND "Scoreboard Mouse" "say PSA: Enable the scoreboard mouse mode! It makes muting people and trading with people easier! (BIND)" |
 				BIND "Let RTR sap!" "say_team ATTENTION TEAM PLAYERS: Don't destroy enemy buildings sapped by RTR, so that the enemy engi can't access his buildings! (BIND)" |
 			}
 		}
