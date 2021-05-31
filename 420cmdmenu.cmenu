@@ -2466,6 +2466,32 @@ display = "caption"
 					}
 				}
 			}
+			"[Weapons]" {
+				"[FoS]" {
+					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY HEAVY USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 2 ENEMY HEAVYS USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 3 ENEMY HEAVYS USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 4 ENEMY HEAVYS USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 5 ENEMY HEAVYS USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 6 ENEMY HEAVYS USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 7 ENEMY HEAVYS USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 8 ENEMY HEAVYS USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 9 ENEMY HEAVYS USE FOS (BIND)" |
+					NOFORMAT BIND " " "say_team 0 ENEMY HEAVYS USE FOS (BIND)" |
+				}
+				"[GRU]" {
+					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY HEAVY USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 2 ENEMY HEAVYS USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 3 ENEMY HEAVYS USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 4 ENEMY HEAVYS USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 5 ENEMY HEAVYS USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 6 ENEMY HEAVYS USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 7 ENEMY HEAVYS USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 8 ENEMY HEAVYS USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 9 ENEMY HEAVYS USE GRU (BIND)" |
+					NOFORMAT BIND " " "say_team 0 ENEMY HEAVYS USE GRU (BIND)" |
+				}
+			}
 		}
 		"[Engi]" {
 			"[Pos]" {
