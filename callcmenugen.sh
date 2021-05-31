@@ -2,11 +2,11 @@
 # Config
 title="[Calls]"
 ClassNames=("scout" "solly" "pyro" "demo" "heavy" "engi" "medic" "sniper" "spy" "medic Combo" "trap" 'sentry dispenser tele nest')
-Weapons=( 'bonk! crit-A-Cola Mad\040Milk' 'Buff\040Banner battals conch gunboats'  'phlog Gas\040Passer' '' '' '' 'Stock\040Medigun kritz quickie vacc Solemn\040Vow' 'jarate' 'yer')
+Weapons=( 'bonk! crit-A-Cola Mad\040Milk' 'Buff\040Banner battals conch gunboats whip'  'phlog Gas\040Passer' '' 'foS GRU' 'rescue\040Ranger frontier\040Justice wrangler short\040Circuit eureka\040Effect jag' 'Stock\040Medigun kritz quickie vacc Solemn\040Vow' 'jarate' 'yer')
 # end Config
 
 # Function to generate position calls. I know this function can be optimized to not use 19 for loops, but that's too much work.
-# $1 - The name of the thing to make pos calls for. 
+# $1 - The name of the thing to make pos calls for.
 # $2 - Tab count
 # $3 - The entire CMenu name. Default val: Pos.
 gen_pos_calls() {
@@ -25,7 +25,7 @@ gen_pos_calls() {
 	echo -e "${2}\tNOFORMAT \"[1]    [2]    [3]<cr>\" {" >> callcmenu_script_result.txt
 	for Amount in {1..9} 0
 	do
-		if [ $Amount -eq 1 ] 
+		if [ $Amount -eq 1 ]
 		then echo -e "${2}\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team $1 MID (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		else echo -e "${2}\t\tNOFORMAT BIND \" \" \"say_team ${Amount} ${1}S MID (TEAM SIDE) (BIND)\" |" >> callcmenu_script_result.txt
 		fi
@@ -320,6 +320,23 @@ main() {
 				done
 			fi
 			# </Builds>
+			# <Phlog/GP calls>
+			if [ $ClassID -eq 0 ] && [ $SubID -eq 2 ]
+			then
+				echo -e "\t\t\t\"[Meters]\" {" >> callcmenu_script_result.txt
+				for Meter in "Phlog" "Gas\040Passer"
+				do
+					echo -e "\t\t\t\t\"[${Meter}]\" {" >> callcmenu_script_result.txt
+					echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174><B>_<B>\" \"say_team ENEMY ${Meter^^} PREPPED (BIND)\" |" >> callcmenu_script_result.txt
+					for Num in {2..9} 0
+					do
+						echo -e "\t\t\t\t\tNOFORMAT BIND \" \" \"say_team $Num ENEMY ${Meter^^}S PREPPED (BIND)\" |" >> callcmenu_script_result.txt
+					done
+					echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
+				done
+				echo -e "\t\t\t}" >> callcmenu_script_result.txt
+			fi
+			# </Phlog/GP calls>
 			# <Banner Calls>
 			if [ $ClassID -eq 0 ] && [ $SubID -eq 1 ]
 			then
