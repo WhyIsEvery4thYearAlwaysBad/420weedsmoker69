@@ -324,10 +324,54 @@ display = "caption"
 		}
 		"[Need]" {
 			"[Medgun]" {
-				BIND "Stock" "say_team Need stock Medigun! (BIND)" |
-				BIND "Kritz" "say_team Need Kritzkreig! (BIND)" |
-				BIND "Quickie" "say_team Need Quickfix! (BIND)" |
-				BIND "Vacc" "say_team Need Vaccinator! (BIND)" |
+				"[Stock]" {
+					NOFORMAT BIND "_" "say_team Need 1 Stock Medigun! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 2 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 3 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 4 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 5 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 6 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 7 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 8 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 9 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 0 Stock Mediguns! (BIND)" |
+				}
+				"[Kritz]" {
+					NOFORMAT BIND "_" "say_team Need 1 Kritz! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 2 Kritzes! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 3 Kritzes! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 4 Kritzes! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 5 Kritzes! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 6 Kritzes! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 7 Kritzes! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 8 Kritzes! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 9 Kritzes! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 0 Kritzes! (BIND)" |
+				}
+				"[Quickie]" {
+					NOFORMAT BIND "_" "say_team Need 1 Quickie! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 2 Quickies! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 3 Quickies! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 4 Quickies! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 5 Quickies! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 6 Quickies! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 7 Quickies! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 8 Quickies! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 9 Quickies! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 0 Quickies! (BIND)" |
+				}
+				"[Vacc]" {
+					NOFORMAT BIND "_" "say_team Need 1 Vacc! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 2 Vaccs! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 3 Vaccs! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 4 Vaccs! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 5 Vaccs! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 6 Vaccs! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 7 Vaccs! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 8 Vaccs! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 9 Vaccs! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 0 Vaccs! (BIND)" |
+				}
 			}
 			"[Class]" {
 				"[Scou/Soldi/Pyr]" {
