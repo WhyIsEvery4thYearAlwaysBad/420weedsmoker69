@@ -1613,6 +1613,18 @@ display = "caption"
 					NOFORMAT BIND " " "say_team 9 ENEMY SOLLYS USE GUNBOATS (BIND)" |
 					NOFORMAT BIND " " "say_team 0 ENEMY SOLLYS USE GUNBOATS (BIND)" |
 				}
+				"[Whip]" {
+					NOFORMAT BIND "<clr:234,209,174><B>_<B>" "say_team ENEMY SOLLY USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 2 ENEMY SOLLYS USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 3 ENEMY SOLLYS USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 4 ENEMY SOLLYS USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 5 ENEMY SOLLYS USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 6 ENEMY SOLLYS USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 7 ENEMY SOLLYS USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 8 ENEMY SOLLYS USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 9 ENEMY SOLLYS USE WHIP (BIND)" |
+					NOFORMAT BIND " " "say_team 0 ENEMY SOLLYS USE WHIP (BIND)" |
+				}
 			}
 			"[Banners]" {
 				"[Buff Banner]" {
