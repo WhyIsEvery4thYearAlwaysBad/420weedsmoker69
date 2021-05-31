@@ -229,14 +229,7 @@ gen_pos_calls() {
 	echo -e "${2}}" >> callcmenu_script_result.txt
 }
 
-# $1 - Value (singular)
-# $2 - Value (plural)
-# $3 - Tab Count
-# $4 - CMenu name
-
-# 
 # The main function body.
-
 main() {
 	echo -e "\"$title\" {" > callcmenu_script_result.txt
 	# Get all classes
