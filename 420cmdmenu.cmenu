@@ -529,10 +529,6 @@ display = "caption"
 						BIND "Frametime Recommendation" "say I recommend using frametime/frame pacing instead of frames per second, because they give more granular info. (BIND)" |
 						BIND "Source" "say Source: cgvr.cs.ut.ee/wp/index.php/frame-rate-vs-frame-time/ (copy and paste) (BIND)" |
 					}
-					"[Network]" {
-						BIND "Check graph" "say Do net_graph 4 in console and tell me what the variables generally are. (BIND)" |
-						BIND "Net settings limited?" "say Check to see if your settings are being limited by typing and entering each network cvar. (BIND)" |
-					}
 				}
 				"[Memes]" {
 					BIND "MiningCraft" "say hEY gOyS iM MOiNInG FoR DOiAmoNDS!! (BIND)" |
