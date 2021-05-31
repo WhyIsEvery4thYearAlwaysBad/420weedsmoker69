@@ -572,16 +572,6 @@ display = "caption"
 		BIND "Accidental Bind" "say oops accidental bind. (BIND)" |
 	}
 	"[Alerts]" {
-		"[Info]" {
-			"[Meters]" {
-				"[Banner Prep]" {
-					BIND "Buf" "say_team ENEMY BUFF BANNER PREPPED! (BIND)" |
-					BIND "Bat" "say_team ENEMY BATTALS PREPPED! (BIND)" |
-					BIND "Con" "say_team ENEMY CONCH PREPPED! (BIND)" |
-				}
-				BIND "Phlog Full!" "say_team ENEMY PHLOG METER FULL! (BIND)" |
-			}
-		}
 		"[Push]" {
 			/*
 				[1 : UPPER]	[4] [3 : UPPER]
