@@ -524,11 +524,6 @@ display = "caption"
 						BIND "Change to mastercomfig" "say I recommend using mastercomfig instead. The other configs are outdated, poorly made, or haven't gone under any proper review. (BIND)" |
 						BIND "Other mods" "say Try out some more performance mods located here: docs.mastercomfig.com/en/latest/customization/see_also (copy and paste it) (BIND)" |
 					}
-					"[Frame]" {
-						BIND "Frametime > FPS" "say Frame time is superior to frame rate because it gives more info. Change my mind! (BIND)" |
-						BIND "Frametime Recommendation" "say I recommend using frametime/frame pacing instead of frames per second, because they give more granular info. (BIND)" |
-						BIND "Source" "say Source: cgvr.cs.ut.ee/wp/index.php/frame-rate-vs-frame-time/ (copy and paste) (BIND)" |
-					}
 				}
 				"[Memes]" {
 					BIND "MiningCraft" "say hEY gOyS iM MOiNInG FoR DOiAmoNDS!! (BIND)" |
@@ -565,6 +560,17 @@ display = "caption"
 				BIND "Gas Passer" "say #GasPasserIsUnderrated (BIND)" |
 				BIND "RTR" "say #RedTapeRecorderIsUnderrated (BIND)" |
 				BIND "Amp" "say #AmputatorIsUnderrated (BIND)" |
+			}
+			"[Fax]" {
+				"[Gas]" {
+					BIND "Gas Gravity" "say Fun Fact: Gas Passer Gas has gravity, which means it can fall. You can use the gravity to coat multiple surfaces. (BIND)" |
+					BIND "Gas Airburst" "say Fun Fact: Gas Passer detonates when in the air for more than 2 seconds. This means you can use it to deny air space. (BIND)" |
+				}
+				"[Frame]" {
+					BIND "Ftime > Frate" "say Frame time is superior to frame rate because it gives more info. Change my mind! (BIND)" |
+					BIND "Frametime Recommendation" "say I recommend using frametime/frame pacing instead of framerate, because they give more granular info. (BIND)" |
+					BIND "Source" "say Source: cgvr.cs.ut.ee/wp/index.php/frame-rate-vs-frame-time/ (copy and paste) (BIND)" |
+				}
 			}
 		}
 		BIND "Accidental Bind" "say oops accidental bind. (BIND)" |
