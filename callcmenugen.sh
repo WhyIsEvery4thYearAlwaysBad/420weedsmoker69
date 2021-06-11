@@ -416,15 +416,15 @@ main() {
 						echo -e "\t\t\t\t\t\t}" >> callcmenu_script_result.txt
 					done
 					echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
-					for Verb in 'popped dropped faked'
+					for Verb in 'popped' 'dropped' 'faked'
 					do
-						echo -e "\t\t\t\t\"[${Verb^}]\" {" >> callcmenu_script_result.txt
-						echo -e "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team ENEMY ÜBER ${Verb^^} (BIND)\" |" >> callcmenu_script_result.txt
+						echo -e "\t\t\t\t\t\"[${Verb^}]\" {" >> callcmenu_script_result.txt
+						echo -e "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team ENEMY ÜBER ${Verb^^} (BIND)\" |" >> callcmenu_script_result.txt
 						for Amount in {2..9} 0
 						do
-							echo -e "\t\t\t\t\tNOFORMAT BIND \"\" \"say_team ${Amount} ENEMY ÜBERS ${Verb^^} (BIND)\" |" >> callcmenu_script_result.txt
+							echo -e "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team ${Amount} ENEMY ÜBERS ${Verb^^} (BIND)\" |" >> callcmenu_script_result.txt
 						done
-						echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
+						echo -e "\t\t\t\t\t}" >> callcmenu_script_result.txt
 					done
 					echo -e "\t\t\t\t}" >> callcmenu_script_result.txt
 				done
