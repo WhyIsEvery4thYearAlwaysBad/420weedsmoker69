@@ -509,7 +509,7 @@ display = "caption"
 			// NO MORE ÜBERSAW OVERRATED PLEASE! SERIOUSLY YOU'LL GET HATED MORE IF YOU KEEP SPAMMING "ÜBERSAW OVERRATED" BINDS!
 			"[Common]" {
 				"[Bind Talk]" {
-					BIND "Bind Count" "say I currently have 8796 effective binds. 8638 of them are chat binds. (BIND)" |
+					BIND "Bind Count" "say I currently have 8798 effective binds. 8640 of them are chat binds. (BIND)" |
 					BIND "CMenu Explanation" "say All of my binds are organized into nested voicemenus that are displayed to me by captions. (BIND)" |
 					"[Generator]" {
 						BIND "CMGen Explanation" "say I made a generator for these bind-voicemenus because they take so long to make otherwise. (BIND)" |
