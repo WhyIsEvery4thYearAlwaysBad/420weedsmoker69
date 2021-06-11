@@ -571,6 +571,8 @@ display = "caption"
 					BIND "Frametime Recommendation" "say I recommend using frametime/frame pacing instead of framerate, because they give more granular info. (BIND)" |
 					BIND "Source" "say Source: cgvr.cs.ut.ee/wp/index.php/frame-rate-vs-frame-time/ (copy and paste) (BIND)" |
 				}
+				BIND "Amputator" "say Fun Fact: The Amputator taunt heals in a sphere, which means you can heal vertically. (BIND)" |
+				BIND "Vulkan > DX11" "say Vulkan is superior to DirectX 11, because it isn't proprietary. Change my mind! (BIND)" |
 			}
 		}
 		BIND "Accidental Bind" "say oops accidental bind. (BIND)" |
