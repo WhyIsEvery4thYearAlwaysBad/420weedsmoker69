@@ -4592,18 +4592,42 @@ display = "caption"
 							}
 						}
 					}
-				"[Popped dropped faked]" {
-					NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-				}
+					"[Popped]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS POPPED (BIND)" |
+					}
+					"[Dropped]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS DROPPED (BIND)" |
+					}
+					"[Faked]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS FAKED (BIND)" |
+					}
 				}
 				"[Kritz]" {
 					"[Value]" {
@@ -6042,18 +6066,42 @@ display = "caption"
 							}
 						}
 					}
-				"[Popped dropped faked]" {
-					NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-				}
+					"[Popped]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS POPPED (BIND)" |
+					}
+					"[Dropped]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS DROPPED (BIND)" |
+					}
+					"[Faked]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS FAKED (BIND)" |
+					}
 				}
 				"[Quickie]" {
 					"[Value]" {
@@ -7492,18 +7540,42 @@ display = "caption"
 							}
 						}
 					}
-				"[Popped dropped faked]" {
-					NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-				}
+					"[Popped]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS POPPED (BIND)" |
+					}
+					"[Dropped]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS DROPPED (BIND)" |
+					}
+					"[Faked]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS FAKED (BIND)" |
+					}
 				}
 				"[Vacc]" {
 					"[Value]" {
@@ -8942,18 +9014,42 @@ display = "caption"
 							}
 						}
 					}
-				"[Popped dropped faked]" {
-					NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-					NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS POPPED DROPPED FAKED (BIND)" |
-				}
+					"[Popped]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS POPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS POPPED (BIND)" |
+					}
+					"[Dropped]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS DROPPED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS DROPPED (BIND)" |
+					}
+					"[Faked]" {
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY ÜBER FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ENEMY ÜBERS FAKED (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ENEMY ÜBERS FAKED (BIND)" |
+					}
 				}
 			}
 		}
