@@ -1,5 +1,5 @@
 // Compile with my command menu generator.
-format = "<clr:234,209,174>$(key). $(title)<cr>"
+format = "$(key). $(title) <cr>"
 predisplay_time = "0"
 linger_time = "0"
 resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9; bind 0 ac.0"
