@@ -562,17 +562,23 @@ display = "caption"
 				BIND "Amp" "say #AmputatorIsUnderrated (BIND)" |
 			}
 			"[Fax]" {
-				"[Gas]" {
-					BIND "Gas Gravity" "say Fun Fact: Gas Passer Gas has gravity, which means it can fall. You can use the gravity to coat multiple surfaces. (BIND)" |
-					BIND "Gas Airburst" "say Fun Fact: Gas Passer detonates when in the air for more than 2 seconds. This means you can use it to deny air space. (BIND)" |
-				}
 				"[Frame]" {
 					BIND "Ftime > Frate" "say Frame time is superior to frame rate because it gives more info. Change my mind! (BIND)" |
 					BIND "Frametime Recommendation" "say I recommend using frametime/frame pacing instead of framerate, because they give more granular info. (BIND)" |
 					BIND "Source" "say Source: cgvr.cs.ut.ee/wp/index.php/frame-rate-vs-frame-time/ (copy and paste) (BIND)" |
 				}
-				BIND "Amputator" "say Fun Fact: The Amputator taunt heals in a sphere, which means you can heal vertically. (BIND)" |
-				BIND "Vulkan > DX11" "say Vulkan is superior to DirectX 11, because it isn't proprietary. Change my mind! (BIND)" |
+				"[Weapons]" {
+					"[Gas]" {
+						BIND "Gas Gravity" "say Fun Fact: Gas Passer Gas has gravity, which means it can fall. You can use the gravity to coat multiple surfaces. (BIND)" |
+						BIND "Gas Airburst" "say Fun Fact: Gas Passer detonates when in the air for more than 2 seconds. This means you can use it to deny air space. (BIND)" |
+					}
+					BIND "Amp-taunt vertheal" "say Fun Fact: The Amputator taunt heals in a sphere, which means you can heal vertically. (BIND)" |
+					BIND "Battals <35%" "say Unfun Fact: Battals only reduces the BASE damage, which means falloff is ignored. (BIND)" |
+					BIND "Huntsman" "say Unfun Fact: Huntsman Arrows can headshot with any charge, which means you can headshot with no delay! (BIND)" |
+					BIND "Hit Storage" "say Fun Fact: Wrench hits can be stored by swinging your wrench and then picking up a building before the swing completes! (BIND)" |
+				}
+				BIND "Vulkan > DX11" "say Vulkan is superior to DirectX, because it isn't proprietary. Change my mind! (BIND)" |
+				BIND "Linux > Windows" "say Linux is superior to Windows because it's better designed. Change my mind! (BIND)" |
 			}
 		}
 		BIND "Accidental Bind" "say oops accidental bind. (BIND)" |
