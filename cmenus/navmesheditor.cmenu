@@ -9,7 +9,7 @@
 			"[Select]" {
     			BIND "Mark Area" "nav_mark" |
 	    		TOGGLE BIND "Start Area Select" "nav_begin_drag_selecting" "End Area Select" "nav_end_drag_selecting" |
-				TOGGLE BIND "Start Area Deselect" "nav_begin_drag_deselecting" "End Area Select" "nav_end_drag_deselecting" |
+				TOGGLE BIND "Start Area Deselect" "nav_begin_drag_deselecting" "End Area Deslect" "nav_end_drag_deselecting" |
 	    		BIND "Flood Select" "nav_flood_select" |
                 "[Place]" {
 	    		    BIND "Pick place" "nav_place_pick" |
