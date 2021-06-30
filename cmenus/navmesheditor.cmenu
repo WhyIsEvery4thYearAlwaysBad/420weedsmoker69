@@ -1,0 +1,80 @@
+// CMenu for editing nav meshes.
+"Nav Mesh editor" {
+	TOGGLE BIND "Enable Nav Editing" "nav_edit 1; tf_show_mesh_decoration 1; tf_show_mesh_decoration_manual 1" "Disable Nav Editing" "nav_edit 0; tf_show_mesh_decoration 0; tf_show_mesh_decoration_manual 0" |
+	"[Nav Mesh]" {
+        "[Create]" {
+            TOGGLE BIND "(Begin) Create Mesh" "nav_begin_area" "(End) Create Mesh" "nav_end_area" |
+        }
+        "[Modify]" {
+			"[Select]" {
+    			BIND "Mark Area" "nav_mark" |
+	    		TOGGLE BIND "Start Area Select" "nav_begin_drag_selecting" "End Area Select" "nav_end_drag_selecting" |
+				TOGGLE BIND "Start Area Deselect" "nav_begin_drag_deselecting" "End Area Select" "nav_end_drag_deselecting" |
+	    		BIND "Flood Select" "nav_flood_select" |
+                "[Place]" {
+	    		    BIND "Pick place" "nav_place_pick" |
+	    		    BIND "Mark unnamed place" "nav_mark_unnamed" |
+    		    }
+    		}
+			"[Operations]" {
+				BIND "Split" "nav_split" |
+				BIND "Merge" "nav_merge" |
+				BIND "Splice" "nav_splice" |
+			}
+			"[(Dis)connect]" {
+				BIND "Connect" "nav_connect" |
+				BIND "Disconnect" "nav_disconnect" |
+			}
+            "[Mark]" {
+	    		"[Source]" {
+    				"[Section 1]" {
+       					BIND "nav_crouch" "nav_crouch" |
+    					BIND "nav_fog_mark" "nav_fog_mark" |
+    					BIND "nav_fog_pick" "nav_fog_pick" |
+       					BIND "nav_fog_select_place" "nav_fog_select_place" |
+    					BIND "nav_gen_cliffs_approx" "nav_gen_cliffs_approx" |
+    					BIND "nav_precise" "nav_precise" |
+    					BIND "nav_jump" "nav_jump" |
+    					BIND "nav_no_jump" "nav_no_jump" |
+    					BIND "nav_stop" "nav_stop" |
+    				}
+    				"[Section 2]" {
+    					BIND "nav_walk" "nav_walk" |
+    					BIND "nav_run" "nav_run" |
+    					BIND "nav_avoid" "nav_avoid" |
+    					BIND "nav_transient" "nav_transient" |
+	    				BIND "nav_dont_hide" "nav_dont_hide" |
+        				BIND "nav_stand" "nav_stand" |
+	    				BIND "nav_no_hostages" "nav_no_hostages" |
+	    			}
+        		}
+	    		"[Team Fortress 2]" {
+	    			BIND "Sentry Spot" "tf_mark SENTRY_SPOT" |
+    				BIND "Sniper Spot" "tf_mark SNIPER_SPOT" |
+			    }
+		    }
+		}
+        "[Delete]" {
+			BIND "Delete" "nav_delete" |
+			BIND "Delete Marked area" "nav_delete_marked" |
+		}
+		"[Misc]" {
+			BIND "Save generated nav mesh" "nav_save" |
+			BIND "Analyze generated nav mesh" "nav_analyze" |
+		}
+	}
+	"[Generation]" {
+		BIND "Mark walkable" "nav_mark_walkable" |
+		BIND "Clear walkables" "nav_clear_walkable_marks" |
+		"[Generate]" {
+			BIND "Fully Generate Nav Mesh" "nav_generate" |
+			BIND "Incrementally Generate Nav Mesh" "nav_generate_incremental" |
+		}
+	}
+	"[Place]" {
+		BIND "Toggle Place mode" "nav_toggle_place_mode" |
+		BIND "Toggle Place Planting mode" "nav_toggle_place_painting" |
+		BIND "List places" "nav_place_list" |
+	}
+	BIND "toggle nb_blind" "toggle nb_blind" |
+}

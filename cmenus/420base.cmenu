@@ -1,0 +1,1042 @@
+// Compile with my command menu generator.
+format = "$(key). $(title) <cr>"
+predisplay_time = "0"
+linger_time = "0"
+resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9; bind 0 ac.0"
+display = "caption"
+"root" {
+	"[Common]" {
+		// Call binds for basic strategies.
+		"[Strategic]" {
+			"[Fallback]" {
+				"[Point]" {
+					NOFORMAT BIND "Which point?" "say_team FALLBACK TO 1ST (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO 2ND (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO 3RD (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO 4TH (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO 5TH (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO 6TH (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO 7TH (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO 8TH (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO 9TH (BIND)" |
+					NOFORMAT BIND "" "say_team FALLBACK TO LAST (BIND)" |
+				}
+				BIND "Unspecified" "say_team FALLBACK! FALLBACK! (BIND)" |
+			}
+			"[Push]" {
+				"[Pos]" {
+					/*
+						[1 : UPPER]	[4] [3 : UPPER]
+								[1] [2] [3]
+						[1 : LOWER]	[5] [2 : LOWER]
+					*/
+					NOFORMAT BIND "        [4]      <cr>" "say_team PUSH LEFT (TEAM SIDE) (BIND)" |
+					NOFORMAT BIND "[1]    [2]    [3]<cr>" "say_team PUSH MID (TEAM SIDE) (BIND)" |
+					NOFORMAT BIND "" "say_team PUSH RIGHT (TEAM SIDE) (BIND)" |
+					NOFORMAT "" {
+						NOFORMAT BIND "[1]    [4]    [3]<cr> <cr>" "say_team PUSH UPPER LEFT (TEAM SIDE) (BIND)" |
+						NOEXIT NOFORMAT BIND "" "" |
+						NOFORMAT BIND "        [5]     " "say_team PUSH UPPER RIGHT (TEAM SIDE) (BIND)" |
+						NOFORMAT BIND "" "say_team PUSH UPPER (TEAM SIDE) (BIND)" |
+					}
+					NOFORMAT "       [5]      " {
+						NOFORMAT BIND "        [4]     <cr>" "say_team PUSH LOWER LEFT (TEAM SIDE) (BIND)" |
+						NOEXIT NOFORMAT BIND " <cr>" "" |
+						NOFORMAT BIND "" "say_team PUSH LOWER RIGHT (TEAM SIDE) (BIND)" |
+						NOEXIT NOFORMAT BIND "" "" |
+						NOFORMAT BIND "[1]    [5]    [3]" "say_team PUSH LOWER (TEAM SIDE) (BIND)" |
+					}
+				}
+				BIND "Point" "say_team CAP THE DAMN POINT! (BIND)" |
+			}
+			"[Hold]" {
+				"[Pos]" {
+					NOFORMAT "        [4]      <cr>" {
+						NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ALLIES HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ALLIES HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ALLIES HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ALLIES HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ALLIES HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ALLIES HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ALLIES HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ALLIES HOLD LEFT (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ALLIES HOLD LEFT (BIND)" |
+					}
+					NOFORMAT "[1]    [2]    [3]<cr>" {
+						NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ALLIES HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ALLIES HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ALLIES HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ALLIES HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ALLIES HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ALLIES HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ALLIES HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ALLIES HOLD MID (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ALLIES HOLD MID (BIND)" |
+					}
+					NOFORMAT " " {
+						NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 2 ALLIES HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 3 ALLIES HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 4 ALLIES HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 5 ALLIES HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 6 ALLIES HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 7 ALLIES HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 8 ALLIES HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 9 ALLIES HOLD RIGHT (BIND)" |
+						NOFORMAT BIND "" "say_team 0 ALLIES HOLD RIGHT (BIND)" |
+					}
+					NOFORMAT "" {
+						NOFORMAT "[1]    [4]    [3]<cr> <cr>" {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD UPPER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD UPPER LEFT (BIND)" |
+						}
+						NOEXIT NOFORMAT BIND "" "" |
+						NOFORMAT "        [5]     " {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD UPPER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD UPPER RIGHT (BIND)" |
+						}
+						NOFORMAT "" {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD UPPER (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD UPPER (BIND)" |
+						}
+					}
+					NOFORMAT "       [5]     [6]" {
+						NOFORMAT "        [4]     <cr>" {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD LOWER LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD LOWER LEFT (BIND)" |
+						}
+						NOEXIT NOFORMAT BIND " <cr>" "" |
+						NOFORMAT "" {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD LOWER RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD LOWER RIGHT (BIND)" |
+						}
+						NOEXIT NOFORMAT BIND "" "" |
+						NOFORMAT "[1]    [5]    [3]" {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD LOWER (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD LOWER (BIND)" |
+						}
+					}
+					NOFORMAT " " {
+						/*
+							[1 : UPPER BACK]	[4] [3 : UPPER BACK]
+									[1] [2] [3]
+							[1 : LOWER BACK]	[5] [2 : LOWER BACK]
+						*/
+						NOFORMAT "        [4]      <cr>" {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK LEFT (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK LEFT (BIND)" |
+						}
+						NOFORMAT "[1]    [2]    [3]<cr>" {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK MID (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK MID (BIND)" |
+						}
+						NOFORMAT " " {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK RIGHT (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK RIGHT (BIND)" |
+						}
+						NOFORMAT " " {
+							NOFORMAT "[1]    [4]    [3]<cr> <cr>" {
+								NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK UPPER LEFT (BIND)" |
+							}
+							NOEXIT NOFORMAT BIND "" "" |
+							NOFORMAT "        [5]     " {
+								NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK UPPER RIGHT (BIND)" |
+							}
+							NOFORMAT "" {
+								NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK UPPER (BIND)" |
+								NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK UPPER (BIND)" |
+							}
+						}
+						NOFORMAT "      [5]     [6]" {
+							NOFORMAT "        [4]     <cr>" {
+								NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+								NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK LOWER LEFT (BIND)" |
+							}
+							NOEXIT NOFORMAT BIND " <cr>" "" |
+							NOFORMAT "" {
+								NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+								NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK LOWER RIGHT (BIND)" |
+							}
+							NOEXIT NOFORMAT BIND "" "" |
+							NOFORMAT "[1]    [5]    [3]" {
+								NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK LOWER (BIND)" |
+								NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK LOWER (BIND)" |
+							}
+						}
+						NOFORMAT " " {
+							NOFORMAT BIND "How many?" "say_team 1 ALLY HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 2 ALLIES HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 3 ALLIES HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 4 ALLIES HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 5 ALLIES HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 6 ALLIES HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 7 ALLIES HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 8 ALLIES HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 9 ALLIES HOLD BACK (BIND)" |
+							NOFORMAT BIND "" "say_team 0 ALLIES HOLD BACK (BIND)" |
+						}
+					}
+				}
+				"[Point]" {
+					NOFORMAT BIND "Which point?" "say_team TEAM HOLD 1ST! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD 2ND! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD 3RD! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD 4TH! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD 5TH! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD 6TH! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD 7TH! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD 8TH! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD 9TH! (BIND)" |
+					NOFORMAT BIND "" "say_team TEAM HOLD LAST! (BIND)" |
+				}
+				BIND "Hold!" "say_team Hold position! (BIND)" |
+			}
+			BIND "Flank" "say_team FLANK THE ENEMY YOU DIMWITS! (BIND)" |
+			"[Misc]" {
+				BIND "When push?" "say_team When will we push? (BIND)" |
+				BIND "Über me!" "say_team Über me medic! (BIND)" |
+				BIND "Check Mediguns" "say_team Can y'all periodically offclass spy and check the enemy mediguns and banners with spy disguises? (BIND)" |
+			}
+		}
+		"[Need]" {
+			"[Medgun]" {
+				"[Stock]" {
+					NOFORMAT BIND "_" "say_team Need 1 Stock Medigun! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 2 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 3 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 4 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 5 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 6 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 7 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 8 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 9 Stock Mediguns! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 0 Stock Mediguns! (BIND)" |
+				}
+				"[Kritz]" {
+					NOFORMAT BIND "_" "say_team Need 1 Kritz! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 2 Kritzes! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 3 Kritzes! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 4 Kritzes! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 5 Kritzes! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 6 Kritzes! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 7 Kritzes! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 8 Kritzes! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 9 Kritzes! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 0 Kritzes! (BIND)" |
+				}
+				"[Quickie]" {
+					NOFORMAT BIND "_" "say_team Need 1 Quickie! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 2 Quickies! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 3 Quickies! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 4 Quickies! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 5 Quickies! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 6 Quickies! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 7 Quickies! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 8 Quickies! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 9 Quickies! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 0 Quickies! (BIND)" |
+				}
+				"[Vacc]" {
+					NOFORMAT BIND "_" "say_team Need 1 Vacc! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 2 Vaccs! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 3 Vaccs! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 4 Vaccs! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 5 Vaccs! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 6 Vaccs! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 7 Vaccs! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 8 Vaccs! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 9 Vaccs! (BIND)" |
+					NOFORMAT BIND "" "say_team Need 0 Vaccs! (BIND)" |
+				}
+			}
+			"[Class]" {
+				"[Scou/Soldi/Pyr]" {
+					NOFORMAT "1. [Scou/Soldi/Pyr] <cr>" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Scout! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Scouts! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Scouts! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Scouts! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Scouts! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Scouts! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Scouts! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Scouts! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Scouts! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any Scouts! (BIND)" |
+					}
+					"[Dem/Heav/Engi]" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Soldier! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Soldiers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Soldiers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Soldiers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Soldiers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Soldiers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Soldiers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Soldiers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Soldiers! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any soldiers! (BIND)" |
+					}
+					"[Med/Snipe/Spy]" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Pyro! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Pyros! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Pyros! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Pyros! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Pyros! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Pyros! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Pyros! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Pyros! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Pyros! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any pyros! (BIND)" |
+					}
+				}
+				"[Dem/Heav/Engi]" {
+					"[Scou/Soldi/Pyr]" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Demo! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Demos! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Demos! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Demos! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Demos! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Demos! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Demos! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Demos! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Demos! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any demos! (BIND)" |
+					}
+					NOFORMAT "2. [Dem/Heav/Engi] <cr>" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Heavy! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Heavies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Heavies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Heavies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Heavies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Heavies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Heavies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Heavies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Heavies! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any heavies! (BIND)" |
+					}
+					"[Med/Snipe/Spy]" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Engi! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Engies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Engies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Engies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Engies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Engies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Engies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Engies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Engies! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any Engies! (BIND)" |
+					}
+				}
+				"[Med/Snipe/Spy]" {
+					"[Scou/Soldi/Pyr]" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Med! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Meds! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Meds! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Meds! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Meds! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Meds! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Meds! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Meds! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Meds! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any Medics! (BIND)" |
+					}
+					"[Dem/Heav/Engi]" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Sniper! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Snipers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Snipers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Snipers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Snipers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Snipers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Snipers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Snipers! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Snipers! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any Snipers! (BIND)" |
+					}
+					NOFORMAT "3. [Med/Snipe/Spy] <cr>" {
+						NOFORMAT BIND "How many?" "say_team Need only 1 Spy! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 2 Spies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 3 Spies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 4 Spies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 5 Spies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 6 Spies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 7 Spies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 8 Spies! (BIND)" |
+						NOFORMAT BIND "" "say_team Need only 9 Spies! (BIND)" |
+						NOFORMAT BIND "" "say_team We don't need any Spies! (BIND)" |
+					}
+				}
+			}
+			"[Special]" {
+				"[Banner]" {
+					BIND "Buff" "say_team Need Buff Banner! (BIND)" |
+					BIND "Batt" "say_team Need Battalions Backup! (BIND)" |
+					BIND "Conch" "say_team Need Concheror! (BIND)" |
+					BIND "None" "say_team Need no Banner! (BIND)" |
+				}
+				BIND "Bonk!" "say_team Need Bonk! Atomic Punch scout! (BIND)" |
+			}
+			"[Buildings]" {
+				BIND "Sentry" "say_team Need a sentry 'ere! (BIND)" |
+				BIND "Disp" "say_team Need a dispenser 'ere! (BIND)" |
+				BIND "Tele" "say_team Need a teleporter 'ere! (BIND)" |
+				BIND "Move Up" "say_team Move your buildings forward! (BIND)" |
+			}
+		}
+		"[Misc Chat]" {
+			// NO MORE ÜBERSAW OVERRATED PLEASE! SERIOUSLY YOU'LL GET HATED MORE IF YOU KEEP SPAMMING "ÜBERSAW OVERRATED" BINDS!
+			"[Common]" {
+				"[Bind Talk]" {
+					BIND "Bind Count" "say I currently have 53563 effective binds. 52044 of them are chat binds. (BIND)" |
+					BIND "CMenu Explanation" "say All of my binds are organized into nested voicemenus that are displayed to me by captions. (BIND)" |
+					"[Generator]" {
+						BIND "CMGen Explanation" "say I made a generator for these bind-voicemenus because they take so long to make otherwise. (BIND)" |
+						BIND "CMGen Link" "say My bind-voicemenu generator link: github.com/WhyIsEvery4thYearAlwaysBad/CmdMenuGenerator (copy and paste it) (BIND)" |
+					}
+					BIND "Annoying Binds" "say Just mute me from the scoreboard if you hate my binds. (Enable the scoreboard mouse mode to do so!) (BIND)" |
+					BIND "Improving Binds" "say How can I improve my binds at github.com/WhyIsEvery4thYearAlwaysBad/420weedsmoker69/blob/mastercoms/420cmdmenu.cmenu? (BIND)" |
+				}
+				"[Performance]" {
+					"[General]" {
+						BIND "Mastercomfig fix problem" "say Try out mastercomfig (at mastercomfig.com) as it might fix your performance problems. (BIND)" |
+						BIND "Change to mastercomfig" "say I recommend using mastercomfig instead. The other configs are outdated, poorly made, or haven't gone under any proper review. (BIND)" |
+						BIND "Other mods" "say Try out some more performance mods located here: docs.mastercomfig.com/en/latest/customization/see_also (copy and paste it) (BIND)" |
+					}
+				}
+				"[Memes]" {
+					BIND "MiningCraft" "say hEY gOyS iM MOiNInG FoR DOiAmoNDS!! (BIND)" |
+					TOGGLE BIND "DF Nerf" "say drAgoN's fURy iS tRAsH! *singlehandedly demolishes 4 enemies in 2 seconds* (BIND)" "DF Nerf" "say dRaGoN'S furY IS trAsh *singlehandedly demolishes 4 enemies in 2 seconds* (BIND)" "DF Nerf" "say DrAgon'S furY IS TrAsH! *singlehandedly demolishes 4 enemies in 2 seconds* (BIND)" |
+				}
+				BIND "MvM Ticket" "say I'm a repeater so I'll leave early on the last round to save my ticket! (BIND)" |
+			}
+			"[PSAs]" {
+				"[Gameplay]" {
+					"[Medic]" {
+						BIND "Don't über a heavy" "say ATTENTION ALL MEDICS: Don't über a heavy when pushing! (BIND)" |
+						BIND "Don't heal your spy" "say ATTENTION ALL MEDICS: Don't heal your spy, unless if he requests/needs it! (BIND)" |
+						BIND "Tell team über" "say ATTENTION ALL MEDICS: Tell your team your über percentage so they can coordinate! (BIND)" |
+						BIND "Amp Spy" "say ATTENTION ALL AMPUTATOR MEDS: Taunt behind a wall while angled slightly to the left to prevent backstabs! (BIND)" |
+					}
+					"[Engi]" {
+						BIND "No close builds" "say ATTENTION ALL ENGINEERS: Keep your buildings away from each other for more defense! (BIND)" |
+						BIND "Upgrade Your Engi's Buildings!" "say_team ATTENTION TEAM PLAYERS: Upgrade/repair your engi's buildings when free! (BIND)" |
+					}
+					"[All]" {
+						BIND "No near übersaw" "say ATTENTION ALL PLAYERS: STAY AWAY FROM THE OVERRATED-ÜBERSAW MEDIC! Use your ranged weapon instead! (BIND)" |
+						BIND "Reserve Health Kits for Medic" "say ATTENTION ALL PLAYERS: Reserve Health kits for your Medic! (BIND)" |
+						BIND "Reserve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer! (BIND)" |
+						BIND "Stop staying in sightlines" "say ATTENTION ALL PLAYERS: Stop standing in sniper sightlines if a Sniper is there! Please take cover until it is safe instead! (BIND)" |
+
+					}
+				}
+				BIND "Scoreboard Mouse" "say PSA: Enable the scoreboard mouse mode! It makes muting people and trading with people easier! (BIND)" |
+				BIND "Let RTR sap!" "say_team ATTENTION TEAM PLAYERS: Don't destroy enemy buildings sapped by RTR, so that the enemy engi can't access his buildings! (BIND)" |
+			}
+			"[Hashtags]" {
+				BIND "DF underrated" "say #DragonsFuryIsUnderrated (BIND)" |
+				BIND "DF Nerf" "say #DragonsFuryNeedsANerf (BIND)" |
+				BIND "Gas Passer" "say #GasPasserIsUnderrated (BIND)" |
+				BIND "RTR" "say #RedTapeRecorderIsUnderrated (BIND)" |
+				BIND "Amp" "say #AmputatorIsUnderrated (BIND)" |
+			}
+			"[Fax]" {
+				"[Frame]" {
+					BIND "Ftime > Frate" "say Frame time is superior to frame rate because it gives more info. Change my mind! (BIND)" |
+					BIND "Frametime Recommendation" "say I recommend using frametime/frame pacing instead of framerate, because they give more granular info. (BIND)" |
+					BIND "Source" "say Source: cgvr.cs.ut.ee/wp/index.php/frame-rate-vs-frame-time/ (copy and paste) (BIND)" |
+				}
+				"[Weapons]" {
+					"[Gas]" {
+						BIND "Gas Gravity" "say Fun Fact: Gas Passer Gas has gravity, which means it can fall. You can use the gravity to coat multiple surfaces. (BIND)" |
+						BIND "Gas Airburst" "say Fun Fact: Gas Passer detonates when in the air for more than 2 seconds. This means you can use it to deny air space. (BIND)" |
+					}
+					BIND "Amp-taunt vertheal" "say Fun Fact: The Amputator taunt heals in a sphere, which means you can heal vertically. (BIND)" |
+					BIND "Battals <35%" "say Unfun Fact: Battals only reduces the BASE damage, which means falloff is ignored. (BIND)" |
+					BIND "Huntsman" "say Unfun Fact: Huntsman Arrows can headshot with any charge, which means you can headshot with no delay! (BIND)" |
+					BIND "Hit Storage" "say Fun Fact: Wrench hits can be stored by swinging your wrench and then picking up a building before the swing completes! (BIND)" |
+				}
+				BIND "Vulkan > DX11" "say Vulkan is superior to DirectX, because it isn't proprietary. Change my mind! (BIND)" |
+				BIND "Linux > Windows" "say Linux is superior to Windows because it's better designed. Change my mind! (BIND)" |
+			}
+		}
+		BIND "Accidental Bind" "say oops accidental bind. (BIND)" |
+	}
+	"[Alerts]" {
+		"[Push]" {
+			/*
+				[1 : UPPER]	[4] [3 : UPPER]
+						[1] [2] [3]
+				[1 : LOWER]	[5] [2 : LOWER]
+			*/
+			NOFORMAT BIND "        [4]      <cr>" "say_team ENEMY PUSH LEFT (TEAM SIDE) (BIND)" |
+			NOFORMAT BIND "[1]    [2]    [3]<cr>" "say_team ENEMY PUSH MID (TEAM SIDE) (BIND)" |
+			NOFORMAT BIND "" "say_team ENEMY PUSH RIGHT (TEAM SIDE) (BIND)" |
+			NOFORMAT "" {
+				NOFORMAT BIND "[1]    [4]    [3]<cr> <cr>" "say_team ENEMY PUSH UPPER LEFT (TEAM SIDE) (BIND)" |
+				NOEXIT NOFORMAT BIND "" "" |
+				NOFORMAT BIND "        [5]     " "say_team ENEMY PUSH UPPER RIGHT (TEAM SIDE) (BIND)" |
+				NOFORMAT BIND "" "say_team ENEMY PUSH UPPER (TEAM SIDE) (BIND)" |
+			}
+			NOFORMAT "       [5]      " {
+				NOFORMAT BIND "        [4]     <cr>" "say_team ENEMY PUSH LOWER LEFT (TEAM SIDE) (BIND)" |
+				NOEXIT NOFORMAT BIND " <cr>" "" |
+				NOFORMAT BIND "" "say_team ENEMY PUSH LOWER RIGHT (TEAM SIDE) (BIND)" |
+				NOEXIT NOFORMAT BIND "" "" |
+				NOFORMAT BIND "[1]    [5]    [3]" "say_team ENEMY PUSH LOWER (TEAM SIDE) (BIND)" |
+			}
+		}
+		BIND "Team Builds Sapped" "say_team TEAM BUILDS SAPPED (BIND)" |
+	}
+	"[Voicelines]" {
+		"[Alerts]" {
+			NOEXIT BIND "Spy!" "cmd voicemenu 1 1" |
+			NOEXIT BIND "Sentry Ahead!" "cmd voicemenu 1 2" |
+			NOEXIT BIND "Incoming!"	"cmd voicemenu 1 0" |
+		}
+		"[Orders]" {
+			NOEXIT BIND "Go!" "cmd voicemenu 0 2" |
+			NOEXIT BIND "No"	"cmd voicemenu 0 7" |
+			NOEXIT BIND "Yes"	"cmd voicemenu 0 6" |
+			"[Need Build]" {
+				NOEXIT BIND "Teleporter" "cmd voicemenu 1 3" |
+				NOEXIT BIND "Dispenser" "cmd voicemenu 1 4" |
+				NOEXIT BIND "Sentry" "cmd voicemenu 1 5" |
+			}
+		}
+		"[Battle Cry/Cheers/Jeers/Thanks]" {
+			NOEXIT BIND "Battle Cry" "cmd voicemenu 2 1" |
+			NOEXIT BIND "Cheers" "cmd voicemenu 2 2" |
+			NOEXIT BIND "Jeers" "cmd voicemenu 2 3" |
+		}
+		"[Misc]" {
+			NOEXIT BIND "Thanks!" "cmd voicemenu 0 1" |
+			NOEXIT BIND "Nice Shot!" "cmd voicemenu 2 6" |
+		}
+	}
+	"[Commands]" {
+		"[Vanilla]" {
+			"[Loadout]" {
+				BIND "Loadout 1"	"loadouts.A" |
+				BIND "Loadout 2"	"loadouts.B" |
+				BIND "Loadout 3"	"loadouts.C" |
+				BIND "Loadout 4"	"loadouts.D" |
+			}
+			"[Suicide]" {
+				BIND "Kill" "kill" |
+				BIND "Explode" "explode" |
+			}
+			"[Debug]" {
+				BIND "fixme" "cmd demorestart; snd_restart; hud_reloadscheme; heartbeat; cc_lang english; cc_lang commandmenu" |
+				BIND "Reload Hud" "hud_reloadscheme" |
+				BIND "retry" "retry" |
+			}
+		}
+		"[Server]" {
+			"[Common]" {
+				"[Votes]" {
+					BIND "/rtv" "say /rtv" |
+					BIND "/vscramble" "say /vscramble" |
+					BIND "/valltalk" "say /valltalk" |
+					BIND "/nominate" "say /nominate" |
+				}
+				BIND "/rtd" "say /rtd" |
+				BIND "/timeleft" "say /timeleft" |
+				BIND "/nextmap" "say /nextmap" |
+			}
+			"[Gamemode]" {
+				"[VSH]" {
+					BIND "/halehp" "say /halehp" |
+					BIND "/halemusic" "say /halemusic" |
+					BIND "/haleboss" "say /haleboss" |
+					BIND "/weaponstats" "say /weaponstats" |
+				}
+				"[Med v. Engi]" {
+					BIND "/zs_perks" "say /zs_perks" |
+				}
+			}
+		}
+		"[Options]" {
+			NOEXIT TOGGLE BIND "Disable Text Chat"	"messages_off; exec $cmenu_options_1"	"Enable Text Chat"	"messages_on; exec $cmenu_options_1" |
+			NOEXIT TOGGLE BIND "Disable Voice Chat"	"voice_modenable 0; exec $cmenu_options_1" "Enable Voice Chat"	"voice_modenable 1; exec $cmenu_options_1" |
+			"[Debug]" {
+				NOEXIT TOGGLE BIND "Show FPS" "cl_showfps 2; exec $cmenu_debug_1" "Hide FPS" "cl_showfps 0; exec $cmenu_debug_1" |
+				NOEXIT TOGGLE BIND "Show net_graph" "net_graph 4; exec $cmenu_debug_1" "Hide net_graph" "net_graph 0; exec $cmenu_debug_1" |
+				NOEXIT TOGGLE BIND "Show pos" "cl_showpos 1; exec $cmenu_debug_1" "Hide pos" "cl_showpos 0; exec $cmenu_debug_1" |
+			}
+		}
+		BIND "{Resupply}" "loadouts.resup" |
+	}
+	NOEXIT BIND "[Class Specific]" "ac.cs_page" |
+}
+
+// Class Specific Pages
+"scout page" {
+	BIND "Mad milk ready" "say_team MAD MILK READY! (BIND)" |
+	"[Bonk]" {
+		BIND "Bonk ready" "say_team BONK! METER FULL! (BIND)" |
+		BIND "Bonk in" "say_team I'll bonk in to tank the knockback and damage from sentries/sticky traps/übers! (BIND)" |
+	}
+}
+"soldier page" {
+	"[Banner Ready]" {
+		BIND "Buff" "say_team Buff Banner Prepped! (BIND)" |
+		BIND "Battals" "say_team Battals Prepped! (BIND)" |
+		BIND "Conch" "say_team Conch Prepped! (BIND)" |
+	}
+}
+"pyro page" {
+	"[Phlog Meter]" {
+		BIND "0%" "say_team PHLOG METER 0% (BIND)" |
+		BIND "50%" "say_team PHLOG METER 50% (BIND)" |
+		BIND "100%" "say_team PHLOG METER 100% (BIND)" |
+	}
+	"[Gas Passer Meter]" {
+		BIND "0%" "say_team GAS PASSER 0% (BIND)" |
+		BIND "50%" "say_team GAS PASSER 50% (BIND)" |
+		BIND "100%" "say_team GAS PASSER 100% (BIND)" |
+	}
+}
+
+"engineer page" {
+	"[Build Up]" {
+		BIND "Teleporter" "say_team Teleporter Up! (BIND)" |
+		BIND "Team Teleporter" "say_team Teleporter to team spawn is up! (BIND)" |
+		BIND "Dispenser" "say_team Dispenser Up! (BIND)" |
+	}
+	"[Eureka Teleport]" {
+		BIND "Ent" "eureka_teleport 0" |
+		BIND "Exit" "eureka_teleport 1" |
+	}
+}
+"medic page" {
+	"[Medgun]" {
+		BIND "Stock" "say_team My Medigun=Stock! (BIND)" |
+		BIND "Quick" "say_team My Medigun=Quickie! (BIND)" |
+		BIND "Kritz" "say_team My Medigun=Kritz! (BIND)" |
+		BIND "Vacc" "say_team My Medigun=Vacc! (BIND)" |
+	}
+	"[My Über]" {
+		"[Über]" {
+			NOFORMAT " " {
+				NOFORMAT "1" {
+					KEY = "ENTER" NOFORMAT BIND "11" "say_team MY ÜBER 11% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "12" "say_team MY ÜBER 12% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "13" "say_team MY ÜBER 13% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "14" "say_team MY ÜBER 14% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "15" "say_team MY ÜBER 15% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "16" "say_team MY ÜBER 16% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "17" "say_team MY ÜBER 17% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "18" "say_team MY ÜBER 18% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "19" "say_team MY ÜBER 19% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "10" "say_team MY ÜBER 10% (BIND)" |
+					KEY = "0" NOFORMAT " " {
+						KEY = "ENTER" NOFORMAT BIND "100" "say_team MY ÜBER 100% (BIND)" |
+					}
+				}
+			}
+			NOFORMAT " " {
+				NOFORMAT "2" {
+					KEY = "ENTER" NOFORMAT BIND "21" "say_team MY ÜBER 21% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "22" "say_team MY ÜBER 22% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "23" "say_team MY ÜBER 23% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "24" "say_team MY ÜBER 24% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "25" "say_team MY ÜBER 25% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "26" "say_team MY ÜBER 26% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "27" "say_team MY ÜBER 27% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "28" "say_team MY ÜBER 28% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "29" "say_team MY ÜBER 29% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "20" "say_team MY ÜBER 20% (BIND)" |
+				}
+			}
+			NOFORMAT " " {
+				NOFORMAT "3" {
+					KEY = "ENTER" NOFORMAT BIND "31" "say_team MY ÜBER 31% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "32" "say_team MY ÜBER 32% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "33" "say_team MY ÜBER 33% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "34" "say_team MY ÜBER 34% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "35" "say_team MY ÜBER 35% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "36" "say_team MY ÜBER 36% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "37" "say_team MY ÜBER 37% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "38" "say_team MY ÜBER 38% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "39" "say_team MY ÜBER 39% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "30" "say_team MY ÜBER 30% (BIND)" |
+				}
+			}
+			NOFORMAT " " {
+				NOFORMAT "4" {
+					KEY = "ENTER" NOFORMAT BIND "41" "say_team MY ÜBER 41% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "42" "say_team MY ÜBER 42% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "43" "say_team MY ÜBER 43% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "44" "say_team MY ÜBER 44% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "45" "say_team MY ÜBER 45% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "46" "say_team MY ÜBER 46% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "47" "say_team MY ÜBER 47% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "48" "say_team MY ÜBER 48% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "49" "say_team MY ÜBER 49% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "40" "say_team MY ÜBER 40% (BIND)" |
+				}
+			}
+			NOFORMAT " " {
+				NOFORMAT "5" {
+					KEY = "ENTER" NOFORMAT BIND "51" "say_team MY ÜBER 51% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "52" "say_team MY ÜBER 52% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "53" "say_team MY ÜBER 53% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "54" "say_team MY ÜBER 54% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "55" "say_team MY ÜBER 55% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "56" "say_team MY ÜBER 56% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "57" "say_team MY ÜBER 57% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "58" "say_team MY ÜBER 58% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "59" "say_team MY ÜBER 59% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "50" "say_team MY ÜBER 50% (BIND)" |
+				}
+			}
+			NOFORMAT " " {
+				NOFORMAT "6" {
+					KEY = "ENTER" NOFORMAT BIND "61" "say_team MY ÜBER 61% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "62" "say_team MY ÜBER 62% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "63" "say_team MY ÜBER 63% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "64" "say_team MY ÜBER 64% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "65" "say_team MY ÜBER 65% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "66" "say_team MY ÜBER 66% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "67" "say_team MY ÜBER 67% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "68" "say_team MY ÜBER 68% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "69" "say_team MY ÜBER 69% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "60" "say_team MY ÜBER 60% (BIND)" |
+				}
+			}
+			NOFORMAT " " {
+				NOFORMAT "7" {
+					KEY = "ENTER" NOFORMAT BIND "71" "say_team MY ÜBER 71% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "72" "say_team MY ÜBER 72% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "73" "say_team MY ÜBER 73% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "74" "say_team MY ÜBER 74% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "75" "say_team MY ÜBER 75% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "76" "say_team MY ÜBER 76% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "77" "say_team MY ÜBER 77% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "78" "say_team MY ÜBER 78% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "79" "say_team MY ÜBER 79% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "70" "say_team MY ÜBER 70% (BIND)" |
+				}
+			}
+			NOFORMAT " " {
+				NOFORMAT "8" {
+					KEY = "ENTER" NOFORMAT BIND "81" "say_team MY ÜBER 81% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "82" "say_team MY ÜBER 82% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "83" "say_team MY ÜBER 83% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "84" "say_team MY ÜBER 84% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "85" "say_team MY ÜBER 85% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "86" "say_team MY ÜBER 86% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "87" "say_team MY ÜBER 87% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "88" "say_team MY ÜBER 88% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "89" "say_team MY ÜBER 89% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "80" "say_team MY ÜBER 80% (BIND)" |
+				}
+			}
+			NOFORMAT " " {
+				NOFORMAT "9" {
+					KEY = "ENTER" NOFORMAT BIND "91" "say_team MY ÜBER 91% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "92" "say_team MY ÜBER 92% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "93" "say_team MY ÜBER 93% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "94" "say_team MY ÜBER 94% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "95" "say_team MY ÜBER 95% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "96" "say_team MY ÜBER 96% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "97" "say_team MY ÜBER 97% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "98" "say_team MY ÜBER 98% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "99" "say_team MY ÜBER 99% (BIND)" |
+				}
+				NOFORMAT " " {
+					KEY = "ENTER" NOFORMAT BIND "90" "say_team MY ÜBER 90% (BIND)" |
+				}
+			}
+			NOFORMAT " " {
+				KEY = "ENTER" NOFORMAT BIND "0" "say_team MY ÜBER 0% (BIND)" |
+			}
+		}
+		BIND "Dropped" "say_team MY ÜBER DROPPED! (BIND)" |
+		BIND "Popped" "say_team MY ÜBER POPPED! (BIND)" |
+	}
+	BIND "Fake Über" "cmd voicemenu 1 7; say_team **FAKED ÜBER** (BIND)" |
+	BIND "Push Pocket" "say_team **PUSH IN with me my pocket! (BIND)" |
+}
