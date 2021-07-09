@@ -5,6 +5,7 @@ cfg\settings_default.scr
 cfg\user_default.scr
 cfg\config\demoview.cfg
 cfg\config\main.cfg
+cfg\config\stock.cfg
 cfg\user\autoexec.cfg
 cfg\user\demoman.cfg
 cfg\user\engineer.cfg
