@@ -2,14 +2,14 @@
 //
 // Format:
 //  Version [float]
-//  Options description followed by 
+//  Options description followed by
 //  Options defaults
 //
 // Option description syntax:
 //
 //  "cvar" { "Prompt" { type [ type info ] } { default } }
 //
-//  type = 
+//  type =
 //   BOOL   (a yes/no toggle)
 //   STRING
 //   NUMBER
@@ -45,16 +45,6 @@ DESCRIPTION SERVER_OPTIONS
 		{ BOOL }
 		{ "1" }
 	}
-	" "
-	{
-		"Generate Nav Mesh?"
-		{
-			LIST
-			"Yes"	"nav_generate"
-			"No"	" "
-		}
-		{ "1" }
-	}
 	"sv_pure"
 	{
 		"Purity"
@@ -74,6 +64,15 @@ DESCRIPTION SERVER_OPTIONS
 		"Packet Loss"
 		"How much packets are lost."
 		{ NUMBER -1 -1 }
+		{ "0" }
+	}
+	"gameplay" {
+		"Gameplay options"
+		{ CATEGORY }
+	}
+	"tf_weapon_criticals" {
+		"Random Criticals?"
+		{ BOOL }
 		{ "0" }
 	}
 }
