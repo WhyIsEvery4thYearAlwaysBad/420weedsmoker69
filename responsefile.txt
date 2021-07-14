@@ -40,7 +40,6 @@ materials\vgui\replay\thumbnails\crosshair_jar.vtf
 materials\vgui\replay\thumbnails\crosshair_huntsman.vmt
 materials\vgui\replay\thumbnails\crosshair_huntsman.vtf
 scripts\chapterbackgrounds.txt
-scripts\kb_act.lst
 scripts\tf_weapon_jar.txt
 scripts\tf_weapon_rocketlauncher_fireball.txt
 scripts\tf_weapon_compound_bow.txt
