@@ -1,7 +1,10 @@
 #!/bin/sh
 # POSIX compliance baby!
+BINDIR=$(dirname "$(readlink -fn "$0")")
+cd "${BINDIR}" || exit 2
 # Combine the three cmenus into one large cmenu.
-cat ./420base.cmenu > ../420cmdmenu.cmenu
+echo '// This file is auto generated. To make edits please modify the cmenu files located in the cmenus directory.' > ../420cmdmenu.cmenu
+cat ./420base.cmenu >> ../420cmdmenu.cmenu
 ./generate_call_cmenu.sh >> ../420cmdmenu.cmenu
 cat ./navmesheditor.cmenu >> ../420cmdmenu.cmenu
 # Set the bind counts for the bind at line 512 in 420base.cmenu.
