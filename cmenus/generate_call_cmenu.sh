@@ -308,12 +308,31 @@ main() {
 			if [ $ClassID -eq 9 ] && [ $SubID -eq 2 ]
 			then
 				echo -e "\t\t\"[Builds]\" {"
+			elif [ $ClassID -eq 9 ] && [ $SubID -eq 0 ]
+			then
+				echo -e "\t\t\"[Medic Combo]\" {"
+				echo -e "\t\t\t\"[Scou/Solly/Pyr]\" {"
+				gen_pos_calls "SCOUT-MED" "\t\t\t\t" "[Scou]"
+				gen_pos_calls "SOLLY-MED" "\t\t\t\t" "[Solly]"
+				gen_pos_calls "PYRO-MED" "\t\t\t\t" "[Pyro]"
+				echo -e "\t\t\t}"
+				echo -e "\t\t\t\"[Dem/Heav/Eng]\" {"
+				gen_pos_calls "DEMO-MED" "\t\t\t\t" "[Dem]"
+				gen_pos_calls "HEAVY-MED" "\t\t\t\t" "[Heav]"
+				gen_pos_calls "ENGI-MED" "\t\t\t\t" "[Eng]"
+				echo -e "\t\t\t}"
+				echo -e "\t\t\t\"[Med/Snipe/Sp]\" {"
+				gen_pos_calls "MED-MED" "\t\t\t\t" "[Med]"
+				gen_pos_calls "SNIPER-MED" "\t\t\t\t" "[Snipe]"
+				gen_pos_calls "SPY-MED" "\t\t\t\t" "[Sp]"
+				echo -e "\t\t\t}"
+				gen_pos_calls "MEDIC COMBO" "\t\t\t" "[Unknown]"
 			else
 				echo -e "\t\t\"[${ClassNames[ClassID+SubID]^}]\" {"
 				gen_pos_calls "${ClassNames[ClassID+SubID]^^}" "\t\t\t"
 			fi
 			# Create "has weapon" calls ONLY if the class actually has special weapons defined.
-			if [ ! ${#Weapons[ClassID+SubID]} -eq 0 ]
+			if [ $((ClassID+SubID)) -lt 9 ]
 			then
 				echo -e "\t\t\t\"[Weapons]\" {"
 				# Primary Weapons
