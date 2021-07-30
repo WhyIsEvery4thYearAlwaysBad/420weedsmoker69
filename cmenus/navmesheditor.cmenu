@@ -1,116 +1,120 @@
 // CMenu for editing nav meshes.
+// TODO: Add nav_simplify_selected
 "Nav Mesh editor" {
-	"[Nav Mesh]" {
-        "[Create]" {
-            TOGGLE BIND "(Begin) Create Mesh" "nav_begin_area" "(End) Create Mesh" "nav_end_area" |
-			BIND "Create Ladder" "nav_build_ladder" |
-        }
-        "[Modify]" {
-			"[Select]" {
-    			BIND "Mark Area" "nav_mark" |
-				"[Cursor]" {
-					BIND "Toggle Select" "nav_toggle_selecting" |
-					BIND "Toggle Deselect" "nav_toggle_deselecting" |
-				}
-				"[Area]" {
-					TOGGLE BIND "Start Area Select" "nav_begin_drag_selecting" "End Area Select" "nav_end_drag_selecting" |
-					TOGGLE BIND "Start Area Deselect" "nav_begin_drag_deselecting" "End Area Deslect" "nav_end_drag_deselecting" |
-				}
-	    		BIND "Flood Select" "nav_flood_select" |
-                "[Place]" {
-	    		    BIND "Pick place" "nav_place_pick" |
-	    		    BIND "Mark unnamed place" "nav_mark_unnamed" |
-    		    }
-    		}
-			"[Operations]" {
-				BIND "Split" "nav_split" |
-				BIND "Merge" "nav_merge" |
-				BIND "Splice" "nav_splice" |
-//				BIND "Flip Ladder" "nav_ladder_flip" |
-				NOEXIT BIND "Place on ground" "nav_corner_place_on_ground" |
-				"[(Dis)connect]" {
-					BIND "Connect" "nav_connect" |
-					BIND "Disconnect" "nav_disconnect" |
-				}
+	// Show more movement paths.
+	`tf_show_incursion_flow_range 1000`
+	// Don't adjust adjacent corners when using nav_corner_* commands.
+	`nav_corner_adjust_adjacent 0`
+    "[Create]" {
+        TOGGLE BIND "(Begin) Create Mesh" "nav_begin_area" "(End) Create Mesh" "nav_end_area" |
+		BIND "Splice" "nav_splice" |
+		BIND "Create Ladder" "nav_build_ladder" |
+		"[Generation]" {
+			BIND "Mark walkable" "nav_mark_walkable" |
+			BIND "Clear walkables" "nav_clear_walkable_marks" |
+			"[Place]" {
+				BIND "Toggle Place mode" "nav_toggle_place_mode" |
+				BIND "Toggle Place Planting mode" "nav_toggle_place_painting" |
+				BIND "List places" "nav_place_list" |
 			}
-            "[Mark]" {
-	    		"[Source]" {
-    				"[Movement]" {
-						BIND "nav_walk" "nav_walk" |
-    					BIND "nav_run" "nav_run" |
-						BIND "nav_crouch" "nav_crouch" |
-						BIND "nav_jump" "nav_jump" |
-						BIND "nav_precise" "nav_precise" |
+		}
+    }
+    "[Modify]" {
+		"[Select]" {
+			NOEXIT BIND "Mark Area" "nav_mark" |
+			"[Cursor]" {
+				NOEXIT BIND "Toggle Select" "nav_toggle_selecting" |
+				NOEXIT BIND "Toggle Deselect" "nav_toggle_deselecting" |
+			}
+			"[Area]" {
+				NOEXIT TOGGLE BIND "Start Area Select" "nav_begin_drag_selecting; exec $cmenu_area" "End Area Select" "nav_end_drag_selecting; exec $cmenu_area" |
+				NOEXIT TOGGLE BIND "Start Area Deselect" "nav_begin_drag_deselecting; exec $cmenu_area" "End Area Deslect" "nav_end_drag_deselecting; exec $cmenu_area" |
+			}
+    		BIND "Flood Select" "nav_flood_select" |
+		}
+		"[Operations]" {
+			BIND "Split" "nav_split" |
+			BIND "Merge" "nav_merge" |
+			"[(Dis)connect]" {
+				BIND "Connect" "nav_connect" |
+				BIND "Disconnect" "nav_disconnect" |
+			}
+			NOEXIT BIND "Ground Area" "nav_corner_place_on_ground" |
+		}
+        "[Mark]" {
+    		"[Source]" {
+				"[Movement]" {
+					BIND "nav_walk" "nav_walk" |
+					BIND "nav_run" "nav_run" |
+					BIND "nav_crouch" "nav_crouch" |
+					BIND "nav_jump" "nav_jump" |
+					BIND "nav_precise" "nav_precise" |
+				}
+				"[Guide]" {
+//					BIND "nav_avoid" "nav_avoid" |
+//					BIND "nav_stop" "nav_stop" |
+    				BIND "nav_dont_hide" "nav_dont_hide" |
+//					BIND "nav_no_jump" "nav_no_jump" |
+				}
+				"[Misc]" {
+/*					"[Fog]" {
+    					BIND "nav_fog_mark" "nav_fog_mark" |
+    					BIND "nav_fog_pick" "nav_fog_pick" |
+       					BIND "nav_fog_select_place" "nav_fog_select_place" |
+					} */
+					BIND "nav_gen_cliffs_approx" "nav_gen_cliffs_approx" |
+					BIND "nav_stand" "nav_stand" |
+    				BIND "nav_no_hostages" "nav_no_hostages" |
+				}
+    		}
+    		"[Team Fortress 2]" {
+//	    		BIND "Sentry Spot" "tf_mark SENTRY_SPOT" |
+//    			BIND "Sniper Spot" "tf_mark SNIPER_SPOT" |
+				"[Points]" {
+					"[Point]" {
+						BIND "First" "tf_mark WITH_FIRST_POINT" |
+						BIND "Second" "tf_mark WITH_SECOND_POINT" |
+						BIND "Third" "tf_mark WITH_THIRD_POINT" |
+						BIND "Fourth" "tf_mark WITH_FOURTH_POINT" |
+						BIND "Fifth" "tf_mark WITH_FIFTH_POINT" |
 					}
-					"[Guide]" {
-						BIND "nav_avoid" "nav_avoid" |
-						BIND "nav_stop" "nav_stop" |
-	    				BIND "nav_dont_hide" "nav_dont_hide" |
-    					BIND "nav_no_jump" "nav_no_jump" |
+					BIND "Blocked Until Cap" "tf_mark BLOCKED_UNTIL_POINT_CAPTURE" |
+					BIND "Blocked After Cap" "tf_mark BLOCKED_AFTER_POINT_CAPTURE" |
+				}
+				"[Doors]" {
+					"[RED]" {
+						BIND "Red One-Way" "tf_mark RED_ONE_WAY_DOOR" |
+						BIND "Red Setup" "tf_mark RED_SETUP_GATE" |
 					}
-					"[Misc]" {
-						"[Fog]" {
-	    					BIND "nav_fog_mark" "nav_fog_mark" |
-	    					BIND "nav_fog_pick" "nav_fog_pick" |
-	       					BIND "nav_fog_select_place" "nav_fog_select_place" |
-						}
-    					BIND "nav_gen_cliffs_approx" "nav_gen_cliffs_approx" |
-						BIND "nav_stand" "nav_stand" |
-	    				BIND "nav_no_hostages" "nav_no_hostages" |
-    				}
-        		}
-	    		"[Team Fortress 2]" {
-	    			BIND "Sentry Spot" "tf_mark SENTRY_SPOT" |
-    				BIND "Sniper Spot" "tf_mark SNIPER_SPOT" |
-					"[Points]" {
-						"[Point]" {
-							BIND "First" "tf_mark WITH_FIRST_POINT" |
-							BIND "Second" "tf_mark WITH_SECOND_POINT" |
-							BIND "Third" "tf_mark WITH_THIRD_POINT" |
-							BIND "Fourth" "tf_mark WITH_FOURTH_POINT" |
-							BIND "Fifth" "tf_mark WITH_FIFTH_POINT" |
-						}
-						BIND "Blocked Until Cap" "tf_mark BLOCKED_UNTIL_POINT_CAPTURE" |
-						BIND "Blocked After Cap" "tf_mark BLOCKED_AFTER_POINT_CAPTURE" |
+					"[BLU]" {
+						BIND "Blu One-Way" "tf_mark BLUE_ONE_WAY_DOOR" |
+						BIND "Blu Setup" "tf_mark BLUE_SETUP_GATE" |
 					}
-					"[Doors]" {
-						"[RED]" {
-							BIND "Red One-Way" "tf_mark RED_ONE_WAY_DOOR" |
-							BIND "Red Setup" "tf_mark RED_SETUP_GATE" |
-						}
-						"[BLU]" {
-							BIND "Blu One-Way" "tf_mark BLUE_ONE_WAY_DOOR" |
-							BIND "Blu Setup" "tf_mark BLUE_SETUP_GATE" |
-						}
-						BIND "Always Blocks" "tf_mark DOOR_ALWAYS_BLOCKS" |
-						BIND "Never Blocks" "tf_mark DOOR_NEVER_BLOCKS" |
-					}
-					BIND "Unblockable" "tf_mark UNBLOCKABLE" |
-			    }
+					BIND "Always Blocks" "tf_mark DOOR_ALWAYS_BLOCKS" |
+					BIND "Never Blocks" "tf_mark DOOR_NEVER_BLOCKS" |
+				}
+				BIND "Unblockable" "tf_mark UNBLOCKABLE" |
 		    }
-		}
-        "[Delete]" {
-			BIND "Delete" "nav_delete" |
-			BIND "Delete Marked area" "nav_delete_marked" |
-			BIND "Wipe TF Attribs" "tf_wipe_attributes" |
-		}
-		"[Misc]" {
-			BIND "Save generated nav mesh" "nav_save" |
-			BIND "Analyze generated nav mesh" "nav_analyze" |
-		}
+	        "[Place]" {
+			    BIND "Pick place" "nav_place_pick" |
+			    BIND "Mark unnamed place" "nav_mark_unnamed" |
+			}
+	    }
 	}
-	"[Generation]" {
-		BIND "Mark walkable" "nav_mark_walkable" |
-		BIND "Clear walkables" "nav_clear_walkable_marks" |
-		"[Place]" {
-			BIND "Toggle Place mode" "nav_toggle_place_mode" |
-			BIND "Toggle Place Planting mode" "nav_toggle_place_painting" |
-			BIND "List places" "nav_place_list" |
-		}
+    "[Delete]" {
+		BIND "Delete" "nav_delete" |
+		BIND "Delete Marked area" "nav_delete_marked" |
+		BIND "Wipe TF Attribs" "tf_wipe_attributes" |
 	}
 	"[Options]" {
-		TOGGLE BIND "Enable Nav Editing" "incrementvar nav_edit 0 2 1; incrementvar tf_show_mesh_decoration 0 2 1; tf_show_mesh_decoration_manual 0" "Disable Nav Editing" "incrementvar nav_edit 0 2 -1; incrementvar tf_show_mesh_decoration 0 2 -1; tf_show_mesh_decoration_manual 0" |
-		BIND "Toggle nb_blind" "toggle nb_blind" |
+		TOGGLE BIND "Enable Nav Editing" "nav_edit 1; tf_show_mesh_decoration 1; nav_show_compass 1" "Disable Nav Editing" "nav_edit 0; tf_show_mesh_decoration 0; nav_show_compass 0" |
 		BIND "Toggle snap-to-grid" "toggle nav_snap_to_grid" |
+		"[Display]" {
+			NOEXIT BIND "Toggle Blocked Areas" "toggle tf_show_blocked_areas; exec $cmenu_display" |
+			NOEXIT BIND "Toggle Invasion Areas" "toggle tf_show_enemy_invasion_areas 0 1 2; exec $cmenu_display" |
+			NOEXIT BIND "Toggle Incursion Flow" "toggle tf_show_incursion_flow 0 1 2; exec $cmenu_display" |
+			NOEXIT BIND "Toggle Sentry Danger" "toggle tf_show_sentry_danger; exec $cmenu_display" |
+		}
+		BIND "Save" "nav_save" |
 	}
 }
