@@ -708,14 +708,18 @@ display = "caption"
 }
 "pyro page" {
 	"[Phlog Meter]" {
-		BIND "0%" "say_team PHLOG METER 0% (BIND)" |
-		BIND "50%" "say_team PHLOG METER 50% (BIND)" |
+		BIND "~0%" "say_team PHLOG METER ~0% (BIND)" |
+		BIND "~25%" "say_team PHLOG METER ~25% (BIND)" |
+		BIND "~50%" "say_team PHLOG METER ~50% (BIND)" |
+		BIND "~75%" "say_team PHLOG METER ~75% (BIND)" |
 		BIND "100%" "say_team PHLOG METER 100% (BIND)" |
 	}
-	"[Gas Passer Meter]" {
-		BIND "0%" "say_team GAS PASSER 0% (BIND)" |
-		BIND "50%" "say_team GAS PASSER 50% (BIND)" |
-		BIND "100%" "say_team GAS PASSER 100% (BIND)" |
+	"[Gas Meter]" {
+		BIND "0%" "say_team GAS 0% (BIND)" |
+		BIND "~25%" "say_team GAS ~25% (BIND)" |
+		BIND "~50%" "say_team GAS ~50% (BIND)" |
+		BIND "~75%" "say_team GAS ~75% (BIND)" |
+		BIND "100%" "say_team GAS 100% (BIND)" |
 	}
 }
 
@@ -739,304 +743,26 @@ display = "caption"
 	}
 	"[My Über]" {
 		"[Über]" {
-			NOFORMAT " " {
-				NOFORMAT "1" {
-					KEY = "ENTER" NOFORMAT BIND "11" "say_team MY ÜBER 11% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "12" "say_team MY ÜBER 12% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "13" "say_team MY ÜBER 13% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "14" "say_team MY ÜBER 14% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "15" "say_team MY ÜBER 15% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "16" "say_team MY ÜBER 16% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "17" "say_team MY ÜBER 17% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "18" "say_team MY ÜBER 18% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "19" "say_team MY ÜBER 19% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "10" "say_team MY ÜBER 10% (BIND)" |
-					KEY = "0" NOFORMAT " " {
-						KEY = "ENTER" NOFORMAT BIND "100" "say_team MY ÜBER 100% (BIND)" |
-					}
-				}
+			"[10-30%]" {
+				BIND "10%" "say_team MY ÜBER 10% (BIND)" |
+				BIND "20%" "say_team MY ÜBER 20% (BIND)" |
+				BIND "30%" "say_team MY ÜBER 30% (BIND)" |
 			}
-			NOFORMAT " " {
-				NOFORMAT "2" {
-					KEY = "ENTER" NOFORMAT BIND "21" "say_team MY ÜBER 21% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "22" "say_team MY ÜBER 22% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "23" "say_team MY ÜBER 23% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "24" "say_team MY ÜBER 24% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "25" "say_team MY ÜBER 25% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "26" "say_team MY ÜBER 26% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "27" "say_team MY ÜBER 27% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "28" "say_team MY ÜBER 28% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "29" "say_team MY ÜBER 29% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "20" "say_team MY ÜBER 20% (BIND)" |
-				}
+			"[40-60%]" {
+				BIND "40%" "say_team MY ÜBER 40% (BIND)" |
+				BIND "50%" "say_team MY ÜBER 50% (BIND)" |
+				BIND "60%" "say_team MY ÜBER 60% (BIND)" |
 			}
-			NOFORMAT " " {
-				NOFORMAT "3" {
-					KEY = "ENTER" NOFORMAT BIND "31" "say_team MY ÜBER 31% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "32" "say_team MY ÜBER 32% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "33" "say_team MY ÜBER 33% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "34" "say_team MY ÜBER 34% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "35" "say_team MY ÜBER 35% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "36" "say_team MY ÜBER 36% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "37" "say_team MY ÜBER 37% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "38" "say_team MY ÜBER 38% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "39" "say_team MY ÜBER 39% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "30" "say_team MY ÜBER 30% (BIND)" |
-				}
+			"[70-90%]" {
+				BIND "70%" "say_team MY ÜBER 70% (BIND)" |
+				BIND "80%" "say_team MY ÜBER 80% (BIND)" |
+				BIND "90%" "say_team MY ÜBER 90% (BIND)" |
 			}
-			NOFORMAT " " {
-				NOFORMAT "4" {
-					KEY = "ENTER" NOFORMAT BIND "41" "say_team MY ÜBER 41% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "42" "say_team MY ÜBER 42% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "43" "say_team MY ÜBER 43% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "44" "say_team MY ÜBER 44% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "45" "say_team MY ÜBER 45% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "46" "say_team MY ÜBER 46% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "47" "say_team MY ÜBER 47% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "48" "say_team MY ÜBER 48% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "49" "say_team MY ÜBER 49% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "40" "say_team MY ÜBER 40% (BIND)" |
-				}
-			}
-			NOFORMAT " " {
-				NOFORMAT "5" {
-					KEY = "ENTER" NOFORMAT BIND "51" "say_team MY ÜBER 51% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "52" "say_team MY ÜBER 52% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "53" "say_team MY ÜBER 53% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "54" "say_team MY ÜBER 54% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "55" "say_team MY ÜBER 55% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "56" "say_team MY ÜBER 56% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "57" "say_team MY ÜBER 57% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "58" "say_team MY ÜBER 58% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "59" "say_team MY ÜBER 59% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "50" "say_team MY ÜBER 50% (BIND)" |
-				}
-			}
-			NOFORMAT " " {
-				NOFORMAT "6" {
-					KEY = "ENTER" NOFORMAT BIND "61" "say_team MY ÜBER 61% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "62" "say_team MY ÜBER 62% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "63" "say_team MY ÜBER 63% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "64" "say_team MY ÜBER 64% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "65" "say_team MY ÜBER 65% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "66" "say_team MY ÜBER 66% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "67" "say_team MY ÜBER 67% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "68" "say_team MY ÜBER 68% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "69" "say_team MY ÜBER 69% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "60" "say_team MY ÜBER 60% (BIND)" |
-				}
-			}
-			NOFORMAT " " {
-				NOFORMAT "7" {
-					KEY = "ENTER" NOFORMAT BIND "71" "say_team MY ÜBER 71% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "72" "say_team MY ÜBER 72% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "73" "say_team MY ÜBER 73% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "74" "say_team MY ÜBER 74% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "75" "say_team MY ÜBER 75% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "76" "say_team MY ÜBER 76% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "77" "say_team MY ÜBER 77% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "78" "say_team MY ÜBER 78% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "79" "say_team MY ÜBER 79% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "70" "say_team MY ÜBER 70% (BIND)" |
-				}
-			}
-			NOFORMAT " " {
-				NOFORMAT "8" {
-					KEY = "ENTER" NOFORMAT BIND "81" "say_team MY ÜBER 81% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "82" "say_team MY ÜBER 82% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "83" "say_team MY ÜBER 83% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "84" "say_team MY ÜBER 84% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "85" "say_team MY ÜBER 85% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "86" "say_team MY ÜBER 86% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "87" "say_team MY ÜBER 87% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "88" "say_team MY ÜBER 88% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "89" "say_team MY ÜBER 89% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "80" "say_team MY ÜBER 80% (BIND)" |
-				}
-			}
-			NOFORMAT " " {
-				NOFORMAT "9" {
-					KEY = "ENTER" NOFORMAT BIND "91" "say_team MY ÜBER 91% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "92" "say_team MY ÜBER 92% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "93" "say_team MY ÜBER 93% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "94" "say_team MY ÜBER 94% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "95" "say_team MY ÜBER 95% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "96" "say_team MY ÜBER 96% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "97" "say_team MY ÜBER 97% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "98" "say_team MY ÜBER 98% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "99" "say_team MY ÜBER 99% (BIND)" |
-				}
-				NOFORMAT " " {
-					KEY = "ENTER" NOFORMAT BIND "90" "say_team MY ÜBER 90% (BIND)" |
-				}
-			}
-			NOFORMAT " " {
-				KEY = "ENTER" NOFORMAT BIND "0" "say_team MY ÜBER 0% (BIND)" |
-			}
+			BIND "100%" "say_team MY ÜBER 100% (BIND)" |
 		}
 		BIND "Dropped" "say_team MY ÜBER DROPPED! (BIND)" |
 		BIND "Popped" "say_team MY ÜBER POPPED! (BIND)" |
 	}
 	BIND "Fake Über" "cmd voicemenu 1 7; say_team **FAKED ÜBER** (BIND)" |
-	BIND "Push Pocket" "say_team **PUSH IN with me my pocket! (BIND)" |
+	BIND "Push Pocket" "say_team **PUSH POCKET!** (BIND)" |
 }
