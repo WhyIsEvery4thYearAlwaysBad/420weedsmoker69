@@ -12,7 +12,7 @@ Weapons=( 'scattergun fan shortstop soda\040popper bfb back\040scatter' \
 'flamethrower backburner degreaser phlog dragons' \
 'shotgun panic reserve flare detonator melter scorch gas' \
 'stock\040axe axtinguisher hammer powerjack back\040scratcher fragment 3° neon hand' \
-'grenade' 'loch' 'bomber' 'boots' 'jumper' \
+'grenade loch bomber boots jumper' \
 'stick-launcher scores quickiebomb sjumper bjumper' \
 'bottle eyelander cutter capper caber claid anime-sword persian' \
 'minigun natascha brass tomislav heater' \
@@ -31,7 +31,6 @@ Weapons=( 'scattergun fan shortstop soda\040popper bfb back\040scatter' \
 'knife kunai earner spycicle' \
 'stock\040watch cad ringer sapper rtr' \
 )
-declare -a ScoutPrimaries=('scattergun' 'fan')
 # end Config
 
 # Function to generate position calls. I know this function can be optimized to not use 19 for loops, but that's too much work.
@@ -335,7 +334,7 @@ main() {
 				echo -e "\t\t\t\t}"
 				# Secondary Weapons
 				echo -e "\t\t\t\t\"[Secondary]\" {"
-				for SecondWeaponGroup in ${Weapons[$(((ClassID+SubID)*3+1))]}
+				for SecondWeaponGroup in ${Weapons[$((((ClassID+SubID)*3)+1))]}
 				do
 					for Weapon in ${SecondWeaponGroup[@]}
 					do
@@ -351,7 +350,7 @@ main() {
 				echo -e "\t\t\t\t}"
 				# Tertiary Weapons
 				echo -e "\t\t\t\t\"[Tertiary]\" {"
-				for TertiaryWeaponGroup in ${Weapons[$(((ClassID+SubID)*3+2))]}
+				for TertiaryWeaponGroup in ${Weapons[$((((ClassID+SubID)*3)+2))]}
 				do
 					for Weapon in ${TertiaryWeaponGroup[@]}
 					do
