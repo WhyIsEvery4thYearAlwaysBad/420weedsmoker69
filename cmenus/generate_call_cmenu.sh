@@ -470,10 +470,10 @@ main() {
 					for UberValue in {1..3}0
 					do
 						echo -e "\t\t\t\t\t\t\t\"$UberValue%\" {"
-						echo -e "\t\t\t\t\t\t\t\tBIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
+						echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
 						for Amount in {2..9} 0
 						do
-							echo -e "\t\t\t\t\t\t\t\tBIND \"\" \"say_team $Amount ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
+							echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team $Amount ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
 						done
 						echo -e "\t\t\t\t\t\t\t}"
 					done
@@ -482,10 +482,10 @@ main() {
 					for UberValue in {4..6}0
 					do
 						echo -e "\t\t\t\t\t\t\t\"$UberValue%\" {"
-						echo -e "\t\t\t\t\t\t\tBIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
+						echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
 						for Amount in {2..9} 0
 						do
-							echo -e "\t\t\t\t\t\t\tBIND \"\" \"say_team $Amount ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
+							echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team $Amount ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
 						done
 						echo -e "\t\t\t\t\t\t\t}"
 					done
@@ -494,16 +494,16 @@ main() {
 					for UberValue in {7..9}0
 					do
 						echo -e "\t\t\t\t\t\t\t\"$UberValue%\" {"
-						echo -e "\t\t\t\t\t\t\t\tBIND \"$UberValue%\" \"say_team 1 ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
+						echo -e "\t\t\t\t\t\t\t\tNOFORMAT BIND \"$UberValue%\" \"say_team 1 ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
 						for Amount in {2..9} 0
 						do
-							echo -e "\t\t\t\t\t\t\tBIND \"$UberValue%\" \"say_team $Amount ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
+							echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \"$UberValue%\" \"say_team $Amount ENEMY ${UberType^^} ÜBERS $UberValue% (BIND)\" |"
 						done
 						echo -e "\t\t\t\t\t\t\t}"
 					done
 					echo -e "\t\t\t\t\t\t}"
 					echo -e "\t\t\t\t\t\t\"[100%]\" {"
-					echo -e "\t\t\t\t\t\t\tBIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY ${UberType^^} ÜBERS 100% (BIND)\" |"
+					echo -e "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY ${UberType^^} ÜBERS 100% (BIND)\" |"
 					for Amount in {2..9} 0
 					do
 						echo -e "\t\t\t\t\t\t\tBIND \"\" \"say_team $Amount ENEMY ${UberType^^} ÜBERS 100% (BIND)\" |"
