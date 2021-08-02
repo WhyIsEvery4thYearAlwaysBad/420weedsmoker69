@@ -283,7 +283,7 @@ main() {
 					printf "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY ${UberType^^} ÜBERS 100%% (BIND)\" |\n"
 					for Amount in 2 3 4 5 6 7 8 9 0
 					do
-						printf "\t\t\t\t\t\t\tBIND \"\" \"say_team %i ENEMY %s ÜBERS 100%% (BIND)\" |\n" "$Amount" "${UberType^^}"
+						printf "\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS 100%% (BIND)\" |\n" "$Amount" "${UberType^^}"
 					done
 					printf "\t\t\t\t\t\t}\n"
 					printf "\t\t\t\t\t}\n"
