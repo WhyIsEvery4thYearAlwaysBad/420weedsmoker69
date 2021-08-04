@@ -170,7 +170,7 @@ main() {
 				for DisguiseID in 0 3 6
 				do
 					printf "\t\t\t\t\"[${ClassNames[DisguiseID]^}/${ClassNames[DisguiseID+1]^}/${ClassNames[DisguiseID+2]^}]\" {\n"
-					for SubDID in 0 2
+					for SubDID in 0 1 2
 					do
 						printf "\t\t\t\t\t\"[${ClassNames[DisguiseID+SubDID]^}]\" {\n"
 						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team SPY ${ClassNames[DisguiseID+SubDID]^^} (BIND)\" |\n"
