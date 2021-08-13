@@ -71,7 +71,7 @@
 
 		"crosshair"
 		{
-				"file"		"vgui/replay/thumbnails/crosshair_jar"
+				"file"		"vgui/replay/thumbnails/crosshair_grenade"
 				"x"		"0"
 				"y"		"0"
 				"width"		"64"
