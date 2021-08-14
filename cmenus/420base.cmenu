@@ -946,6 +946,7 @@ display = "caption"
 				"[Memes]" {
 					BIND "MiningCraft" "say hEY gOyS iM MOiNInG FoR DOiAmoNDS!! (BIND)" |
 					TOGGLE BIND "DF Nerf" "say drAgoN's fURy iS tRAsH! *singlehandedly demolishes 4 enemies in 2 seconds* (BIND)" "DF Nerf" "say dRaGoN'S furY IS trAsh *singlehandedly demolishes 4 enemies in 2 seconds* (BIND)" "DF Nerf" "say DrAgon'S furY IS TrAsH! *singlehandedly demolishes 4 enemies in 2 seconds* (BIND)" |
+					BIND "1v1 hero" "say 'I'm Ami-chan, one of the four TF2 heroes—the 1v1 Hero, to be exact.' - Amicdict, Rising of the Pub Hero. (BIND)" |
 				}
 				"[MvM]" {
 					BIND "Saving Ticket" "say I'm a repeater so I'll leave early on the last round to save my ticket! (BIND)" |
