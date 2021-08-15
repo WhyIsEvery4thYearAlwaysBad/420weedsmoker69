@@ -1497,8 +1497,8 @@ display = "caption"
 "medic page" {
 	"[Medgun]" {
 		BIND "Stock" "say_team My Medigun=Stock! (BIND)" |
-		BIND "Quick" "say_team My Medigun=Quickie! (BIND)" |
 		BIND "Kritz" "say_team My Medigun=Kritz! (BIND)" |
+		BIND "Quick" "say_team My Medigun=Quickie! (BIND)" |
 		BIND "Vacc" "say_team My Medigun=Vacc! (BIND)" |
 	}
 	"[My Über]" {
