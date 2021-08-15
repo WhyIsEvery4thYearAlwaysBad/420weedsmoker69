@@ -956,9 +956,12 @@ display = "caption"
 				}
 				"[MvM]" {
 					BIND "Saving Ticket" "say I'm a repeater so I'll leave early on the last round to save my ticket! (BIND)" |
-					BIND "No D-Range" "say I'm not getting Dispenser Range. It is redundant as you can just spread out to get the same benefits. (BIND)" |
-					BIND "No D-Range args 1" "say Refer to this text file for more info:　" |
-					BIND "No D-Range args 2" "say github.com/WhyIsEvery4thYearAlwaysBad/mahstuff/blob/master/Im%20not%20getting%20dispenser%20range.md (BIND)" |
+					"[D-Range]" {
+						BIND "No D-Range" "say I'm not getting Dispenser Range. It is redundant as you can just spread out to get the same benefits. (BIND)" |
+						BIND "No D-Range args 1" "say Refer to this text file for more info:　" |
+						BIND "No D-Range args 2" "say github.com/WhyIsEvery4thYearAlwaysBad/mahstuff/blob/master/Im%20not%20getting%20dispenser%20range.md (BIND)" |
+					}
+					BIND "Please see" "say Please see the guide 'Dumb $#!& the Meta 'Teaches' You' by Underscore Gaming for more info. (BIND)" |
 				}
 			}
 			"[PSAs]" {
