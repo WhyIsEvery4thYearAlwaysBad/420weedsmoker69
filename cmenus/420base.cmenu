@@ -24,7 +24,7 @@ display = "caption"
 				BIND "Unspecified" "say_team FALLBACK! FALLBACK! (BIND)" |
 			}
 			"[Push]" {
-								"[Pos]" {
+				"[Pos]" {
 					KEY="4" NOFORMAT "<clr:234,209,174>        [4]      <cr>" {
 						KEY="1" NOFORMAT "<clr:234,209,174>        [4]      <cr>" {
 							NOFORMAT BIND "<clr:234,209,174>_" "say_team ALLY PUSH FRONT LEFT (TEAM SIDE) (BIND)" |
@@ -981,7 +981,6 @@ display = "caption"
 						BIND "Reserve Health Kits for Medic" "say ATTENTION ALL PLAYERS: Reserve Health kits for your Medic! (BIND)" |
 						BIND "Reserve Ammo Packs for Engi" "say ATTENTION ALL PLAYERS: Reserve Ammo packs for your Engineer! (BIND)" |
 						BIND "Stop staying in sightlines" "say ATTENTION ALL PLAYERS: Stop standing in sniper sightlines if a Sniper is there! Please take cover until it is safe instead! (BIND)" |
-
 					}
 				}
 				BIND "Scoreboard Mouse" "say PSA: Enable the scoreboard mouse mode! It makes muting people and trading with people easier! (BIND)" |
