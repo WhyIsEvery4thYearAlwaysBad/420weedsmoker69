@@ -1,0 +1,14 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/replay/thumbnails/crosshair_medigun"
+	"$translucent" 1
+	"$vertexcolor" 1
+	"$no_fullbright" 1
+	"$ignorez" 1
+	Proxies {
+		PlayerSpeed {
+			scale 0.040625
+			resultVar $frame
+		}
+	}
+}
