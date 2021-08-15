@@ -989,7 +989,7 @@ display = "caption"
 			}
 			"[Hashtags]" {
 				BIND "DF underrated" "say #DragonsFuryIsUnderrated (BIND)" |
-				BIND "DF Nerf" "say #DragonsFuryNeedsANerf (BIND)" |
+				BIND "DF Nerf" "say #DragonsFuryNeedsANerf /s (BIND)" |
 				BIND "Gas Passer" "say #GasPasserIsUnderutilized (BIND)" |
 				BIND "RTR" "say #RedTapeRecorderIsUnderrated (BIND)" |
 				BIND "Amp" "say #AmputatorIsUnderrated (BIND)" |
