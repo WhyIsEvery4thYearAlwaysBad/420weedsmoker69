@@ -12,5 +12,5 @@ BIND_COUNT=$(grep -c -i "BIND\([[:space:]]*\)\"\(.*\)\"[[:space:]]*\"\([^\"]\{1,
 CHAT_BIND_COUNT=$(grep -c -i "BIND\([[:space:]]*\)\"\(.*\)\"[[:space:]]*\"say\(_team\)\?[[:space:]]\([^\"]\{1,\}\)" ../420cmdmenu.cmenu)
 # Amount of binds that have been commented out.
 COMMENTED_BIND_COUNT=9
-sed -i "s/{_BIND_COUNT_}/$((BIND_COUNT - COMMENTED_BIND_COUNT+1))/" ../420cmdmenu.cmenu # Add one more to account for the class-specific "CMenu" bind.
+sed -i "s/{_BIND_COUNT_}/$((BIND_COUNT - (COMMENTED_BIND_COUNT+1)))/" ../420cmdmenu.cmenu # Add one more to account for the class-specific "CMenu" bind.
 sed -i "s/{_CHAT_BIND_COUNT_}/${CHAT_BIND_COUNT}/" ../420cmdmenu.cmenu
