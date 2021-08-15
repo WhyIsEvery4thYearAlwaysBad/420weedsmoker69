@@ -40,11 +40,14 @@ materials/vgui/replay/thumbnails/crosshair_huntsman.vmt
 materials/vgui/replay/thumbnails/crosshair_huntsman.vtf
 materials/vgui/replay/thumbnails/crosshair_grenade.vmt
 materials/vgui/replay/thumbnails/crosshair_grenade.vtf
+materials/vgui/replay/thumbnails/crosshair_medigun.vmt
+materials/vgui/replay/thumbnails/crosshair_medigun.vtf
 materials/vgui/replay/thumbnails/crosshair_syringe_gun.vmt
 materials/vgui/replay/thumbnails/crosshair_syringe_gun.vtf
 scripts/chapterbackgrounds.txt
 scripts/tf_weapon_compound_bow.txt
 scripts/tf_weapon_jar.txt
+scripts/tf_weapon_medigun.txt
 scripts/tf_weapon_rocketlauncher_fireball.txt
 scripts/tf_weapon_syringegun_medic.txt
 sound/misc/tf_domination.mp3
