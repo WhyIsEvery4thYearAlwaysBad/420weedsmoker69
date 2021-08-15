@@ -737,7 +737,7 @@ display = "caption"
 			"[Misc]" {
 				BIND "When push?" "say_team When will we push? (BIND)" |
 				BIND "Über me!" "say_team Über me medic! (BIND)" |
-				BIND "Check Mediguns" "say_team Can y'all periodically offclass spy and check the enemy mediguns and banners with spy disguises? (BIND)" |
+				BIND "Check Mediguns" "say_team Can y'all periodically offclass spy and check for important enemy weapons with spy disguises? (BIND)" |
 			}
 		}
 		"[Need]" {
