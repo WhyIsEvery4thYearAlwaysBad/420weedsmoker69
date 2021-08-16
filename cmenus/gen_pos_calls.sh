@@ -271,7 +271,7 @@ done
 ### Done
 printf "${TAB_STR}\t\t\t}\n"
 ### Back mid lower
-printf "${TAB_STR}\t\t\tKEY=\"4\" NOFORMAT \"       [5]       \" {\n"
+printf "${TAB_STR}\t\t\tKEY=\"5\" NOFORMAT \"       [5]       \" {\n"
 printf "${TAB_STR}\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s BACK MID LOWER (TEAM SIDE) (BIND)\" |\n" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
