@@ -733,7 +733,7 @@ display = "caption"
 				}
 				BIND "Hold!" "say_team Hold position! (BIND)" |
 			}
-			BIND "Flank" "say_team FLANK THE ENEMY PUSH YOU DIMWITS! (BIND)" |
+			BIND "Flank" "say_team FLANK THE ENEMY YOU DIMWITS! (BIND)" |
 			"[Misc]" {
 				BIND "When push?" "say_team When will we push? (BIND)" |
 				BIND "Über me!" "say_team Über me medic! (BIND)" |
