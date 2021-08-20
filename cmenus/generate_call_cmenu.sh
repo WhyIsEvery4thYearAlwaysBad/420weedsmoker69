@@ -198,19 +198,19 @@ main() {
 					then
 						printf "\t\t\t\t\"[LvL1]\" {"
 						gen_detailed_pos_calls "LVL1 SENTRY" "LVL1 SENTRIES" "\t\t\t\t\t"
-						gen_detailed_pos_calls "LVL1 SENTRY" "LVL1 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "DESTROYED LVL1 SENTRY" "DESTROYED LVL1 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
 						printf "\t\t\t\t}"
 						printf "\t\t\t\t\"[LvL2]\" {"
 						gen_detailed_pos_calls "LVL2 SENTRY" "LVL2 SENTRIES" "\t\t\t\t\t"
-						gen_detailed_pos_calls "LVL2 SENTRY" "LVL2 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "DESTROYED LVL2 SENTRY" "DESTROYED LVL2 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
 						printf "\t\t\t\t}"
 						printf "\t\t\t\t\"[LvL3]\" {"
 						gen_detailed_pos_calls "LVL3 SENTRY" "LVL3 SENTRIES" "\t\t\t\t\t"
-						gen_detailed_pos_calls "LVL3 SENTRY" "LVL3 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "DESTROYED LVL3 SENTRY" "DESTROYED LVL3 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
 						printf "\t\t\t\t}"
 						printf "\t\t\t\t\"[Mini]\" {"
 						gen_detailed_pos_calls "MINI SENTRY" "MINI SENTRIES" "\t\t\t\t\t"
-						gen_detailed_pos_calls "MINI SENTRY" "MINI SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "DESTROYED MINI SENTRY" "DESTROYED MINI SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
 						printf "\t\t\t\t}"
 					else
 						# Generate position calls for buildings.
