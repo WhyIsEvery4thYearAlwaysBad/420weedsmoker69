@@ -961,7 +961,7 @@ display = "caption"
 			"[Common]" {
 				"[Bind Talk]" {
 					BIND "Bind Count" "say I currently have {_BIND_COUNT_} effective binds. {_CHAT_BIND_COUNT_} of them are chat binds. (BIND)" |
-					BIND "CMenu Explanation" "say All of my binds are organized into nested voicemenus that are displayed to me by captions. (BIND)" |
+					BIND "CMenu Explanation" "say All of my binds are organized into recursively-nested voicemenus that are displayed to me by captions. (BIND)" |
 					"[Generator]" {
 						BIND "CMGen Explanation" "say I made a generator for these bind-voicemenus because they take so long to make otherwise. (BIND)" |
 						BIND "CMGen Link" "say My bind-voicemenu generator link: github.com/WhyIsEvery4thYearAlwaysBad/CmdMenuGenerator (copy and paste it) (BIND)" |
