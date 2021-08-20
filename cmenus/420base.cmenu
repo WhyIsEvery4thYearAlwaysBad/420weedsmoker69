@@ -1367,6 +1367,58 @@ display = "caption"
 				}
 			}
 		}
+		"[Über]" {
+			"[Dropped]" {
+				"[Stock]" {
+					NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team 1 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 TEAM STOCK ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 TEAM STOCK ÜBER DROPPED (BIND)" |
+				}
+				"[Kritz]" {
+					NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team 1 TEAM KRITZ ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 TEAM KRITZ ÜBERS DROPPED (BIND)" |
+				}
+				"[Quickie]" {
+					NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team 1 TEAM QUICKIE ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 TEAM QUICKIE ÜBERS DROPPED (BIND)" |
+				}
+				"[Vacc]" {
+					NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team 1 TEAM VAC ÜBER DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 2 TEAM VAC ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 3 TEAM VAC ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 4 TEAM VAC ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 5 TEAM VAC ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 6 TEAM VAC ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 7 TEAM VAC ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 8 TEAM VAC ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 9 TEAM VAC ÜBERS DROPPED (BIND)" |
+					NOFORMAT BIND " " "say_team 0 TEAM VAC ÜBERS DROPPED (BIND)" |
+				}
+			}
+		}
 		BIND "Team Builds Sapped" "say_team TEAM BUILDS SAPPED (BIND)" |
 	}
 	"[Voicelines]" {
