@@ -909,9 +909,42 @@ display = "caption"
 			}
 			"[Special]" {
 				"[Banner]" {
-					BIND "Buff" "say_team Need Buff Banner! (BIND)" |
-					BIND "Batt" "say_team Need Battalions Backup! (BIND)" |
-					BIND "Conch" "say_team Need Concheror! (BIND)" |
+					"[Buff]" {
+						NOFORMAT BIND "Amount:" "say_team Need 1 Buff Banner! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 2 Buff Banners! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 3 Buff Banners! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 4 Buff Banners! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 5 Buff Banners! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 6 Buff Banners! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 7 Buff Banners! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 8 Buff Banners! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 9 Buff Banners! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 0 Buff Banners! (BIND)" |
+					}
+					"[Battals]" {
+						NOFORMAT BIND "Amount: " "say_team Need 1 Battalions Backup! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 2 Battals! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 3 Battals! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 4 Battals! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 5 Battals! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 6 Battals! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 7 Battals! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 8 Battals! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 9 Battals! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 0 Battals! (BIND)" |
+					}
+					"[Conch]" {
+						NOFORMAT BIND "Amount:" "say_team Need 1 Concheror! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 2 Conches! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 3 Conches! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 4 Conches! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 5 Conches! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 6 Conches! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 7 Conches! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 8 Conches! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 9 Conches! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 0 Conches! (BIND)" |
+					}
 					BIND "None" "say_team Need no Banner! (BIND)" |
 				}
 				BIND "Bonk!" "say_team Need Bonk! Atomic Punch scout! (BIND)" |
