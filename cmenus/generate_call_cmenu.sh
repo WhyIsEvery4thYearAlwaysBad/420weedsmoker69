@@ -42,40 +42,40 @@ Weapons=( 'scattergun fan shortstop soda\040popper bfb back\040scatter' \
 # $4 - The entire CMenu definition line. Default val: Pos.
 gen_detailed_pos_calls() {
 	TAB_STR="$3"
-	printf "${TAB_STR}%s" "${4:-"\"[Pos]\" {"}"
+	printf "%bs" "${TAB_STR}${4:-"\"[Pos]\" {"}"
 	for Point in "BLU Spawn" "RED Spawn" "1st" "2nd" "3rd" "4th" "5th" "6th" "7th" "8th" "9th" "LAST"
 	do
 		if [ "$Point" == "BLU Spawn" ]
 		then
-			printf "${TAB_STR}\t\"[Spawn]\" {\n"
-			./gen_pos_calls.sh "$1 $(printf "%s" "$Point" | tr [:lower:] [:upper:])" "${2} $(printf "%s" "$Point" | tr [:lower:] [:upper:])" "${TAB_STR}\t\t" "\"[${Point%" Spawn "}]\" {"
+			printf "%b\t\"[Spawn]\" {\n" "${TAB_STR}"
+			./gen_pos_calls.sh "$1 $(printf "%s" "$Point" | tr "[:lower:]" "[:upper:]")" "${2} $(printf "%s" "$Point" | tr "[:lower:]" "[:upper:]")" "${TAB_STR}\t\t" "\"[${Point%" Spawn "}]\" {"
 		elif [ "$Point" == "RED Spawn" ]
 		then
-			./gen_pos_calls.sh "$1 $(printf "%s" "$Point" | tr [:lower:] [:upper:])" "${2} $(printf "%s" "$Point" | tr [:lower:] [:upper:])" "${TAB_STR}\t\t" "\"[${Point%" Spawn "}]\" {"
-			printf "${TAB_STR}\t}\n"
-			printf "${TAB_STR}\t\"[Point]\" {\n"
+			./gen_pos_calls.sh "$1 $(printf "%s" "$Point" | tr "[:lower:]" "[:upper:]")" "${2} $(printf "%s" "$Point" | tr "[:lower:]" "[:upper:]")" "${TAB_STR}\t\t" "\"[${Point%" Spawn "}]\" {"
+			printf "%b\t}\n" "${TAB_STR}"
+			printf "%b\t\"[Point]\" {\n" "${TAB_STR}"
 		else 
-			./gen_pos_calls.sh "$1 $(printf "%s" "$Point" | tr [:lower:] [:upper:])" "${2} $(printf "%s" "$Point" | tr [:lower:] [:upper:])" "${TAB_STR}\t\t" "NOFORMAT \" \" {"
+			./gen_pos_calls.sh "$1 $(printf "%s" "$Point" | tr "[:lower:]" "[:upper:]")" "${2} $(printf "%s" "$Point" | tr "[:lower:]" "[:upper:]")" "${TAB_STR}\t\t" "NOFORMAT \" \" {"
 		fi
 		
 	done
-	printf "${TAB_STR}\t}\n"
+	printf "%b\t}\n" "${TAB_STR}"
 	./gen_pos_calls.sh "$1" "$2" "${TAB_STR}\t"
-	printf "${TAB_STR}}\n"
+	printf "%b}\n" "${TAB_STR}"
 }
 
 # The main function body.
 main() {
-	printf "\"$TITLE\" {\n"
+	printf "\"%s\" {\n" "$TITLE"
 	# Get all classes
 	for ClassID in 0 3 6 9
 	do
 		# Name the building array "Builds" instead of 'sentry dispenser…'.
 		if [ $ClassID -eq 9 ]
 		then
-			printf "\t\"[${ClassNames[ClassID]^}/${ClassNames[ClassID+1]^}/Builds]\" {\n"
+			printf "\t\"[%s/%s/Builds]\" {\n" "${ClassNames[ClassID]^}" "${ClassNames[ClassID+1]^}"
 		else
-			printf "\t\"[${ClassNames[ClassID]^}/${ClassNames[ClassID+1]^}/${ClassNames[ClassID+2]^}]\" {\n"
+			printf "\t\"[%s/%s/%s]\" {\n" "${ClassNames[ClassID]^}" "${ClassNames[ClassID+1]^}" "${ClassNames[ClassID+2]^}"
 		fi
 
 		# The actual calls
@@ -90,24 +90,24 @@ main() {
 			then
 				printf "\t\t\"[Medic Combo]\" {\n"
 				printf "\t\t\t\"[Scou/Solly/Pyr]\" {\n"
-				gen_detailed_pos_calls "SCOUT-MED" "SCOUT-MEDs" "\t\t\t\t" "\"[Scou]\" {"
-				gen_detailed_pos_calls "SOLLY-MED" "SOLLY-MEDs" "\t\t\t\t" "\"[Solly]\" {"
-				gen_detailed_pos_calls "PYRO-MED" "PYRO-MEDs" "\t\t\t\t" "\"[Pyr]\" {"
+				gen_detailed_pos_calls "1 SCOUT-MED" "SCOUT-MEDs" "\t\t\t\t" "\"[Scou]\" {"
+				gen_detailed_pos_calls "1 SOLLY-MED" "SOLLY-MEDs" "\t\t\t\t" "\"[Solly]\" {"
+				gen_detailed_pos_calls "1 PYRO-MED" "PYRO-MEDs" "\t\t\t\t" "\"[Pyr]\" {"
 				printf "\t\t\t}\n"
 				printf "\t\t\t\"[Dem/Heav/Eng]\" {\n"
-				gen_detailed_pos_calls "DEMO-MED" "DEMO-MEDs" "\t\t\t\t" "\"[Dem]\" {"
-				gen_detailed_pos_calls "HEAVY-MED" "HEAVY-MEDs" "\t\t\t\t" "\"[Heav]\" {"
-				gen_detailed_pos_calls "ENGI-MED" "ENGI-MEDs" "\t\t\t\t" "\"[Eng]\" {"
+				gen_detailed_pos_calls "1 DEMO-MED" "DEMO-MEDs" "\t\t\t\t" "\"[Dem]\" {"
+				gen_detailed_pos_calls "1 HEAVY-MED" "HEAVY-MEDs" "\t\t\t\t" "\"[Heav]\" {"
+				gen_detailed_pos_calls "1 ENGI-MED" "ENGI-MEDs" "\t\t\t\t" "\"[Eng]\" {"
 				printf "\t\t\t}\n"
 				printf "\t\t\t\"[Med/Snipe/Sp]\" {\n"
-				gen_detailed_pos_calls "MED-MED" "MED-MEDs" "\t\t\t\t" "\"[Med]\" {"
-				gen_detailed_pos_calls "SNIPER-MED" "SNIPER-MEDs" "\t\t\t\t" "\"[Snipe]\" {"
-				gen_detailed_pos_calls "SPY-MED" "SPY-MEDs" "\t\t\t\t" "\"[Sp]\" {"
+				gen_detailed_pos_calls "1 MED-MED" "MED-MEDs" "\t\t\t\t" "\"[Med]\" {"
+				gen_detailed_pos_calls "1 SNIPER-MED" "SNIPER-MEDs" "\t\t\t\t" "\"[Snipe]\" {"
+				gen_detailed_pos_calls "1 SPY-MED" "SPY-MEDs" "\t\t\t\t" "\"[Sp]\" {"
 				printf "\t\t\t}\n"
-				gen_detailed_pos_calls "MEDIC COMBO" "MEDIC COMBOS" "\t\t\t" "\"[Unknown]\" {"
+				gen_detailed_pos_calls "1 MEDIC COMBO" "MEDIC COMBOS" "\t\t\t" "\"[Unknown]\" {"
 			else
-				printf "\t\t\"[${ClassNames[ClassID+SubID]^}]\" {\n"
-				gen_detailed_pos_calls "${ClassNames[ClassID+SubID]^^}" "${ClassNames[ClassID+SubID]^^}s" "\t\t\t"
+				printf "\t\t\"[%s]\" {\n" "${ClassNames[ClassID+SubID]^}"
+				gen_detailed_pos_calls "1 ${ClassNames[ClassID+SubID]^^}" "${ClassNames[ClassID+SubID]^^}s" "\t\t\t"
 			fi
 			# Create "has weapon" calls ONLY if the class actually has special weapons defined.
 			if [ $((ClassID+SubID)) -lt 9 ]
@@ -117,13 +117,13 @@ main() {
 				printf "\t\t\t\t\"[Primary]\" {\n"
 				for PrimaryWeaponGroup in ${Weapons[$(((ClassID+SubID)*3))]}
 				do
-					for Weapon in ${PrimaryWeaponGroup[@]}
+					for Weapon in "${PrimaryWeaponGroup[@]}"
 					do
-						printf "\t\t\t\t\t\"[${Weapon^}]\" {\n"
-						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team ENEMY ${ClassNames[ClassID+SubID]^^} USE $(printf "%s" "$Weapon" | tr [:lower:] [:upper:]) (BIND)\" |\n"
+						printf "\t\t\t\t\t\"[%s]\" {\n" "${Weapon^}"
+						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team 1 ENEMY %s USE $(printf "%s" "$Weapon" | tr "[:lower:]" "[:upper:]") (BIND)\" |\n" "${ClassNames[ClassID+SubID]^^}"
 						for Amount in 2 3 4 5 6 7 8 9 0
 						do
-							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team ${Amount} ENEMY ${ClassNames[ClassID+SubID]^^}S USE $(printf "%s" "$Weapon" | tr [:lower:] [:upper:]) (BIND)\" |\n"
+							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %sS USE $(printf "%s" "$Weapon" | tr "[:lower:]" "[:upper:]") (BIND)\" |\n" "${Amount}" "${ClassNames[ClassID+SubID]^^}"
 						done
 						printf "\t\t\t\t\t}\n"
 					done
@@ -133,13 +133,13 @@ main() {
 				printf "\t\t\t\t\"[Secondary]\" {\n"
 				for SecondWeaponGroup in ${Weapons[$((((ClassID+SubID)*3)+1))]}
 				do
-					for Weapon in ${SecondWeaponGroup[@]}
+					for Weapon in "${SecondWeaponGroup[@]}"
 					do
-						printf "\t\t\t\t\t\"[${Weapon^}]\" {\n"
-						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team ENEMY ${ClassNames[ClassID+SubID]^^} USE $(printf "%s" "$Weapon" | tr [:lower:] [:upper:]) (BIND)\" |\n"
+						printf "\t\t\t\t\t\"[%s]\" {\n" "${Weapon^}"
+						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team 1 ENEMY %s USE $(printf "%s" "$Weapon" | tr "[:lower:]" "[:upper:]") (BIND)\" |\n" "${ClassNames[ClassID+SubID]^^}"
 						for Amount in 2 3 4 5 6 7 8 9 0
 						do
-							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team ${Amount} ENEMY ${ClassNames[ClassID+SubID]^^}S USE $(printf "%s" "$Weapon" | tr [:lower:] [:upper:]) (BIND)\" |\n"
+							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %sS USE $(printf "%s" "$Weapon" | tr "[:lower:]" "[:upper:]") (BIND)\" |\n" "${Amount}" "${ClassNames[ClassID+SubID]^^}"
 						done
 						printf "\t\t\t\t\t}\n"
 					done
@@ -149,13 +149,13 @@ main() {
 				printf "\t\t\t\t\"[Tertiary]\" {\n"
 				for TertiaryWeaponGroup in ${Weapons[$((((ClassID+SubID)*3)+2))]}
 				do
-					for Weapon in ${TertiaryWeaponGroup[@]}
+					for Weapon in "${TertiaryWeaponGroup[@]}"
 					do
-						printf "\t\t\t\t\t\"[${Weapon^}]\" {\n"
-						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team ENEMY ${ClassNames[ClassID+SubID]^^} USE $(printf "%s" "$Weapon" | tr [:lower:] [:upper:]) (BIND)\" |\n"
+						printf "\t\t\t\t\t\"[%s]\" {\n" "${Weapon^}"
+						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team 1 ENEMY %s USE $(printf "%s" "$Weapon" | tr "[:lower:]" "[:upper:]") (BIND)\" |\n" "${ClassNames[ClassID+SubID]^^}"
 						for Amount in 2 3 4 5 6 7 8 9 0
 						do
-							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team ${Amount} ENEMY ${ClassNames[ClassID+SubID]^^}S USE $(printf "%s" "$Weapon" | tr [:lower:] [:upper:]) (BIND)\" |\n"
+							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %sS USE $(printf "%s" "$Weapon" | tr "[:lower:]" "[:upper:]") (BIND)\" |\n" "${Amount}" "${ClassNames[ClassID+SubID]^^}"
 						done
 						printf "\t\t\t\t\t}\n"
 					done
@@ -170,14 +170,14 @@ main() {
 				printf "\t\t\t\"[Disguise]\" {\n"
 				for DisguiseID in 0 3 6
 				do
-					printf "\t\t\t\t\"[${ClassNames[DisguiseID]^}/${ClassNames[DisguiseID+1]^}/${ClassNames[DisguiseID+2]^}]\" {\n"
+					printf "\t\t\t\t\"[%s/%s/%s]\" {\n" "${ClassNames[DisguiseID]^}" "${ClassNames[DisguiseID+1]^}" "${ClassNames[DisguiseID+2]^}"
 					for SubDID in 0 1 2
 					do
-						printf "\t\t\t\t\t\"[${ClassNames[DisguiseID+SubDID]^}]\" {\n"
-						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team SPY ${ClassNames[DisguiseID+SubDID]^^} (BIND)\" |\n"
+						printf "\t\t\t\t\t\"[%s]\" {\n" "${ClassNames[DisguiseID+SubDID]^}"
+						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team 1 SPY %s (BIND)\" |\n" "${ClassNames[DisguiseID+SubDID]^^}"
 						for Amount in 2 3 4 5 6 7 8 9 0
 						do
-							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team ${Amount} SPY ${ClassNames[DisguiseID+SubDID]^^}S (BIND)\" |\n"
+							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i SPY %sS (BIND)\" |\n" "${Amount}" "${ClassNames[DisguiseID+SubDID]^^}"
 						done
 						printf "\t\t\t\t\t}\n"
 					done
@@ -193,30 +193,30 @@ main() {
 			then
 				for Build in ${ClassNames[ClassID+SubID]}
 				do
-					printf "\t\t\t\"[${Build^}]\" {\n"
-					if [ "$Build" == "sentry" ]
+					printf "\t\t\t\"[%s]\" {\n" "${Build^}"
+					if [ "$Build" = "sentry" ]
 					then
 						printf "\t\t\t\t\"[LvL1]\" {"
-						gen_detailed_pos_calls "LVL1 SENTRY" "LVL1 SENTRIES" "\t\t\t\t\t"
-						gen_detailed_pos_calls "DESTROYED LVL1 SENTRY" "DESTROYED LVL1 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "1 L1 SENTRY" "L1 SENTRIES" "\t\t\t\t\t"
+						gen_detailed_pos_calls "DESTROYED 1 L1 SENTRY" "DESTROYED L1 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
 						printf "\t\t\t\t}"
 						printf "\t\t\t\t\"[LvL2]\" {"
-						gen_detailed_pos_calls "LVL2 SENTRY" "LVL2 SENTRIES" "\t\t\t\t\t"
-						gen_detailed_pos_calls "DESTROYED LVL2 SENTRY" "DESTROYED LVL2 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "1 L2 SENTRY" "L2 SENTRIES" "\t\t\t\t\t"
+						gen_detailed_pos_calls "DESTROYED 1 L2 SENTRY" "DESTROYED L2 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
 						printf "\t\t\t\t}"
 						printf "\t\t\t\t\"[LvL3]\" {"
-						gen_detailed_pos_calls "LVL3 SENTRY" "LVL3 SENTRIES" "\t\t\t\t\t"
-						gen_detailed_pos_calls "DESTROYED LVL3 SENTRY" "DESTROYED LVL3 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "1 L3 SENTRY" "L3 SENTRIES" "\t\t\t\t\t"
+						gen_detailed_pos_calls "DESTROYED 1 L3 SENTRY" "DESTROYED L3 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
 						printf "\t\t\t\t}"
 						printf "\t\t\t\t\"[Mini]\" {"
-						gen_detailed_pos_calls "MINI SENTRY" "MINI SENTRIES" "\t\t\t\t\t"
-						gen_detailed_pos_calls "DESTROYED MINI SENTRY" "DESTROYED MINI SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "1 L0 SENTRY" "L0 SENTRIES" "\t\t\t\t\t"
+						gen_detailed_pos_calls "DESTROYED 1 L0 SENTRY" "DESTROYED L0 SENTRIES" "\t\t\t\t\t" "\"[Destroyed]\" {"
 						printf "\t\t\t\t}"
 					else
 						# Generate position calls for buildings.
-						gen_detailed_pos_calls "$(printf "%s" "$Build" | tr [:lower:] [:upper:])" "$(printf "%s" "${Build}" | tr [:lower:] [:upper:])" "\t\t\t\t"
+						gen_detailed_pos_calls "1 $(printf "%s" "$Build" | tr "[:lower:]" "[:upper:]")" "$(printf "%s" "${Build}" | tr "[:lower:]" "[:upper:]")" "\t\t\t\t"
 						# and for destroyed ones.
-						gen_detailed_pos_calls "DESTROYED $(printf "%s" "$Build" | tr [:lower:] [:upper:])" "DESTROYED $(printf "%s" "$Build" | tr [:lower:] [:upper:])s" "\t\t\t\t" "\"[Destroyed]\" {"
+						gen_detailed_pos_calls "DESTROYED 1 $(printf "%s" "$Build" | tr "[:lower:]" "[:upper:]")" "DESTROYED $(printf "%s" "$Build" | tr "[:lower:]" "[:upper:]")s" "\t\t\t\t" "\"[Destroyed]\" {"
 					fi
 					printf "\t\t\t}\n"
 				done
@@ -228,11 +228,11 @@ main() {
 				printf "\t\t\t\"[Meters]\" {\n"
 				for Meter in "Phlog" "Gas\040Passer"
 				do
-					printf "\t\t\t\t\"[${Meter}]\" {\n"
-					printf "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team ENEMY $(printf "%s" "$Meter" | tr [:lower:] [:upper:]) PREPPED (BIND)\" |\n"
+					printf "\t\t\t\t\"[%s]\" {\n" "${Meter}"
+					printf "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team 1 ENEMY %s USED! (BIND)\" |\n" "$(printf "%s" "$Meter" | tr "[:lower:]" "[:upper:]")"
 					for Num in 2 3 4 5 6 7 8 9 0
 					do
-						printf "\t\t\t\t\tNOFORMAT BIND \"\" \"say_team $Num ENEMY $(printf "%s" "$Meter" | tr [:lower:] [:upper:])S PREPPED (BIND)\" |\n"
+						printf "\t\t\t\t\tNOFORMAT BIND \"\" \"say_team $Num ENEMY %sS USED! (BIND)\" |\n" "$(printf "%s" "$Meter" | tr "[:lower:]" "[:upper:]")"
 					done
 					printf "\t\t\t\t}\n"
 				done
@@ -245,11 +245,11 @@ main() {
 				printf "\t\t\t\"[Banners]\" {\n"
 				for Banner in "Buff\040Banner" "Battal" "Conch"
 				do
-					printf "\t\t\t\t\"[${Banner}]\" {\n"
-					printf "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team 1 ENEMY $(printf "%s" "$Banner" | tr [:lower:] [:upper:]) PREPPED (BIND)\" |\n"
+					printf "\t\t\t\t\"[%s]\" {\n" "${Banner}"
+					printf "\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team 1 ENEMY %s PREPPED (BIND)\" |\n" "$(printf "%s" "$Banner" | tr "[:lower:]" "[:upper:]")"
 					for Num in 2 3 4 5 6 7 8 9 0
 					do
-						printf "\t\t\t\t\tNOFORMAT BIND \"\" \"say_team $Num ENEMY $(printf "%s" "$Banner" | tr [:lower:] [:upper:])S PREPPED (BIND)\" |\n"
+						printf "\t\t\t\t\tNOFORMAT BIND \"\" \"say_team $Num ENEMY %sS PREPPED (BIND)\" |\n" "$(printf "%s" "$Banner" | tr "[:lower:]" "[:upper:]")"
 					done
 					printf "\t\t\t\t}\n"
 				done
@@ -265,56 +265,56 @@ main() {
 					printf "\t\t\t\t\"[%s]\" {\n" "${UberType^}"
 					printf "\t\t\t\t\t\"[Value]\" {\n"
 					printf "\t\t\t\t\t\t\"[10-30%%]\" {\n"
-					for UberValue in {1..3}0
+					for UberValue in 10 20 30
 					do
 						printf "\t\t\t\t\t\t\t\"[%i%%]\" {\n" $UberValue
-						printf "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY %s ÜBER %s%% (BIND)\" |\n" "$(printf "%s" "$UberType" | tr [:lower:] [:upper:])" "$UberValue"
+						printf "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY %s ÜBER %s%% (BIND)\" |\n" "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")" "$UberValue"
 						for Amount in 2 3 4 5 6 7 8 9 0
 						do
-							printf "\t\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %s ENEMY %s ÜBERS %s%% (BIND)\" |\n" "$Amount" "$(printf "%s" "$UberType" | tr [:lower:] [:upper:])" "$UberValue"
+							printf "\t\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %s ENEMY %s ÜBERS %s%% (BIND)\" |\n" "$Amount" "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")" "$UberValue"
 						done
 						printf "\t\t\t\t\t\t\t}\n"
 					done
 					printf "\t\t\t\t\t\t}\n"
 					printf "\t\t\t\t\t\t\"[40-60%%]\" {\n"
-					for UberValue in {4..6}0
+					for UberValue in 40 50 60
 					do
 						printf "\t\t\t\t\t\t\t\"[%i%%]\" {\n" $UberValue
-						printf "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY %s ÜBER %s%% (BIND)\" |\n" "$(printf "%s" "$UberType" | tr [:lower:] [:upper:])" "$UberValue"
+						printf "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY %s ÜBER %s%% (BIND)\" |\n" "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")" "$UberValue"
 						for Amount in 2 3 4 5 6 7 8 9 0
 						do
-							printf "\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS %s%% (BIND)\" |\n" $Amount "$(printf "%s" "$UberType" | tr [:lower:] [:upper:])" "$UberValue"
+							printf "\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS %s%% (BIND)\" |\n" $Amount "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")" "$UberValue"
 						done
 						printf "\t\t\t\t\t\t\t}\n"
 					done
 					printf "\t\t\t\t\t\t}\n"
 					printf "\t\t\t\t\t\t\"[70-90%%]\" {\n"
-					for UberValue in {7..9}0
+					for UberValue in 70 80 90
 					do
 						printf "\t\t\t\t\t\t\t\"[%i%%]\" {\n" $UberValue
-						printf "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY $(printf "%s" "$UberType" | tr [:lower:] [:upper:]) ÜBER $UberValue%% (BIND)\" |\n"
+						printf "\t\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY $(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]") ÜBER $UberValue%% (BIND)\" |\n"
 						for Amount in 2 3 4 5 6 7 8 9 0
 						do
-							printf "\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS %s%% (BIND)\" |\n" $Amount "$(printf "%s" "$UberType" | tr [:lower:] [:upper:])" "$UberValue"
+							printf "\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS %s%% (BIND)\" |\n" $Amount "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")" "$UberValue"
 						done
 						printf "\t\t\t\t\t\t\t}\n"
 					done
 					printf "\t\t\t\t\t\t}\n"
 					printf "\t\t\t\t\t\t\"[100%%]\" {\n"
-					printf "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY $(printf "%s" "$UberType" | tr [:lower:] [:upper:]) ÜBER 100%% (BIND)\" |\n"
+					printf "\t\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY %s ÜBER 100%% (BIND)\" |\n" "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")"
 					for Amount in 2 3 4 5 6 7 8 9 0
 					do
-						printf "\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS 100%% (BIND)\" |\n" "$Amount" "$(printf "%s" "$UberType" | tr [:lower:] [:upper:])"
+						printf "\t\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS 100%% (BIND)\" |\n" "$Amount" "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")"
 					done
 					printf "\t\t\t\t\t\t}\n"
 					printf "\t\t\t\t\t}\n"
 					for Verb in 'popped' 'dropped' 'faked'
 					do
 						printf "\t\t\t\t\t\"[%s]\" {\n" "${Verb^}"
-						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team ENEMY %s ÜBER %s (BIND)\" |\n" "$(printf "%s" "$UberType" | tr [:lower:] [:upper:])" "$(printf "%s" "$Verb" | tr [:lower:] [:upper:])"
+						printf "\t\t\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>Amount: _\" \"say_team 1 ENEMY %s ÜBER %s (BIND)\" |\n" "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")" "$(printf "%s" "$Verb" | tr "[:lower:]" "[:upper:]")"
 						for Amount in 2 3 4 5 6 7 8 9 0
 						do
-							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS %s (BIND)\" |\n" ${Amount} "$(printf "%s" "$UberType" | tr [:lower:] [:upper:])" "$(printf "%s" "$Verb" | tr [:lower:] [:upper:])"
+							printf "\t\t\t\t\t\tNOFORMAT BIND \"\" \"say_team %i ENEMY %s ÜBERS %s (BIND)\" |\n" "${Amount}" "$(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]")" "$(printf "%s" "$Verb" | tr "[:lower:]" "[:upper:]")"
 						done
 						printf "\t\t\t\t\t}\n"
 					done
