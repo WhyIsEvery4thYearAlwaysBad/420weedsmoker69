@@ -42,7 +42,7 @@ Weapons=( 'scattergun fan shortstop soda\040popper bfb back\040scatter' \
 # $4 - The entire CMenu definition line. Default val: Pos.
 gen_detailed_pos_calls() {
 	TAB_STR="$3"
-	printf "%bs" "${TAB_STR}${4:-"\"[Pos]\" {"}"
+	printf "%b" "${TAB_STR}${4:-"\"[Pos]\" {"}"
 	for Point in "BLU Spawn" "RED Spawn" "1st" "2nd" "3rd" "4th" "5th" "6th" "7th" "8th" "9th" "LAST"
 	do
 		if [ "$Point" == "BLU Spawn" ]
