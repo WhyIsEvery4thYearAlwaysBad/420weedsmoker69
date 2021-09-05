@@ -1027,14 +1027,12 @@ display = "caption"
 				BIND "Amp" "say #AmputatorIsUnderrated (BIND)" |
 			}
 			"[Fax]" {
-				"[Frame]" {
-					BIND "Frametime Recommendation" "say I recommend using frametime/frame pacing instead of framerate, because they give more granular info. (BIND)" |
-					BIND "Source" "say Source: cgvr.cs.ut.ee/wp/index.php/frame-rate-vs-frame-time/ (copy and paste) (BIND)" |
-				}
+				BIND "MAccel Good..." "say Mouse accel is fine to use, as it does not ruin muscle memory in any way. (Not joking) (BIND)" |
 				"[Weapons]" {
 					"[Gas]" {
 						BIND "Gas Gravity" "say Fun Fact: Gas Passer Gas has gravity, which means it can fall. You can use the gravity to coat multiple surfaces. (BIND)" |
 						BIND "Gas Airburst" "say Fun Fact: Gas Passer detonates when in the air for more than 2 seconds. This means you can use it to deny air space. (BIND)" |
+						BIND "Gas Fallthrough" "say (Un)fun fact: Gas Passer falls through displacements! (BIND)" |
 					}
 					BIND "Amp-taunt vertheal" "say Fun Fact: The Amputator taunt heals in a sphere, which means you can heal vertically. (BIND)" |
 					BIND "Battals <35%" "say Unfun Fact: Battals only reduces the BASE damage, which means falloff is ignored. (BIND)" |
@@ -1045,8 +1043,7 @@ display = "caption"
 					BIND "Ftime > Frate" "say Frame time is superior to frame rate because it gives more info. Change my mind! (BIND)" |
 					BIND "Vulkan > DirectX" "say Vulkan is superior to DirectX, because it isn't proprietary. Change my mind! (BIND)" |
 					BIND "Linux > Windows" "say Linux is superior to Windows because it's FOSS, better designed, and more efficent. Change my mind! (BIND)" |
-					BIND "MAccel Good" "say Mouse accel is underrated as it gives more flexibility for those who prefer it. Change my mind! (BIND)" |
-					BIND "RInput Bad" "say Raw Input is misunderstood and really overrated as a result. Change my mind! (BIND)" |
+					BIND "Mouse Accel myth" "say Aim training is what will improve aim, not changing sens or disabling mouse accel. Change my mind! (BIND)" |
 				}
 			}
 		}
@@ -1386,7 +1383,7 @@ display = "caption"
 						NOFORMAT BIND "" "say_team 0 ENEMIES PUSH BACK MID UPPER (TEAM SIDE) (BIND)" |
 					}
 					KEY="4" NOFORMAT "       [5]       " {
-						NOFORMAT BIND "<clr:234,209,174>_" "say_team ENEMY PUSH BACK MID LOWER (TEAM SIDE) (BIND)" |
+						NOFORMAT BIND "<clr:234,209,174>Amount: _" "say_team ENEMY PUSH BACK MID LOWER (TEAM SIDE) (BIND)" |
 						NOFORMAT BIND "" "say_team 2 ENEMIES PUSH BACK MID LOWER (TEAM SIDE) (BIND)" |
 						NOFORMAT BIND "" "say_team 3 ENEMIES PUSH BACK MID LOWER (TEAM SIDE) (BIND)" |
 						NOFORMAT BIND "" "say_team 4 ENEMIES PUSH BACK MID LOWER (TEAM SIDE) (BIND)" |
