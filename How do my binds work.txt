@@ -1,0 +1,9 @@
+99.99% of my binds are organized into recursively-nested voicemenus, which are made through commands. (Look up recursion and nesting online if you don't know what those mean.)
+
+Voicemenus are menus that have voicecommands bound to numberkeys. (The things you see when you press Z, X, or C.) They will not parse commands (you can't bind number keys in voicemenus to commands).
+
+However you can emulate voicemenus through the use of binds. Since you can make binds that ran aliases that run aliases, I use this to immitate voicemenus but with binds. You can also attach captions to them tool. Unfortunately it takes a long time to do manually. That's why I made my cmenu generator and now I use that to make my bind-voicemenus.
+
+CMenu Generator: https://github.com/WhyIsEvery4thYearAlwaysBad/CmdMenuGenerator
+
+As for generating call binds, I just have shell scripts to do automation.
