@@ -6,8 +6,7 @@ CMG="../CmdMenuGenerator/cmg-x64" # File location of the cmenu generator exe.
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 # The actual script
-
-sh ./cmenus/generate_cmenu.sh ./cmenu
+sh ./cmenus/generate_cmenu.sh
 $CMG 420cmdmenu.cmenu --output-dir "${TF2_DIR}/tf/custom/420cmdmenu"
 if [ ! $? -eq 0 ]
 then
