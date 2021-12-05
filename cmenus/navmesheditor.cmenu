@@ -6,8 +6,8 @@
 	// Don't adjust adjacent corners when using nav_corner_* commands.
 	`nav_corner_adjust_adjacent 0`
 	// Convenient command to move bots, since `bot_moveto` doesn't work.
-	`alias bot_red_moveto "ent_remove red_bots_go_here; ent_create item_teamflag teamnum 3 targetname red_bots_go_here"`
-	`alias bot_blu_moveto "ent_remove blu_bots_go_here; ent_create item_teamflag teamnum 2 targetname blu_bots_go_here"`
+	`alias bot_red_moveto "ent_remove red_bots_go_here; ent_create item_teamflag teamnum 3 targetname red_bots_go_here OnPickup !self,ForceReset,0,-1"`
+	`alias bot_blu_moveto "ent_remove blu_bots_go_here; ent_create item_teamflag teamnum 2 targetname blu_bots_go_here OnPickup !self,ForceReset,0,-1"`
     "[Create]" {
         TOGGLE BIND "(Begin) Create Mesh" "nav_begin_area" "(End) Create Mesh" "nav_end_area" |
 		BIND "Splice" "nav_splice" |
@@ -103,6 +103,11 @@
 			    BIND "Mark unnamed place" "nav_mark_unnamed" |
 			}
 	    }
+		//"[Move]" {
+			NOEXIT TOGGLE BIND "Begin XY Shift" "nav_begin_shift_xy; exec $cmenu_modify" "End XY Shift" "nav_end_shift_xy; $cmenu_modify" |
+			// NOEXIT BIND "Begin XY Shift" "nav_begin_shift_xy" |
+			// NOEXIT BIND "End XY Shift" "nav_end_shift_xy" |
+		//}
 	}
     "[Delete]" {
 		BIND "Delete" "nav_delete" |

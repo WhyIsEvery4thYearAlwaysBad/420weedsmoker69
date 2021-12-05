@@ -950,9 +950,52 @@ display = "caption"
 				BIND "Bonk!" "say_team Need Bonk! Atomic Punch scout! (BIND)" |
 			}
 			"[Buildings]" {
-				BIND "Sentry" "say_team Need a sentry 'ere! (BIND)" |
-				BIND "Disp" "say_team Need a dispenser 'ere! (BIND)" |
-				BIND "Tele" "say_team Need a teleporter 'ere! (BIND)" |
+				"[Sentry]" {
+					NOFORMAT BIND "Amount: _" "say_team Need 1 Sentry! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 2 Sentries! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 3 Sentries! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 4 Sentries! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 5 Sentries! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 7 Sentries! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 8 Sentries! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 9 Sentries! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 0 Sentries! (BIND)" |
+				}
+				"[Dispenser]" {
+					NOFORMAT BIND "Amount: _" "say_team Need 1 Dispenser! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 2 Dispensers! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 3 Dispensers! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 4 Dispensers! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 5 Dispensers! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 7 Dispensers! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 8 Dispensers! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 9 Dispensers! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 0 Dispensers! (BIND)" |
+				}
+				"[Teleporter]" {
+					"[Entrance]" {
+						NOFORMAT BIND "Amount: _" "say_team Need 1 Tele Entrance! (BIND)" |
+	      	       	  	    	   	      NOFORMAT BIND " " "say_team Need 2 Tele Entrances! (BIND)" |
+	      	  	    	   	       NOFORMAT BIND " " "say_team Need 3 Tele Entrances! (BIND)" |
+					       					NOFORMAT BIND " " "say_team Need 4 Tele Entrances! (BIND)" |
+										NOFORMAT BIND " " "say_team Need 5 Tele Entrances! (BIND)" |
+										NOFORMAT BIND " " "say_team Need 7 Tele Entrances! (BIND)" |
+										NOFORMAT BIND " " "say_team Need 8 Tele Entrances! (BIND)" |
+						 NOFORMAT BIND " " "say_team Need 9 Tele Entrances! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 0 Tele Entrances! (BIND)" |
+					}
+					"[Exit]" {
+										NOFORMAT BIND "Amount: _" "say_team Need 1 Tele Exit! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 2 Tele Exits! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 3 Tele Exits! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 4 Tele Exits! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 5 Tele Exits! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 7 Tele Exits! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 8 Tele Exits! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 9 Tele Exits! (BIND)" |
+					NOFORMAT BIND " " "say_team Need 0 Tele Exits! (BIND)" |
+					}
+				}
 				BIND "Move Up" "say_team Move your buildings forward! (BIND)" |
 			}
 		}
@@ -1042,8 +1085,9 @@ display = "caption"
 				"[Change my mind!]" {
 					BIND "Ftime > Frate" "say Frame time is superior to frame rate because it gives more info. Change my mind! (BIND)" |
 					BIND "Vulkan > DirectX" "say Vulkan is superior to DirectX, because it isn't proprietary. Change my mind! (BIND)" |
-					BIND "Linux > Windows" "say Linux is superior to Windows because it's FOSS, better designed, and more efficent. Change my mind! (BIND)" |
+					BIND "Linux > Windows" "say Linux is superior to Windows because it's FOSS, better designed, and more efficient. Change my mind! (BIND)" |
 					BIND "Mouse Accel myth" "say Aim training is what will improve aim, not changing sens or disabling mouse accel. Change my mind! (BIND)" |
+					BIND "15.ai voicelines for sentence mixing." "say Someone should make 15.ai voice lines dedicated for sentence mixers. Change my mind! (BIND)" |
 				}
 			}
 		}
@@ -1450,6 +1494,7 @@ display = "caption"
 			}
 		}
 		BIND "Team Builds Sapped" "say_team TEAM BUILDS SAPPED (BIND)" |
+		BIND "Out of Ammo" "say_team OUT OF AMMO! (BIND)" |
 	}
 	"[Voicelines]" {
 		"[Alerts]" {
@@ -1494,6 +1539,7 @@ display = "caption"
 				BIND "Reload Hud" "hud_reloadscheme" |
 				BIND "retry" "retry" |
 			}
+			NOEXIT BIND "inspect" "+ac.inspect" |
 		}
 		"[Server]" {
 			"[Common]" {
