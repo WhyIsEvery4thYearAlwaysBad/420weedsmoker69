@@ -974,27 +974,40 @@ display = "caption"
 				}
 				"[Teleporter]" {
 					"[Entrance]" {
-						NOFORMAT BIND "Amount: _" "say_team Need 1 Tele Entrance! (BIND)" |
-	      	       	  	    	   	      NOFORMAT BIND " " "say_team Need 2 Tele Entrances! (BIND)" |
-	      	  	    	   	       NOFORMAT BIND " " "say_team Need 3 Tele Entrances! (BIND)" |
-					       					NOFORMAT BIND " " "say_team Need 4 Tele Entrances! (BIND)" |
-										NOFORMAT BIND " " "say_team Need 5 Tele Entrances! (BIND)" |
-										NOFORMAT BIND " " "say_team Need 7 Tele Entrances! (BIND)" |
-										NOFORMAT BIND " " "say_team Need 8 Tele Entrances! (BIND)" |
-						 NOFORMAT BIND " " "say_team Need 9 Tele Entrances! (BIND)" |
-						NOFORMAT BIND " " "say_team Need 0 Tele Entrances! (BIND)" |
+						     NOFORMAT BIND "Amount: _" "say_team Need 1 Tele Entrance! (BIND)" |
+						     NOFORMAT BIND " " "say_team Need 2 Tele Entrances! (BIND)" |
+						     NOFORMAT BIND " " "say_team Need 3 Tele Entrances! (BIND)" |
+						     NOFORMAT BIND " " "say_team Need 4 Tele Entrances! (BIND)" |
+						     NOFORMAT BIND " " "say_team Need 5 Tele Entrances! (BIND)" |
+						     NOFORMAT BIND " " "say_team Need 7 Tele Entrances! (BIND)" |
+						     NOFORMAT BIND " " "say_team Need 8 Tele Entrances! (BIND)" |
+						     NOFORMAT BIND " " "say_team Need 9 Tele Entrances! (BIND)" |
+						     NOFORMAT BIND " " "say_team Need 0 Tele Entrances! (BIND)" |
 					}
 					"[Exit]" {
-										NOFORMAT BIND "Amount: _" "say_team Need 1 Tele Exit! (BIND)" |
-					NOFORMAT BIND " " "say_team Need 2 Tele Exits! (BIND)" |
-					NOFORMAT BIND " " "say_team Need 3 Tele Exits! (BIND)" |
-					NOFORMAT BIND " " "say_team Need 4 Tele Exits! (BIND)" |
-					NOFORMAT BIND " " "say_team Need 5 Tele Exits! (BIND)" |
-					NOFORMAT BIND " " "say_team Need 7 Tele Exits! (BIND)" |
-					NOFORMAT BIND " " "say_team Need 8 Tele Exits! (BIND)" |
-					NOFORMAT BIND " " "say_team Need 9 Tele Exits! (BIND)" |
-					NOFORMAT BIND " " "say_team Need 0 Tele Exits! (BIND)" |
+						NOFORMAT BIND "Amount: _" "say_team Need 1 Tele Exit! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 2 Tele Exits! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 3 Tele Exits! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 4 Tele Exits! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 5 Tele Exits! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 7 Tele Exits! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 8 Tele Exits! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 9 Tele Exits! (BIND)" |
+						NOFORMAT BIND " " "say_team Need 0 Tele Exits! (BIND)" |
 					}
+					"[Pairs]" {
+						 NOFORMAT BIND "_" "say_team Need 1 Tele Pair! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 2 Tele Pairs! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 3 Tele Pairs! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 4 Tele Pairs! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 5 Tele Pairs! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 6 Tele Pairs! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 7 Tele Pairs! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 8 Tele Pairs! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 9 Tele Pairs! (BIND)" |
+						 NOFORMAT BIND "" "say_team Need 0 Tele Pairs! (BIND)" |
+					}
+					BIND "General" "say_team Need teleporters! (BIND)" |
 				}
 				BIND "Move Up" "say_team Move your buildings forward! (BIND)" |
 			}
@@ -1653,4 +1666,96 @@ display = "caption"
 	}
 	BIND "Fake Über" "cmd voicemenu 1 7; say_team **FAKED ÜBER** (BIND)" |
 	BIND "Push Pocket" "say_team **PUSH POCKET!** (BIND)" |
+}
+
+"spy page" {
+	"[Sapping]" {
+		"[Sentry]" {
+			"[Unspecified]" {
+				NOFORMAT BIND "_" "say_team SAPPED 1 SENTRY! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 2 SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 3 SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 4 SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 5 SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 6 SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 7 SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 8 SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 9 SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 0 SENTRIES! (BIND)" |
+			}
+			"[LvL 1]" {
+				NOFORMAT BIND "_" "say_team SAPPED 1 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 2 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 3 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 4 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 5 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 6 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 7 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 8 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 9 Lvl-1 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 0 Lvl-1 Sentries! (BIND)" |
+			}
+			"[LvL 2]" {
+				NOFORMAT BIND "_" "say_team SAPPED 1 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 2 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 3 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 4 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 5 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 6 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 7 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 8 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 9 Lvl-2 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 0 Lvl-2 Sentries! (BIND)" |
+			}
+			"[LvL 3]" {
+				NOFORMAT BIND "_" "say_team SAPPED 1 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 2 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 3 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 4 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 5 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 6 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 7 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 8 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 9 Lvl-3 Sentries! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 0 Lvl-3 Sentries! (BIND)" |
+			}
+			"[Mini]" {
+				NOFORMAT BIND "_" "say_team SAPPED 1 MINI SENTRY! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 2 MINI SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 3 MINI SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 4 MINI SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 5 MINI SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 6 MINI SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 7 MINI SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 8 MINI SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 9 MINI SENTRIES! (BIND)" |
+				NOFORMAT BIND "" "say_team SAPPED 0 MINI SENTRIES! (BIND)" |
+			}
+		}
+		"[Dispenser]" {
+			NOFORMAT BIND "_" "say_team SAPPED 1 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 2 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 3 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 4 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 5 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 6 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 7 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 8 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 9 DISPENSERS! (BIND)" |
+			NOFORMAT BIND "" "say_team SAPPED 0 DISPENSERS! (BIND)" |
+		}
+		"[Teleporter]" {
+			       NOFORMAT BIND "_" "say_team SAPPED 1 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 2 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 3 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 4 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 5 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 6 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 7 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 8 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 9 TELES! (BIND)" |
+			       NOFORMAT BIND "" "say_team SAPPED 0 TELES! (BIND)" |
+		}
+		BIND "General" "say_team SAPPED ENEMY BUILDS! (BIND)" |
+	}
 }
