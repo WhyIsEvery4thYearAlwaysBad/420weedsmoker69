@@ -1593,21 +1593,21 @@ display = "caption"
 }
 
 // Class Specific Pages
-"scout page" {
+"scout cmenu" {
 	BIND "Mad milk ready" "say_team MAD MILK READY! (BIND)" |
 	"[Bonk]" {
 		BIND "Bonk ready" "say_team BONK! METER FULL! (BIND)" |
 		BIND "Bonk in" "say_team I'll bonk in to tank the knockback and damage from sentries/sticky traps/übers! (BIND)" |
 	}
 }
-"soldier page" {
+"soldier cmenu" {
 	"[Banner Ready]" {
 		BIND "Buff" "say_team Buff Banner Prepped! (BIND)" |
 		BIND "Battals" "say_team Battals Prepped! (BIND)" |
 		BIND "Conch" "say_team Conch Prepped! (BIND)" |
 	}
 }
-"pyro page" {
+"pyro cmenu" {
 	"[Phlog Meter]" {
 		BIND "~0%" "say_team PHLOG METER ~0% (BIND)" |
 		BIND "~25%" "say_team PHLOG METER ~25% (BIND)" |
@@ -1624,7 +1624,7 @@ display = "caption"
 	}
 }
 
-"engineer page" {
+"engineer cmenu" {
 	"[Build Up]" {
 		BIND "Teleporter" "say_team Teleporter Up! (BIND)" |
 		BIND "Team Teleporter" "say_team Teleporter to team spawn is up! (BIND)" |
@@ -1635,7 +1635,7 @@ display = "caption"
 		BIND "Exit" "eureka_teleport 1" |
 	}
 }
-"medic page" {
+"medic cmenu" {
 	"[Medgun]" {
 		BIND "Stock" "say_team My Medigun=Stock! (BIND)" |
 		BIND "Kritz" "say_team My Medigun=Kritz! (BIND)" |
@@ -1668,7 +1668,7 @@ display = "caption"
 	BIND "Push Pocket" "say_team **PUSH POCKET!** (BIND)" |
 }
 
-"spy page" {
+"spy cmenu" {
 	"[Sapping]" {
 		"[Sentry]" {
 			"[Unspecified]" {
