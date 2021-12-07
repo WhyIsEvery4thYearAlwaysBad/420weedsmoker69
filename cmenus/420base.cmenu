@@ -1594,10 +1594,10 @@ display = "caption"
 
 // Class Specific Pages
 "scout cmenu" {
-	BIND "Mad milk ready" "say_team MAD MILK READY! (BIND)" |
+	BIND "Mad Milk Ready!" "say_team MAD MILK READY! (BIND)" |
 	"[Bonk]" {
-		BIND "Bonk ready" "say_team BONK! METER FULL! (BIND)" |
-		BIND "Bonk in" "say_team I'll bonk in to tank the knockback and damage from sentries/sticky traps/übers! (BIND)" |
+		BIND "Bonk Ready!" "say_team BONK! METER FULL! (BIND)" |
+		BIND "Bonking In!" "say_team I'll bonk in to tank the knockback and damage from sentries/sticky traps/übers! (BIND)" |
 	}
 }
 "soldier cmenu" {
@@ -1606,6 +1606,9 @@ display = "caption"
 		BIND "Battals" "say_team Battals Prepped! (BIND)" |
 		BIND "Conch" "say_team Conch Prepped! (BIND)" |
 	}
+	"[Bomb]" {
+		 BIND "About to Bomb!" "say_team I'm about to bomb! (BIND)" |
+		 BIND "Bombing! "say_team Bombing enemy! (BIND)" |
 }
 "pyro cmenu" {
 	"[Phlog Meter]" {
@@ -1670,6 +1673,7 @@ display = "caption"
 
 "spy cmenu" {
 	"[Sapping]" {
+		BIND "General" "say_team SAPPED ENEMY BUILDS! (BIND)" |
 		"[Sentry]" {
 			"[Unspecified]" {
 				NOFORMAT BIND "_" "say_team SAPPED 1 SENTRY! (BIND)" |
@@ -1756,6 +1760,5 @@ display = "caption"
 			       NOFORMAT BIND "" "say_team SAPPED 9 TELES! (BIND)" |
 			       NOFORMAT BIND "" "say_team SAPPED 0 TELES! (BIND)" |
 		}
-		BIND "General" "say_team SAPPED ENEMY BUILDS! (BIND)" |
 	}
 }
