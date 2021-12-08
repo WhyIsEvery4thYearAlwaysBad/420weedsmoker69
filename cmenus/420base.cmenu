@@ -1611,6 +1611,7 @@ display = "caption"
 	"[Bomb]" {
 		 BIND "About to Bomb!" "say_team I'm about to bomb! (BIND)" |
 		 BIND "Bombing!" "say_team Bombing enemy! (BIND)" |
+	}
 }
 "pyro cmenu" {
 	"[Phlog Meter]" {
