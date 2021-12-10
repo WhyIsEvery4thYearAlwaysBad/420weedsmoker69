@@ -1,0 +1,142 @@
+# List of weapons.
+
+scout:
+# Primary weapons.
+  Primary: [
+	  	 { category: Common, weapons: [ scattergun, 'soda popper', shortstop ] },
+	 	 { category: Uncommon, weapons: [ fan, bfb, 'back scatter' ] }
+  ]
+# Secondary weapons.
+  Secondary: [
+  	   { category: Common, weapons: [ pistol, winger, pbpp, cleaver ] },
+	   { category: Rare, weapons: [ milk, bonk, caC ] }
+  ]
+  Melee: [
+  	    { category: Common, weapons: [ atomizer, fow, bash ] },
+	    { category: Uncommon, weapons: [ assassin, cane ] },
+	    { category: Rare, weapons: [ sandman, stick, bat ] }
+  ]
+
+soldier:
+  Primary: [
+		{ category: Common, weapons: [ rocket\040launcher, original, 'direct\040hit', 'black\040box', 'jumper' ] },
+		{ category: Uncommon, weapons: [ beggars, uncommon ] },
+		{ category: Rare, weapons: [ air\040strike, liberty ] }
+  ]
+  
+  Secondary: [
+  	     { category: Common, weapons: [ gunboats, panic\040attack, shotgun ] },
+	     { category: Banners, weapons: [ buff\040banner, 'battalions\040backup', 'concheror' ] },
+	     { category: Rare, weapons: [ mantreads, base, bison ] }
+  ]
+  Melee: [
+  	 { category: Common, weapons: [ escape\040plan, whip ] },
+	 { category: Uncommon, weapons: [ pain\040train, market, anime-sword ] },
+	 { category: Rare, weapons: [ equalizer ] }
+  ]
+
+pyro:
+  Primary: [
+  	   { category: Common, weapons: [ flamethrower, backburner ] },
+	   { category: Uncommon, weapons: [ dragon's fury, phlog ] }
+  ]
+  Secondary: [
+  	   { category: Flare guns, weapons: [ flare gun, detonator, scorch shot, mannmelter ] },
+  	   { category: Shotguns, weapons: [ panic\040attack, shotgun, reserve ] },
+	   { category: Misc, weapons: [ jetpack, gas ] }
+  ]
+  Melee: [
+  	 { category: Common, weapons: [ powerjack, homewrecker ] },
+	 { category: Combo, weapons: [ axtinguisher, neon ] },
+	 { category: Rare, weapons: [ hot\040hand, fragment, 3rd\040degree, stock\040axe ] }
+  ]
+
+demo:
+  Launchers: [
+  	{ category: Grenade, weapons: [ stock\040grenade\040launcher, loch-n-load, cannon, iron\040bomber ] },
+	{ category: Sticky, weapons: [ stickybomb\040launcher, jumper, scot\040resist, quickiebomb ] }
+  ]
+  Shield: [
+  	  { category: Shield, weapons: [ targe, screen, turner ] }
+  ]
+  Melee: [
+  	 { category: Common, weapons: [ bottle ] },
+	 { category: Knight, weapons: [ eyelander, persian, battleaxe, claid ] },
+	 { category: Utility, weapons: [ pain\040train, caber ] }
+  ]
+  Misc: [
+    "B.A.S.E"
+  ]
+
+heavy:
+  Weapons: [
+    { category: Miniguns, weapons: [ minigun, tomislav, natascha, heater, brass ] },
+    { category: Shotguns, weapons: [ shotgun, panic\040attack, family\040buisness ] }
+  ]
+  Food: [
+    { category: Heal, weapons: [ sandvich, banana ] },
+    { category: Utility, weapons: [ snickers, steak ] }
+  ]
+  Melee: [
+  	 { category: Utility, weapons: [ fos, gru, punch ] },
+	 { category: Offensive, weapons: [ kgb, warriors, notice, fists ] }
+  ]
+
+engi:
+  Weapons: [
+    { category: Primary, weapons: [ rescue\040ranger, shotgun, frontier, panic\040attack, pompson ] }
+  ]
+  Utilities: [
+    { category: Secondary, weapons: [ pistol, wrangler, circuit ] },
+    { category: Wrench, weapons: [ jag, eureka, wrench, gunslinger, bleeder ] }
+  ]
+
+medic:
+  Primary: [
+  	   crossbow, blutsauger, overdose, syringe\040gun
+  ]
+  Medigun: [
+  	   medigun, kritz, quickie, vacc
+  ]
+  Melee: [
+    Übersaw, vow, vitasaw, amputator, bonesaw
+  ]
+
+sniper:
+  Primary: [
+  	   { category: Common, weapons: [ sniper\040rifle, bow, classic ] },
+	   { category: Uncommon, weapons: [ sleeper, bazaar, heatmaker ] }
+  ]
+  Secondary: [
+  	     { category: SMG, weapons: [ smg, cleaners ] },
+	     jarate,
+	     { category: Backpacks, weapons: [ razorback, fire\040shield, cozy\040camper ] }
+  ]
+  Melee: [
+  	 kuk(ku)ri, bushwacka, shahanshah, shiv
+  ]
+
+spy:
+  Revolver: [
+    revolver,
+    l'etranger,
+    diamondback,
+    ambassador,
+    enforcer
+  ]
+  Watch: [
+    invis\040watch,
+    cad,
+    ringer
+  ]
+  Knife: [
+    knife,
+    kunai,
+    big\040earner,
+    spycicle,
+    yer
+  ]
+  Sapper: [
+    "sapper",
+    "red-tape"
+  ]

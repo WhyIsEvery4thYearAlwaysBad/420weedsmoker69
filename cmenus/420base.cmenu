@@ -101,7 +101,8 @@ display = "caption"
 								NOFORMAT BIND "" "say_team 9 ALLIES PUSH FRONT RIGHT (<-TEAM SIDE) LOWER (BIND)" |
 								NOFORMAT BIND "" "say_team 0 ALLIES PUSH FRONT RIGHT (<-TEAM SIDE) LOWER (BIND)" |
 							}
-						}						KEY="2" NOFORMAT "" {
+						}
+						KEY="2" NOFORMAT "" {
 							KEY="2" NOFORMAT "" {
 								NOFORMAT BIND "<clr:234,209,174>_" "say_team ALLY PUSH FRONT MID (BIND)" |
 								NOFORMAT BIND "" "say_team 2 ALLIES PUSH FRONT MID (BIND)" |
@@ -372,6 +373,7 @@ display = "caption"
 					}
 				}
 				BIND "Point" "say_team CAP THE DAMN POINT! (BIND)" |
+				BIND "Generic" "say_team PUSH! PUSH! (BIND)" |
 			}
 			"[Hold]" {
 				"[Pos]" {
@@ -451,7 +453,8 @@ display = "caption"
 								NOFORMAT BIND "" "say_team 9 ALLIES HOLD FRONT RIGHT (<-TEAM SIDE) LOWER (BIND)" |
 								NOFORMAT BIND "" "say_team 0 ALLIES HOLD FRONT RIGHT (<-TEAM SIDE) LOWER (BIND)" |
 							}
-						}						KEY="2" NOFORMAT "" {
+						}
+						KEY="2" NOFORMAT "" {
 							KEY="2" NOFORMAT "" {
 								NOFORMAT BIND "<clr:234,209,174>_" "say_team ALLY HOLD FRONT MID (BIND)" |
 								NOFORMAT BIND "" "say_team 2 ALLIES HOLD FRONT MID (BIND)" |

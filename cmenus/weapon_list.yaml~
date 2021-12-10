@@ -1,0 +1,18 @@
+# List of weapons.
+
+scout:
+# Primary weapons.
+  Primary: [
+	  	 { category: "Common", weapons: [ "scattergun", 'soda popper', "shortstop" ] },
+	 	 { category: "Uncommon", weapons: [ "fan", "bfb", 'back scatter' ] }
+  ]
+# Secondary weapons.
+  Secondary: [
+  	   { category: "Common", weapons: [ "pistol", "winger", "pbpp", "cleaver" ] },
+	   { category: "Rare", weapons: [ "milk", "bonk", "caC" ] }
+  ]
+  Tertiary: [
+  	    { category: "Common", weapons: [ "atomizer", "fow", "bash" ] },
+	    { category: "Uncommon", weapons: [ "assassin", "cane" ] },
+	    { category: "Rare", weaons: [ "sandman", "stick", "bat" ] }
+  ]
