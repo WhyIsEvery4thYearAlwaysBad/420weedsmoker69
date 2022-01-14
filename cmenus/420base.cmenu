@@ -2,7 +2,7 @@
 format = "$(key). $(title) <cr>"
 predisplay_time = "0"
 linger_time = "0"
-resetkeys = "bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9; bind 0 ac.0"
+resetkeys = "bind ` ac.grave; bind 1 ac.1; bind 2 ac.2; bind 3 ac.3; bind 4 ac.4; bind 5 ac.5; bind 6 ac.6; bind 7 ac.7; bind 8 ac.8; bind 9 ac.9; bind 0 ac.0"
 display = "caption"
 "root" {
 	"[Common]" {
@@ -1617,19 +1617,315 @@ display = "caption"
 	}
 }
 "pyro cmenu" {
-	"[Phlog Meter]" {
-		BIND "~0%" "say_team PHLOG METER ~0% (BIND)" |
-		BIND "~25%" "say_team PHLOG METER ~25% (BIND)" |
-		BIND "~50%" "say_team PHLOG METER ~50% (BIND)" |
-		BIND "~75%" "say_team PHLOG METER ~75% (BIND)" |
-		BIND "100%" "say_team PHLOG METER 100% (BIND)" |
+	"[Amount]" {
+		KEY="`" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team PHLOG METER @ 0%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team 1 %SINGLE% (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team PHLOG METER @ 2%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team PHLOG METER @ 3%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team PHLOG METER @ 4%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 5%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 6%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 7%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 8%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 9%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 10%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 11%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 12%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 13%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 14%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 15%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 16%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 17%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 18%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 19%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 20%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 21%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 22%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 23%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 24%! (BIND)" |
+			}
+		}
+		KEY="1" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team PHLOG METER @ 25%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team PHLOG METER @ 26%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team PHLOG METER @ 27%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team PHLOG METER @ 28%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team PHLOG METER @ 29%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 30%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 31%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 32%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 33%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 34%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 35%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 36%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 37%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 38%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 39%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 40%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 41%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 42%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 43%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 44%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 45%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 46%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 47%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 48%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 49%! (BIND)" |
+			}
+		}
+		KEY="2" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team PHLOG METER @ 50%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team PHLOG METER @ 51%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team PHLOG METER @ 52%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team PHLOG METER @ 53%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team PHLOG METER @ 54%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 55%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 56%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 57%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 58%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 59%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 60%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 61%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 62%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 63%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 64%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 65%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 66%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 67%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 68%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 69%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 70%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 71%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 72%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 73%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 74%! (BIND)" |
+			}
+		}
+		KEY="3" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team PHLOG METER @ 75%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team PHLOG METER @ 76%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team PHLOG METER @ 77%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team PHLOG METER @ 78%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team PHLOG METER @ 79%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 80%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 81%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 82%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 83%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 84%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 85%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 86%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 87%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 88%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 89%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 90%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 91%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 92%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 93%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 94%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team PHLOG METER @ 95%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team PHLOG METER @ 96%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team PHLOG METER @ 97%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team PHLOG METER @ 98%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team PHLOG METER @ 99%! (BIND)" |
+			}
+		}
+		KEY="4" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team PHLOG METER @ 100%! (BIND)" |
+			}
+		}
 	}
 	"[Gas Meter]" {
-		BIND "0%" "say_team GAS 0% (BIND)" |
-		BIND "~25%" "say_team GAS ~25% (BIND)" |
-		BIND "~50%" "say_team GAS ~50% (BIND)" |
-		BIND "~75%" "say_team GAS ~75% (BIND)" |
-		BIND "100%" "say_team GAS 100% (BIND)" |
+		KEY="`" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team GAS @ 0%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team GAS @ 1%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team GAS @ 2%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team GAS @ 3%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team GAS @ 4%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 5%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 6%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 7%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 8%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 9%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 10%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 11%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 12%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 13%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 14%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 15%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 16%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 17%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 18%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 19%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 20%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 21%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 22%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 23%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 24%! (BIND)" |
+			}
+		}
+		KEY="1" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team GAS @ 25%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team GAS @ 26%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team GAS @ 27%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team GAS @ 28%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team GAS @ 29%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 30%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 31%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 32%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 33%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 34%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 35%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 36%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 37%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 38%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 39%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 40%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 41%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 42%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 43%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 44%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 45%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 46%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 47%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 48%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 49%! (BIND)" |
+			}
+		}
+		KEY="2" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team GAS @ 50%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team GAS @ 51%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team GAS @ 52%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team GAS @ 53%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team GAS @ 54%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 55%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 56%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 57%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 58%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 59%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 60%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 61%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 62%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 63%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 64%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 65%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 66%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 67%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 68%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 69%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 70%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 71%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 72%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 73%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 74%! (BIND)" |
+			}
+		}
+		KEY="3" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team GAS @ 75%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team GAS @ 76%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team GAS @ 77%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team GAS @ 78%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team GAS @ 79%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 80%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 81%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 82%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 83%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 84%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 85%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 86%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 87%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 88%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 89%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 90%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 91%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 92%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 93%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 94%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team GAS @ 95%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team GAS @ 96%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team GAS @ 97%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team GAS @ 98%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team GAS @ 99%! (BIND)" |
+			}
+		}
+		KEY="4" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team GAS @ 100%! (BIND)" |
+			}
+		}
 	}
 }
 
@@ -1687,8 +1983,160 @@ display = "caption"
 
 "sniper cmenu" {
 	BIND "Jarat Preped!" "say_team JARAT REDY! (BIND)" |
-	"[Clenrs]" {
-		   BIND "Chage Full" "say_team MY CLENRS CHAGE REDY! (BIND)" |
+	"[Cleaner's Charge]" {
+		KEY="`" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 0%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team 1 %SINGLE% (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 2%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 3%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 4%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 5%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 6%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 7%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 8%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 9%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 10%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 11%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 12%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 13%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 14%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 15%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 16%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 17%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 18%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 19%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 20%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 21%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 22%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 23%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 24%! (BIND)" |
+			}
+		}
+		KEY="1" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 25%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 26%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 27%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 28%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 29%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 30%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 31%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 32%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 33%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 34%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 35%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 36%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 37%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 38%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 39%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 40%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 41%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 42%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 43%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 44%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 45%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 46%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 47%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 48%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 49%! (BIND)" |
+			}
+		}
+		KEY="2" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 50%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 51%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 52%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 53%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 54%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 55%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 56%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 57%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 58%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 59%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 60%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 61%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 62%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 63%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 64%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 65%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 66%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 67%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 68%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 69%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 70%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 71%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 72%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 73%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 74%! (BIND)" |
+			}
+		}
+		KEY="3" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 75%! (BIND)" |
+				KEY="1" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 76%! (BIND)" |
+				KEY="2" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 77%! (BIND)" |
+				KEY="3" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 78%! (BIND)" |
+				KEY="4" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 79%! (BIND)" |
+			}
+			KEY="1" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 80%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 81%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 82%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 83%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 84%! (BIND)" |
+			}
+			KEY="2" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 85%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 86%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 87%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 88%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 89%! (BIND)" |
+			}
+			KEY="3" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 90%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 91%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 92%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 93%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 94%! (BIND)" |
+			}
+			KEY="4" NOFORMAT "" {
+				KEY="`" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 95%! (BIND)" |
+				KEY="1" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 96%! (BIND)" |
+				KEY="2" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 97%! (BIND)" |
+				KEY="3" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 98%! (BIND)" |
+				KEY="4" NOFORMAT BIND "" "say_team MY CLEANERS CHARGE @ 99%! (BIND)" |
+			}
+		}
+		KEY="4" NOFORMAT "" {
+			KEY="`" NOFORMAT "_" {
+				KEY="`" NOFORMAT BIND "`_" "say_team MY CLEANERS CHARGE @ 100%! (BIND)" |
+			}
+		}
 	}
 }
 

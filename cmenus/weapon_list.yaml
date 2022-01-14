@@ -1,5 +1,4 @@
 # List of weapons.
-
 Scout:
 # Primary weapons.
   Primary: [
@@ -38,7 +37,7 @@ Soly:
 
 Pyro:
   Primary: [
-  	   flamethrowr, bakburnr, dragn\040fury, phlog
+  	   flamethrowr, degreasr, bakburnr, dragn\040fury, phlog
   ]
   Secondary: [
   	   { category: "Flare Guns", weapons: [ flar\040gun, detnatr, scorch, manmeltr ] },

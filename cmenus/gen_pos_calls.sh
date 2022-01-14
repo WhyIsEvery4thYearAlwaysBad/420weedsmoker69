@@ -26,23 +26,23 @@ printf "%b\t\t\tNOFORMAT \"<clr:234,209,174>        [4]      <cr>\" {\n" "$TAB_S
 printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ FRNT LEFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ FRNT LFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ FRNT LEFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t\t}\n" "$TAB_STR"
 ### In front left upper
 printf "%b\t\t\tKEY=\"4\" NOFORMAT \" \" {\n" "$TAB_STR"
-printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ LFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$1"
+printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ LEFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ FRNT LFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ FRNT LEFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t\t}\n" "$TAB_STR"
 ### In front left lower
 printf "%b\t\t\tKEY=\"5\" NOFORMAT \" \" {\n" "$TAB_STR"
-printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ FRNT LFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$1"
+printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ FRNT LEFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ FRNT LFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ FRNT LEFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t\t}\n" "$TAB_STR"
 ## Done
@@ -138,26 +138,26 @@ printf "%b\t}\n" "$TAB_STR"
 printf "%b\tKEY=\"1\" NOFORMAT \" \" {\n" "$TAB_STR"
 # Left left
 printf "%b\t\tKEY=\"1\" NOFORMAT \" \" {\n" "$TAB_STR"
-printf "%b\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ LFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$1"
+printf "%b\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ LEFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\tNOFORMAT BIND \"\" \"say_team %s %s @ LFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\tNOFORMAT BIND \"\" \"say_team %s %s @ LEFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t}\n" "$TAB_STR"
 ## Left upper
 printf "%b\t\tKEY=\"4\" NOFORMAT \"\" {\n" "$TAB_STR"
-printf "%b\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ LFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$1"
+printf "%b\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ LEFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\tNOFORMAT BIND \"\" \"say_team %s %s @ LFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\tNOFORMAT BIND \"\" \"say_team %s %s @ LEFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t}\n" "$TAB_STR"
 ## Left lower
 printf "%b\t\tKEY=\"5\" NOFORMAT \"\" {\n" "$TAB_STR"
-printf "%b\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ LFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$1"
+printf "%b\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ LEFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\tNOFORMAT BIND \"\" \"say_team %s %s @ LFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\tNOFORMAT BIND \"\" \"say_team %s %s @ LEFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t}\n" "$TAB_STR"
 # Done
@@ -198,26 +198,26 @@ printf "%b\tKEY=\"5\" NOFORMAT \"       [5]       \" {\n" "$TAB_STR"
 printf "%b\t\tKEY=\"1\" NOFORMAT \"<clr:234,209,174>        [4]     <cr>\" {\n" "$TAB_STR"
 # Back left left
 printf "%b\t\t\tKEY=\"1\" NOFORMAT \" \" {\n" "$TAB_STR"
-printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ BACK LFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$1"
+printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ BACK LEFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ BACK LFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ BACK LEFT (<-TEAM SIDE) (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t\t}\n" "$TAB_STR"
 ## Back left upper
 printf "%b\t\t\tKEY=\"4\" NOFORMAT \"\" {\n" "$TAB_STR"
-printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ BACK LFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$1"
+printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ BACK LEFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ BACK LFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ BACK LEFT (<-TEAM SIDE) UPPR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t\t}\n" "$TAB_STR"
 ## Back left lower
 printf "%b\t\t\tKEY=\"5\" NOFORMAT \"\" {\n" "$TAB_STR"
-printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ BACK LFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$1"
+printf "%b\t\t\t\tNOFORMAT BIND \"<clr:234,209,174>_\" \"say_team %s @ BACK LEFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$1"
 for Amount in 2 3 4 5 6 7 8 9 0
 do
-	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ BACK LFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
+	printf "%b\t\t\t\tNOFORMAT BIND \"\" \"say_team %i %s @ BACK LEFT (<-TEAM SIDE) LOWR (BIND)\" |\n" "$TAB_STR" "$Amount" "$2"
 done
 printf "%b\t\t\t}\n" "$TAB_STR"
 # Done
