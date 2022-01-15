@@ -206,13 +206,13 @@ main() {
 				    Temp_Amount=0
 				    for Key in '`' `seq 1 4`
 				    do
-					printf '\t\t\t\t\t\tKEY="%s" NOFORMAT "" {\n' "$Key1"
+					printf '\t\t\t\t\t\tKEY="%s" NOFORMAT "%s_" {\n' "$Key" "$([ "$Key" = "\`" ] && printf '%s' '[0-4]')"
 					for Key2 in '`' `seq 1 4`
 					do
-					    printf '\t\t\t\t\t\t\tKEY="%s" NOFORMAT "%s" {\n' "$3" "${Key2}" "$([ "$Key2" = '`' ] && printf '%s_' "${Key1}")"
+					    printf '\t\t\t\t\t\t\tKEY="%s" NOFORMAT "%s" {\n' "${Key2}" "$([ "$Key2" = '`' ] && printf '%s_' "${Key}")"
 					    for Key3 in '`' `seq 1 4`
 					    do
-						generate_cmenu_count "1 ENEMY $(printf '%s' "$UberType" | tr '[:lower:]' '[:upper:]') ÜBER @ ${TempAmount}%!" "ENEMY $(printf '%s' "$UberType" | tr '[:lower:]' '[:upper:]') ÜBERS @ ${Temp_Amount}%!" '\t\t\t\t\t\t\t\t' "[Uber Value]"
+						generate_cmenu_count "ENEMY $(printf '%s' "$UberType" | tr '[:lower:]' '[:upper:]') ÜBER @ ${TempAmount}%!" "ENEMY $(printf '%s' "$UberType" | tr '[:lower:]' '[:upper:]') ÜBERS @ ${Temp_Amount}%!" "\t\t\t\t\t\t\t\t" "[Uber Value]"
 						Temp_Amount=$((Temp_Amount+1))
 					    done
 					    printf '\t\t\t\t\t\t\t}\n'
@@ -223,7 +223,7 @@ main() {
 				    
 				    for Verb in 'popd' 'dropd' 'fakd'
 				    do
-					generate_cmenu_count "1 ENEMY $(printf '%s' "$UberType" | tr '[:lower:]' '[:upper:]') ÜBER $(printf '%s' "$Verb" | tr '[:lower:]' '[:upper:]')" "ENEMY $(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]") ÜBERS $(printf "%s" "$Verb" | tr "[:lower:]" "[:upper:]")" '\t\t\t\t\t' "$Verb"
+					generate_cmenu_count "ENEMY $(printf '%s' "$UberType" | tr '[:lower:]' '[:upper:]') ÜBER $(printf '%s' "$Verb" | tr '[:lower:]' '[:upper:]')" "ENEMY $(printf "%s" "$UberType" | tr "[:lower:]" "[:upper:]") ÜBERS $(printf "%s" "$Verb" | tr "[:lower:]" "[:upper:]")" '\t\t\t\t\t' "$Verb"
 				    done
 				    printf "\t\t\t\t}\n"
 				done
@@ -231,7 +231,7 @@ main() {
 			fi
 			# </Über>
 			# Generate calls for Giant (robots).
-			generate_cmenu_count "1 ENEMY $(printf '%s' "$Class" | tr '[:lower:]' '[:upper:]') DOWN!" "ENEMY $(printf '%s' "$Class" | tr '[:lower:]' '[:upper:]')S DOWN!" '\t\t' 'Dead'
+			generate_cmenu_count "ENEMY $(printf '%s' "$Class" | tr '[:lower:]' '[:upper:]') DOWN!" "ENEMY $(printf '%s' "$Class" | tr '[:lower:]' '[:upper:]')S DOWN!" '\t\t' 'Dead'
 			generate_cmenu_count "ENEMY TEAM HAS 1 $(printf '%s' "$Class" | tr '[:lower:]' '[:upper:]')!" " $(printf '%s' "$Class" | tr '[:lower:]' '[:upper:]')S ON ENEMY TEAM!" '\t\t' 'Amount'
 			test "$Class" != 'Trap' && test "$Class" != 'Builds' && gen_detailed_pos_calls "1 GIANT $(printf '%s' "$Class" | tr '[:lower:]' '[:upper:]')" "GIANT $(printf '%s' "$Class" | tr '[:lower:]' '[:upper:]')S" '\t\t' '"[Giant]" {'
 			# End class cmenu
